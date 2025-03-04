@@ -40,7 +40,7 @@ main nav {
     flex-grow: 1;
 }
 
-main aside {
+#details {
     background-color: #143a52;
     border-radius: 10px;
     margin: 20px;
@@ -51,11 +51,11 @@ main aside {
     overflow: hidden;
 }
 
-main aside section {
+#details section {
     padding: 20px;
 }
 
-main aside section h1 {
+#details section h1 {
     font-size: 30px;
     margin-top: 0px;
     margin-bottom: 10px;
@@ -88,4 +88,14 @@ main aside section h1 {
     width: 150px;
     object-fit: cover;
     margin-right: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #0f2c3e;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }

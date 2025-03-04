@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de vaiseaux</title>
-    <link rel="stylesheet" href="styles/style.css">
     
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+
     <script type="module" src="config.js"></script>
     <script type="module" src="app.js"></script>
 </head>
@@ -13,6 +15,7 @@
     <header>
         <nav>
             <button onclick="router('listing');" id="listing-button">Vaisseaux</button>
+            <button onclick="router('favorites');;" id="favorites-button">Favoris</button>
         </nav>
     </header>
     <main>
