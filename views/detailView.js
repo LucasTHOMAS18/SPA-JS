@@ -4,7 +4,7 @@ export async function loadDetail(id) {
     let vaiseau = await getVaisseau(id);
 
     document.getElementById("details").innerHTML = 
-    `<span onclick="router('listing');" class='close-button material-symbols-rounded'>close</span>`
+    `<span onclick="route('listing');" class='close-button material-symbols-rounded'>close</span>`
     + `<img src="${vaiseau.image}">`
     + "<section>"
     + `<h1>${vaiseau.nom}</h1>`
