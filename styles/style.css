@@ -20,7 +20,8 @@ header button {
     color: #ADD3EB;
     height: 60px;
     font-size: 20px;
-    font-family: "Saira Bold", sans-serif;
+    font-family: "Saira", sans-serif;
+    font-weight: 600;
     padding: 0px 20px;
     cursor: pointer;
     transition: 0.3s;
@@ -44,6 +45,12 @@ header button:hover {
     margin-top: 10px;
     max-height: 80px;
     cursor: pointer;
+    transition: 0.3s;
+    outline: 2px solid transparent;
+}
+
+.horizontal-card:hover {
+    outline: 2px solid #6fb2c6;
 }
 
 .horizontal-card img {
