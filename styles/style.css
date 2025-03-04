@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0px;
+    background-color: #0a1d29;
+    color: white;
+    font-family: "Saira", sans-serif
+}
+
+header {
+    background-color: #0f2c3e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    color: #ADD3EB;
+    height: 60px;
+    font-size: 20px;
+    font-family: "Saira Bold", sans-serif;
+    padding: 0px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header button:hover {
+    color: #6fb2c6;
+    background-color: #143a52;
+}
+
+#app {
+    padding: 20px;
+}
+
+.horizontal-card {
+    background-color: #143a52;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    max-height: 80px;
+    cursor: pointer;
+}
+
+.horizontal-card img {
+    border-radius: 10px 0px 0px 10px;
+    max-height: 80px;
+    margin-right: 10px;
+}

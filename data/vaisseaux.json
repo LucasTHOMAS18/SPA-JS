@@ -8,9 +8,9 @@
       "equipements": [1, 2],
       "favori": false,
       "note": 4.5,
-      "image": "avenger_titan.png"
+      "image": "https://media.starcitizen.tools/thumb/4/4b/Avenger_Titan_3.2_sale_Titan_01-Squashed.jpg/1920px-Avenger_Titan_3.2_sale_Titan_01-Squashed.jpg.webp"
     },
-    {
+    { 
       "id": 2,
       "nom": "Cutlass Black",
       "fabricantId": 2,
@@ -18,7 +18,7 @@
       "equipements": [3, 4],
       "favori": true,
       "note": 4.8,
-      "image": "cutlass_black.png"
+      "image": "https://media.starcitizen.tools/thumb/8/87/CutlassBlack_TouchingDown.png/1920px-CutlassBlack_TouchingDown.png.webp"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "equipements": [5],
       "favori": false,
       "note": 4.2,
-      "image": "aurora_mr.png"
+      "image": "https://media.starcitizen.tools/thumb/d/d4/Aurora_MR_flying_above_world_-_Crop.png/1920px-Aurora_MR_flying_above_world_-_Crop.png.webp"
     }
   ],
   "armes": [
