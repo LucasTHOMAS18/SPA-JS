@@ -60,4 +60,4 @@ def get_roles(title):
     
 
 if __name__ == "__main__":
-    json.dump(get_ships(), open("data/ships.json", "w"))
+    json.dump(get_ships(), open("data/vaisseaux.json", "w"))
