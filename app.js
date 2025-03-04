@@ -6,4 +6,5 @@ export function router(view, id = null) {
     if (view === 'detail' && id) loadDetail(id);
 }
 
+window.router = router;
 router('listing');

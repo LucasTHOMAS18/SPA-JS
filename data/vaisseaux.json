@@ -1,0 +1,108 @@
+{
+  "vaisseaux": [
+    {
+      "id": 1,
+      "nom": "Avenger Titan",
+      "fabricantId": 1,
+      "type": "Transporteur léger",
+      "equipements": [1, 2],
+      "favori": false,
+      "note": 4.5,
+      "image": "avenger_titan.png"
+    },
+    {
+      "id": 2,
+      "nom": "Cutlass Black",
+      "fabricantId": 2,
+      "type": "Vaisseau polyvalent",
+      "equipements": [3, 4],
+      "favori": true,
+      "note": 4.8,
+      "image": "cutlass_black.png"
+    },
+    {
+      "id": 3,
+      "nom": "Aurora MR",
+      "fabricantId": 3,
+      "type": "Chasseur léger",
+      "equipements": [5],
+      "favori": false,
+      "note": 4.2,
+      "image": "aurora_mr.png"
+    }
+  ],
+  "armes": [
+    {
+      "id": 1,
+      "nom": "CF-227 Panther",
+      "type": "Répétiteur laser",
+      "puissance": 2200,
+      "fabricantId": 4
+    },
+    {
+      "id": 2,
+      "nom": "M5A Laser Cannon",
+      "type": "Canon laser",
+      "puissance": 1800,
+      "fabricantId": 5
+    },
+    {
+      "id": 3,
+      "nom": "GT-870 Tarantula",
+      "type": "Canon balistique",
+      "puissance": 2500,
+      "fabricantId": 6
+    },
+    {
+      "id": 4,
+      "nom": "Scorpion GT-215",
+      "type": "Gatling balistique",
+      "puissance": 2000,
+      "fabricantId": 6
+    },
+    {
+      "id": 5,
+      "nom": "Omnisky VI",
+      "type": "Canon laser",
+      "puissance": 1900,
+      "fabricantId": 7
+    }
+  ],
+  "fabricants": [
+    {
+      "id": 1,
+      "nom": "Aegis Dynamics",
+      "pays": "UEE"
+    },
+    {
+      "id": 2,
+      "nom": "Drake Interplanetary",
+      "pays": "UEE"
+    },
+    {
+      "id": 3,
+      "nom": "Roberts Space Industries",
+      "pays": "UEE"
+    },
+    {
+      "id": 4,
+      "nom": "Klaus and Werner",
+      "pays": "UEE"
+    },
+    {
+      "id": 5,
+      "nom": "Behring Applied Technology",
+      "pays": "UEE"
+    },
+    {
+      "id": 6,
+      "nom": "Gallenson Tactical Systems",
+      "pays": "UEE"
+    },
+    {
+      "id": 7,
+      "nom": "Omnisky Armaments",
+      "pays": "UEE"
+    }
+  ]
+}
