@@ -10,22 +10,12 @@ export async function getVaisseau(id) {
     return response.json();
 }
 
-export async function getMarques() {
-    const response = await fetch('http://localhost:3000/marques');
+export async function getFabricants() {
+    const response = await fetch('http://localhost:3000/fabricants');
     return response.json();
 }
 
-export async function getMarque(id) {
-    const response = await fetch(`http://localhost:3000/marques/${id}`);
-    return response.json();
-}
-
-export async function getArmes() {
-    const response = await fetch('http://localhost:3000/armes');
-    return response.json();
-}
-
-export async function getArme(id) {
-    const response = await fetch(`http://localhost:3000/armes/${id}`);
+export async function getFabricant(id) {
+    const response = await fetch(`http://localhost:3000/fabricants/${id}`);
     return response.json();
 }
