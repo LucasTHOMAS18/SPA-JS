@@ -14,7 +14,7 @@ header {
     align-items: center;
 }
 
-header button {
+header nav button {
     background-color: transparent;
     border: none;
     color: #ADD3EB;
@@ -27,7 +27,7 @@ header button {
     transition: 0.3s;
 }
 
-header button:hover {
+header nav button:hover {
     color: #6fb2c6;
     background-color: #143a52;
 }
@@ -137,4 +137,35 @@ main nav {
 
 .material-symbols-rounded.filled {
     font-family: 'Material Symbols Rounded Filled';
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    gap: 5px;
+}
+
+.search-bar input {
+    border-radius: 10px 5px 5px 10px;
+    padding: 10px;
+    border: none;
+    height: calc(44px - 20px);
+
+}
+
+.search-bar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #58b4f6;
+    transition: .3s;
+    border: none;
+    border-radius: 5px 10px 10px 5px;
+}
+
+.search-bar button:hover {
+    background-color: #95c7f4;
 }
