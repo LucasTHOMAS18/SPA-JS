@@ -21,6 +21,8 @@ export function removeFavorite(id) {
 }
 
 export function toggleFavorite(id) {
+    console.log("Skibidi")
+
     if (getFavorites().find(fav => fav.id === id)) {
         removeFavorite(id);
 

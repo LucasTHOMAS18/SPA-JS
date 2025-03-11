@@ -99,3 +99,7 @@ main nav {
     border-radius: 5px;
     cursor: pointer;
 }
+
+#favorite-button {
+    cursor: pointer;
+}
