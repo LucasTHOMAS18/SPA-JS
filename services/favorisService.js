@@ -20,20 +20,22 @@ export function removeFavorite(id) {
     localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
-export function toggleFavorite(id) {
-    console.log("Skibidi")
+export function isFavorited(id) {
+    return getFavorites().some(fav => fav.id === id);
+}
 
+export function toggleFavorite(id) {
     if (getFavorites().find(fav => fav.id === id)) {
         removeFavorite(id);
 
-        document.getElementById("favorite-button").style.fontVariationSettings = "FILL: 0";
+        document.getElementById("favorite-button").classList.remove("filled")
         
         if (document.getElementById(id)) {
             document.getElementById(id).remove();
             hideDetails()
         }
     } else {
-        document.getElementById("favorite-button").style.fontVariationSettings = "FILL: 0";
+        document.getElementById("favorite-button").classList.add("filled");
         addFavorite(id);
     }
 }
