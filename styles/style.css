@@ -95,11 +95,11 @@ main > div {
 
 .close-button {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 0px;
+    right: 0px;
     background-color: #0f2c3e;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 0px 0px 0px 10px;
     cursor: pointer;
 }
 
