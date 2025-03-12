@@ -2,10 +2,16 @@ import { getFabricant, getVaisseau } from '../provider.js';
 import { isFavorited, toggleFavorite } from '../services/favorisService.js';
 
 export async function loadDetail(id) {
+    let hash = window.location.hash.split('?')[0].replace('#', '');
+    let params = new URLSearchParams(window.location.hash.split('?')[1]);
+
+    params.set('detail', id);
+    location.hash = `${hash}?${params.toString()}`;
+    
     let vaiseau = await getVaisseau(id);
 
     document.getElementById("details").innerHTML = 
-    '<div>'
+    `<div id=${vaiseau.id}>`
     + `<span onclick="hideDetails();" class='close-button material-symbols-rounded'>close</span>`
     + `<img src="${vaiseau.image}">`
     + "<section>"

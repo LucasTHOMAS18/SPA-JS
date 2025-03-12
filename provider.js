@@ -10,10 +10,10 @@ export async function getVaisseau(id) {
     return response.json();
 }
 
-export async function searchVaisseaux(querry) {
-    querry = querry.toLowerCase()
+export async function searchVaisseaux(query) {
+    query = query.toLowerCase()
     let vaisseaux = await getVaisseaux(); 
-    return vaisseaux.filter((vaisseau) => vaisseau.nom.toLowerCase().includes(querry))
+    return vaisseaux.filter((vaisseau) => vaisseau.nom.toLowerCase().includes(query))
 }
 
 export async function getFabricants() {
