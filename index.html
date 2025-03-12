@@ -21,19 +21,19 @@
 
         <div class="search-bar">
             <input placeholder="Rechercher par nom" type="text" onkeydown="if(event.key === 'Enter') location.hash = `search?query=${encodeURIComponent(this.value)}`;" id="search-field">
-            <button type="button" onclick="updateSearchQuery(document.getElementById('search-field').value)">
+            <button type="button" onclick="location.hash = `search?query=${document.getElementById('search-field').value}`;">
                 <span class='material-symbols-rounded'>search</span>
             </button>
         </div>
     </header>
 
     <main>
-        <div id="app"></div>
+        <div>
+            <div id="app"></div>
+            <footer id="footer"></footer>
+        </div>
         <aside id="details"></aside>
     </main>
 
-    <footer id="footer">
-
-    </footer>
 </body>
 </html>

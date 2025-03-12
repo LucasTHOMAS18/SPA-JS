@@ -1,9 +1,10 @@
 import { SHIPS_PER_PAGE } from './config.js';
-import { getVaisseaux, NUMBER_OF_SHIPS, searchVaisseaux } from './provider.js';
+import { getVaisseaux, searchVaisseaux } from './provider.js';
 import { getFavorites } from './services/favorisService.js';
-import { hideDetails, loadDetail } from './views/detailView.js';
-import { loadListing } from './views/listingView.js';
+import { DetailView } from './views/detailView.js';
+import { ListingView } from './views/listingView.js';
 
+// URL management
 export function getHashAndParams() {
     let [hashPart, paramString] = window.location.hash.split('?');
     let hash = hashPart.replace('#', '');
@@ -20,27 +21,32 @@ export function setHashParam(key, value) {
     window.location.hash = newHash;
 }
 
+export function getHashParam(key) {
+    let { params } = getHashAndParams();
+    return params.get(key);
+}
+
+// Routing
+export const listingView = new ListingView(SHIPS_PER_PAGE);
+export const detailView = new DetailView();
+
 async function handleRouting() {
     let {hash, params} = getHashAndParams();
 
     let query = params.get('query');
     let detailId = params.get('detail');
     
-    let page = params.get('page');
-    let start = page ? (page - 1) * SHIPS_PER_PAGE : 0;
-    let limit = page ? (page) * SHIPS_PER_PAGE : SHIPS_PER_PAGE
-
     switch (hash) {
         case 'listing':
-            await loadListing("Liste des vaisseaux", await getVaisseaux(start, limit), page, parseInt(NUMBER_OF_SHIPS / SHIPS_PER_PAGE));
+            await listingView.render("Liste des vaisseaux", await getVaisseaux());
             break;
 
         case 'favorites':
-            await loadListing("Liste des favoris", await getFavorites());
+            await listingView.render("Liste des favoris", await getFavorites());
             break;
 
         case 'search':
-            if (query) await loadListing("Resultats de la recherche", await searchVaisseaux(query));
+            if (query) await listingView.render("Resultats de la recherche", await searchVaisseaux(query));
             break;
 
         default:
@@ -50,13 +56,13 @@ async function handleRouting() {
 
     if (detailId) {
         let id = parseInt(detailId);
-        if (!isNaN(id)) loadDetail(id);
+        if (!isNaN(id)) detailView.render(id);
     }
 }
 
 window.addEventListener('DOMContentLoaded', handleRouting);
 window.addEventListener('hashchange', handleRouting);
 
-window.loadDetail = loadDetail;
-window.hideDetails = hideDetails;
+window.loadDetail = detailView.render;
+window.hideDetails = detailView.hide;
 window.setHashParam = setHashParam;

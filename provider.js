@@ -1,7 +1,7 @@
-import { ENDPOINT, SHIPS_PER_PAGE } from './config.js';
+import { ENDPOINT } from './config.js';
 
-export async function getVaisseaux(start=0, limit=SHIPS_PER_PAGE) {
-    const response = await fetch(`${ENDPOINT}/vaisseaux?_start=${start}&_limit=${limit}`);
+export async function getVaisseaux() {
+    const response = await fetch(`${ENDPOINT}/vaisseaux`);
     return response.json();
 }
 
@@ -12,8 +12,8 @@ export async function getVaisseau(id) {
 
 export async function searchVaisseaux(query) {
     query = query.toLowerCase()
-    let vaisseaux = await getVaisseaux(); 
-    return vaisseaux.filter((vaisseau) => vaisseau.nom.toLowerCase().includes(query))
+    let vaisseaux = await getVaisseaux();
+    return vaisseaux.filter((vaisseau) => vaisseau.nom.toLowerCase().includes(query));
 }
 
 export async function getFabricants() {
@@ -26,4 +26,12 @@ export async function getFabricant(id) {
     return response.json();
 }
 
-export const NUMBER_OF_SHIPS = 500; // Valeur par défaut
+export let NUMBER_OF_SHIPS = null;
+export async function getNumberOfShips() {
+    if (NUMBER_OF_SHIPS) return NUMBER_OF_SHIPS;
+    
+    const response = await fetch(`${ENDPOINT}/vaisseaux`);
+    const ships = await response.json();
+    NUMBER_OF_SHIPS = ships.length;
+    return NUMBER_OF_SHIPS;
+}
