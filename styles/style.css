@@ -12,6 +12,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
 }
 
 header nav button {
@@ -32,7 +34,8 @@ header nav button:hover {
     background-color: #143a52;
 }
 
-main {  
+main { 
+    padding-top: 60px;
     display: flex;
 }
 
@@ -48,9 +51,9 @@ main > div {
     margin-top: 114px;
     margin-left: 0px;
     margin-right: 0px;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 40px - 60px);
     position: sticky;
-    top: 20px;
+    top: 80px;
     overflow: hidden;
 }
 
