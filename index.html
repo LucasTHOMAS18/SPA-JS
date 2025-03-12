@@ -16,8 +16,15 @@
     <header>
         <nav>
             <button onclick="route('listing');" id="listing-button">Vaisseaux</button>
-            <button onclick="route('favorites');;" id="favorites-button">Favoris</button>
+            <button onclick="route('favorites');" id="favorites-button">Favoris</button>
         </nav>
+
+        <div class="search-bar">
+            <input placeholder="Rechercher par nom" type="text" onkeydown="if(event.key === 'Enter') route('search');" id="search-field">
+            <button type="button" onclick="route('search');">
+                <span class='material-symbols-rounded'>search</span>
+            </button>
+        </div>
     </header>
     <main>
         <nav id="app"></nav>
