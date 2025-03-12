@@ -16,15 +16,15 @@
     <header>
         <nav>
             <button onclick="route('listing');" id="listing-button">Vaisseaux</button>
-            <button onclick="route('favorites');;" id="favorites-button">Favoris</button>
+            <button onclick="route('favorites');" id="favorites-button">Favoris</button>
         </nav>
 
-        <form action="" class="search-bar">
-            <input type="text" name="" id="">
-            <button type="submit">
+        <div class="search-bar">
+            <input type="text" onkeydown="if(event.key === 'Enter') route('search');" id="search-field">
+            <button type="button" onclick="route('search');">
                 <span class='material-symbols-rounded'>search</span>
             </button>
-        </form>
+        </div>
     </header>
     <main>
         <nav id="app"></nav>
