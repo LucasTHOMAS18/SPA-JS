@@ -32,19 +32,22 @@ header nav button:hover {
     background-color: #143a52;
 }
 
-main {
+main {  
     display: flex;
 }
 
-main nav {
+main > div {
     flex-grow: 1;
+    padding: 20px;
 }
 
 #details {
     background-color: #143a52;
     border-radius: 10px;
     margin: 20px;
-    margin-top: 98px;
+    margin-top: 114px;
+    margin-left: 0px;
+    margin-right: 0px;
     height: calc(100vh - 40px);
     position: sticky;
     top: 20px;
@@ -59,10 +62,6 @@ main nav {
     font-size: 30px;
     margin-top: 0px;
     margin-bottom: 10px;
-}
-
-#app {
-    padding: 20px;
 }
 
 .horizontal-card {
@@ -104,6 +103,38 @@ main nav {
     cursor: pointer;
 }
 
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    gap: 5px;
+}
+
+.search-bar input {
+    border-radius: 10px 5px 5px 10px;
+    padding: 10px;
+    border: none;
+    height: calc(44px - 20px);
+
+}
+
+.search-bar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #58b4f6;
+    transition: .3s;
+    border: none;
+    border-radius: 5px 10px 10px 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #95c7f4;
+}
+
 /* Material icons */
 @font-face {
     font-family: 'Material Symbols Rounded';
@@ -137,36 +168,4 @@ main nav {
 
 .material-symbols-rounded.filled {
     font-family: 'Material Symbols Rounded Filled';
-}
-
-.search-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    gap: 5px;
-}
-
-.search-bar input {
-    border-radius: 10px 5px 5px 10px;
-    padding: 10px;
-    border: none;
-    height: calc(44px - 20px);
-
-}
-
-.search-bar button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-color: #58b4f6;
-    transition: .3s;
-    border: none;
-    border-radius: 5px 10px 10px 5px;
-    cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: #95c7f4;
 }

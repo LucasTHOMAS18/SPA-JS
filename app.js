@@ -1,18 +1,31 @@
-import { loadDetail } from './views/detailView.js';
+import { hideDetails, loadDetail } from './views/detailView.js';
 import { loadFavorites } from './views/favoriteView.js';
 import { loadListing } from './views/listingView.js';
 import { loadSearch } from './views/searchViews.js';
 
 export function showDetails(id) {
+    let hash = window.location.hash.split('?')[0].replace('#', '');
+    let params = new URLSearchParams(window.location.hash.split('?')[1]);
+
+    params.set('detail', id);
+    location.hash = `${hash}?${params.toString()}`;
+
     loadDetail(id);
 }
 
-function handleRouting() {
-    let hash = window.location.hash.replace('#', '');
-    let args = hash.split('/');
+export function updateSearchQuery(query) {
+    location.hash = `search?query=${encodeURIComponent(query)}`;
+}
 
-    switch (args[0]) {
-        case 'listing': 
+function handleRouting() {
+    let hash = window.location.hash.split('?')[0].replace('#', '');
+    let params = new URLSearchParams(window.location.hash.split('?')[1]);
+
+    let query = params.get('query');
+    let detailId = params.get('detail');
+
+    switch (hash) {
+        case 'listing':
             loadListing();
             break;
 
@@ -21,13 +34,18 @@ function handleRouting() {
             break;
 
         case 'search':
-            let querry = decodeURIComponent(args[1]);
-            loadSearch(querry);
+            if (query) loadSearch(query);
             break;
 
         default:
             location.hash = 'listing';
-            break;
+            return;
+    }
+
+    if (detailId) {
+        let id = parseInt(detailId);
+        console.log(id)
+        if (!isNaN(id)) showDetails(id);
     }
 }
 
@@ -35,3 +53,5 @@ window.addEventListener('DOMContentLoaded', handleRouting);
 window.addEventListener('hashchange', handleRouting);
 
 window.showDetails = showDetails;
+window.updateSearchQuery = updateSearchQuery;
+window.hideDetails = hideDetails;
