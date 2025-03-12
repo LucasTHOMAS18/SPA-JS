@@ -69,6 +69,10 @@ main > div {
     margin-bottom: 10px;
 }
 
+#details img {
+    border-radius: 10px 20px 0px 0px;
+}
+
 .horizontal-card {
     background-color: #143a52;
     display: flex;

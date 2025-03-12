@@ -16,7 +16,7 @@ export class DetailView {
         let vaiseau = await getVaisseau(id);
     
         document.getElementById("details").innerHTML = 
-        `<div id=${vaiseau.id}>`
+        `<div>`
         + `<span onclick="hideDetails();" class='close-button material-symbols-rounded'>close</span>`
         + `<img src="${vaiseau.image}">`
         + "<section>"

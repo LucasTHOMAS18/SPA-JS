@@ -31,7 +31,7 @@ export function toggleFavorite(id) {
         document.getElementById("favorite-button").classList.remove("filled")
         
         if (getHashAndParams().hash === 'favorites') {
-            document.getElementById(id).remove();
+            document.getElementById('details').innerHTML = '';
             detailView.hide();
         }
     } else {
