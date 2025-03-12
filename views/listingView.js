@@ -13,7 +13,7 @@ export class ListingView {
         this.details.innerHTML = '';
         
         this.footer.innerHTML=""
-        let selectedPage = getHashParam('page') || 1;
+        let selectedPage = parseInt(getHashParam('page')) || 1;
         let displayedShips = vaisseaux.slice((selectedPage - 1) * this.shipsPerPage, selectedPage * this.shipsPerPage);
         
         this.app.innerHTML = `<h1>${title}</h1>` + displayedShips.map(p =>

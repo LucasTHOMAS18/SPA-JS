@@ -164,6 +164,7 @@ footer button {
     height: 34px;
     transition: 0.3s;
     outline: 2px solid transparent;
+    outline-offset: -1px;
 }
 
 footer button:hover {
@@ -176,4 +177,8 @@ footer button:first-child {
 
 footer button:last-child {
     border-radius: 5px 10px 10px 5px;
+}
+
+footer .selected {
+    background-color: #58b4f6;
 }
