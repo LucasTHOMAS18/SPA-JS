@@ -15,19 +15,19 @@
 <body>
     <header>
         <nav>
-            <button onclick="route('listing');" id="listing-button">Vaisseaux</button>
-            <button onclick="route('favorites');" id="favorites-button">Favoris</button>
+            <button onclick="location.hash='listing';">Vaisseaux</button>
+            <button onclick="location.hash='favorites';">Favoris</button>
         </nav>
 
         <div class="search-bar">
-            <input placeholder="Rechercher par nom" type="text" onkeydown="if(event.key === 'Enter') route('search');" id="search-field">
-            <button type="button" onclick="route('search');">
+            <input placeholder="Rechercher par nom" type="text" onkeydown="if(event.key === 'Enter') updateSearchQuery(this.value);" id="search-field">
+            <button type="button" onclick="updateSearchQuery(document.getElementById('search-field').value)">
                 <span class='material-symbols-rounded'>search</span>
             </button>
         </div>
     </header>
     <main>
-        <nav id="app"></nav>
+        <div id="app"></div>
         <aside id="details"></aside>
     </main>
 
