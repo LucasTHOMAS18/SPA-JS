@@ -25,7 +25,7 @@ export class ListingView {
         
         if (vaisseaux.length > this.shipsPerPage)  {
             for (let i=1; i <= parseInt(vaisseaux.length / this.shipsPerPage) + 1; i++) {
-                footer.innerHTML += `<button class='${i === selectedPage ? "selected" : ""}' onclick="setHashParam('page', ${i}); hideDetails();">${i}</button>`
+                footer.innerHTML += `<button class='${i === selectedPage ? "selected" : ""}' onclick="setHashParam('page', ${i}); hideDetails(); window.scrollTo({top: 0, behavior: 'smooth'});">${i}</button>`
             }
         }
     }
