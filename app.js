@@ -3,9 +3,9 @@ import { loadFavorites } from './views/favoriteView.js';
 import { loadListing } from './views/listingView.js';
 import { loadSearch } from './views/searchViews.js';
 
-export function route(view, id = null) {
+export function route(view, ...args) {
     if (view === 'listing') loadListing();
-    if (view === 'detail' && id) loadDetail(id);
+    if (view === 'detail') loadDetail(args);
     if (view === 'favorites') loadFavorites();
     if (view === 'search') {
         let querry = document.getElementById("search-field").value
