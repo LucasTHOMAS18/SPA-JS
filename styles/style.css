@@ -44,7 +44,7 @@ main > div {
     padding: 20px;
 }
 
-#details {
+#details > div {
     background-color: #143a52;
     border-radius: 10px;
     margin: 20px;
@@ -55,6 +55,7 @@ main > div {
     position: sticky;
     top: 80px;
     overflow: hidden;
+    margin-right: 20px;
 }
 
 #details section {

@@ -17,7 +17,7 @@ export function updateSearchQuery(query) {
     location.hash = `search?query=${encodeURIComponent(query)}`;
 }
 
-function handleRouting() {
+async function handleRouting() {
     let hash = window.location.hash.split('?')[0].replace('#', '');
     let params = new URLSearchParams(window.location.hash.split('?')[1]);
 
@@ -26,15 +26,15 @@ function handleRouting() {
 
     switch (hash) {
         case 'listing':
-            loadListing();
+            await loadListing();
             break;
 
         case 'favorites':
-            loadFavorites();
+            await loadFavorites();
             break;
 
         case 'search':
-            if (query) loadSearch(query);
+            if (query) await loadSearch(query);
             break;
 
         default:
