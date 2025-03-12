@@ -1,5 +1,5 @@
+import { detailView, getHashAndParams } from '../app.js';
 import { getVaisseau } from '../provider.js';
-import { hideDetails } from '../views/detailView.js';
 
 export async function addFavorite(id) {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -30,9 +30,9 @@ export function toggleFavorite(id) {
 
         document.getElementById("favorite-button").classList.remove("filled")
         
-        if (document.getElementById(id)) {
-            document.getElementById(id).remove();
-            hideDetails()
+        if (getHashAndParams().hash === 'favorites') {
+            document.getElementById('details').innerHTML = '';
+            detailView.hide();
         }
     } else {
         document.getElementById("favorite-button").classList.add("filled");
