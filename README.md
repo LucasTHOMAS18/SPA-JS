@@ -1,15 +1,15 @@
-Installation :
+## Installation :
 ``` bash
-$ npm install -g json-server
-$ npm install -g http-server
+npm install -g json-server http-server
 ```
 
-Lancement de l'application :
+## Lancement de l'application :
+Démarrer le serveur JSON :  
 ``` bash
-$ npx json-server --watch data/vaisseaux.json --port 3000
+npx json-server --watch data/vaisseaux.json --port 3000
 ```
 
-Et dans un second terminal :
+Lancer l'application (dans un second terminal) :
 ``` bash
-$ http-server -p 8000
+http-server -p 8000
 ```
