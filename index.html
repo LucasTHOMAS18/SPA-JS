@@ -20,16 +20,20 @@
         </nav>
 
         <div class="search-bar">
-            <input placeholder="Rechercher par nom" type="text" onkeydown="if(event.key === 'Enter') updateSearchQuery(this.value);" id="search-field">
+            <input placeholder="Rechercher par nom" type="text" onkeydown="if(event.key === 'Enter') location.hash = `search?query=${encodeURIComponent(this.value)}`;" id="search-field">
             <button type="button" onclick="updateSearchQuery(document.getElementById('search-field').value)">
                 <span class='material-symbols-rounded'>search</span>
             </button>
         </div>
     </header>
+
     <main>
         <div id="app"></div>
         <aside id="details"></aside>
     </main>
 
+    <footer id="footer">
+
+    </footer>
 </body>
 </html>

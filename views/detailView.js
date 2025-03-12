@@ -1,9 +1,9 @@
+import { getHashAndParams } from '../app.js';
 import { getFabricant, getVaisseau } from '../provider.js';
 import { isFavorited, toggleFavorite } from '../services/favorisService.js';
 
 export async function loadDetail(id) {
-    let hash = window.location.hash.split('?')[0].replace('#', '');
-    let params = new URLSearchParams(window.location.hash.split('?')[1]);
+    let {hash, params} = getHashAndParams();
 
     params.set('detail', id);
     location.hash = `${hash}?${params.toString()}`;
@@ -29,8 +29,7 @@ export async function loadDetail(id) {
 }
 
 export async function hideDetails() {
-    let hash = window.location.hash.split('?')[0].replace('#', '');
-    let params = new URLSearchParams(window.location.hash.split('?')[1]);
+    let {hash, params} = getHashAndParams();
 
     params.delete('detail');
     location.hash = params.toString() ? `${hash}?${params.toString()}` : hash;

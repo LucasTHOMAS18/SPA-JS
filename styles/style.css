@@ -139,6 +139,12 @@ main > div {
     background-color: #95c7f4;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Material icons */
 @font-face {
     font-family: 'Material Symbols Rounded';
