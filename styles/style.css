@@ -164,6 +164,7 @@ main nav {
     transition: .3s;
     border: none;
     border-radius: 5px 10px 10px 5px;
+    cursor: pointer;
 }
 
 .search-bar button:hover {
