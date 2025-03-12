@@ -11,7 +11,7 @@ export async function loadFavorites(hideDetails = true) {
     }
 
     app.innerHTML = '<h1>Liste des Vaisseaux</h1>' + favorites.map(p =>
-        `<div id='${p.id}' class="horizontal-card" onclick="route('detail', ${p.id})">`
+        `<div id='${p.id}' class="horizontal-card" onclick="showDetails(${p.id})">`
         + `<img src="${p.image}" alt="${p.nom}">`
         + `<h2>${p.nom}</h2>`
         + `</div>`

@@ -15,13 +15,13 @@
 <body>
     <header>
         <nav>
-            <button onclick="route('listing');" id="listing-button">Vaisseaux</button>
-            <button onclick="route('favorites');" id="favorites-button">Favoris</button>
+            <button onclick="location.hash='listing';">Vaisseaux</button>
+            <button onclick="location.hash='favorites';">Favoris</button>
         </nav>
 
         <div class="search-bar">
-            <input placeholder="Rechercher par nom" type="text" onkeydown="if(event.key === 'Enter') route('search');" id="search-field">
-            <button type="button" onclick="route('search');">
+            <input placeholder="Rechercher par nom" type="text" onkeydown="if(event.key === 'Enter') location.hash=`search/${this.value}`;" id="search-field">
+            <button type="button" onclick="location.hash = `search/${document.getElementById('search-field').value}`">
                 <span class='material-symbols-rounded'>search</span>
             </button>
         </div>
