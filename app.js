@@ -44,7 +44,6 @@ function handleRouting() {
 
     if (detailId) {
         let id = parseInt(detailId);
-        console.log(id)
         if (!isNaN(id)) showDetails(id);
     }
 }
