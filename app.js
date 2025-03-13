@@ -1,6 +1,5 @@
 import { SHIPS_PER_PAGE } from './config.js';
-import { getVaisseaux, searchVaisseaux, getFabricant, getVaisseauxByFabricant } from './provider.js';import { getFavorites } from './services/favorisService.js';
-import { DetailView } from './views/detailView.js';
+import { getVaisseaux, searchVaisseaux, getFabricant, getVaisseauxByFabricant, getVaisseauxByRole, getRole } from './provider.js';import { DetailView } from './views/detailView.js';
 import { ListingView } from './views/listingView.js';
 
 // URL management
@@ -53,6 +52,14 @@ async function handleRouting() {
             if (fabricantId) {
                 const fabricant = await getFabricant(fabricantId);
                 await listingView.render(`Vaisseaux de ${fabricant.nom}`, await getVaisseauxByFabricant(fabricantId));
+            }
+            break;
+
+        case 'role':
+            let roleId = params.get('roleId');
+            if (roleId) {
+                const role = await getRole(roleId);
+                await listingView.render(`Vaisseaux avec rôle: ${role.nom}`, await getVaisseauxByRole(roleId));
             }
             break;
 

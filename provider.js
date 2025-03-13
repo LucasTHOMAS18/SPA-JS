@@ -42,6 +42,12 @@ export async function getVaisseauxByFabricant(fabricantId) {
     return response.json();
 }
 
+export async function getVaisseauxByRole(roleId) {
+    const response = await fetch(`${ENDPOINT}/vaisseaux`);
+    const vaisseaux = await response.json();
+    return vaisseaux.filter(vaisseau => vaisseau.roles.includes(parseInt(roleId)));
+}
+
 export let NUMBER_OF_SHIPS = null;
 export async function getNumberOfShips() {
     if (NUMBER_OF_SHIPS) return NUMBER_OF_SHIPS;
