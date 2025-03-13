@@ -12,7 +12,8 @@ export async function getVaisseau(id) {
 
 export async function searchVaisseaux(query) {
     query = query.toLowerCase()
-    let vaisseaux = await getVaisseaux();
+    const response = await fetch(`${ENDPOINT}/vaisseaux?nom_ne=${query}`);
+    const vaisseaux = await response.json();
     return vaisseaux.filter((vaisseau) => vaisseau.nom.toLowerCase().includes(query));
 }
 
