@@ -1,12 +1,9 @@
-import { getHashAndParams } from '../app.js';
-import { getFabricant, getRole, getVaisseau } from '../provider.js';
+import { getFabricant, getRole, getVaisseau } from '../lib/provider.js';
+import { getHashAndParams } from '../lib/utils.js';
 import { isFavorited, toggleFavorite } from '../services/favorisService.js';
+import { GenericView } from './genericView.js';
 
-export class DetailView {
-    constructor() {
-        this.details = document.getElementById('details');
-    }
-
+class DetailView extends GenericView {
     async render(id) {
         const {hash, params} = getHashAndParams();
     
@@ -45,5 +42,8 @@ export class DetailView {
         
         document.getElementById('details').innerHTML = '';
     }
-
 }
+
+export const detailView = new DetailView();
+window.showDetails = detailView.render;
+window.hideDetails = detailView.hide;

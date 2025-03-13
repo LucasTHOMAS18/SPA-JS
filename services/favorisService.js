@@ -1,5 +1,6 @@
-import { detailView, getHashAndParams } from '../app.js';
-import { getVaisseau } from '../provider.js';
+import { getVaisseau } from '../lib/provider.js';
+import { getHashAndParams } from '../lib/utils.js';
+import { detailView } from '../views/detailView.js';
 
 export async function addFavorite(id) {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];

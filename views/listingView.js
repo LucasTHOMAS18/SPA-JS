@@ -1,32 +1,95 @@
-import { getHashParam } from "../app.js";
+import { SHIPS_PER_PAGE } from '../lib/config.js';
+import { getVaisseaux, searchVaisseaux } from '../lib/provider.js';
+import { getHashParam } from '../lib/utils.js';
+import { getFavorites } from '../services/favorisService.js';
+import { detailView } from './detailView.js';
+import { GenericView } from './genericView.js';
 
-export class ListingView {
-    constructor(shipsPerPage) {
-        this.shipsPerPage = shipsPerPage;
+class ListingView extends GenericView {
+    constructor() {
+        super();
 
-        this.app = document.getElementById('app');
-        this.details = document.getElementById('details');
-        this.footer = document.getElementById('footer');
+        this.previousHash = '';
+        this.previousParams = new URLSearchParams();
+
+        this.title = '';
+        this.ships = [];
+
+        window.currentPage = this.currentPage;
     }
-    
-    async render(title, vaisseaux) {    
-        this.details.innerHTML = '';
-        
-        this.footer.innerHTML=""
+
+    get renderedShips() {
         let selectedPage = parseInt(getHashParam('page')) || 1;
-        let displayedShips = vaisseaux.slice((selectedPage - 1) * this.shipsPerPage, selectedPage * this.shipsPerPage);
-        
-        this.app.innerHTML = `<h1>${title}</h1>` + displayedShips.map(p =>
-            `<div class="horizontal-card" onclick="loadDetail(${p.id})">`
+        return this.ships.slice((selectedPage - 1) * SHIPS_PER_PAGE, selectedPage * SHIPS_PER_PAGE);
+    }
+
+    async handleRouting(hash, params) {
+        const query = params.get('query');
+        const page = params.get('page');
+        const detail = params.get('detail');
+
+        // Handle detail view
+        if (detail) {
+            detailView.render(detail);
+        }
+
+        // Handle page index change
+        if (hash === this.previousHash && query === this.previousParams.get('query') && page !== this.previousParams.get('page')) {
+            this.previousParams = params;
+            this.render();
+            return;
+        }
+
+        // Handle page change
+        switch (hash) {
+            case 'search':
+                this.title = `Résultats de la recherche pour "${query}"`;
+                this.ships = await searchVaisseaux(query);
+                break;
+            
+            case 'favorites':
+                this.title = "Liste des favoris";
+                this.ships = await getFavorites();
+                break;
+            
+            default:
+                this.title = "Liste des vaisseaux";
+                this.ships = await getVaisseaux();
+                break;
+        }
+
+        this.render();
+        this.previousHash = hash;
+        this.previousParams = params
+    }
+
+    async render() {
+        this.details.innerHTML = '';
+
+        this.footer.innerHTML = ""
+        let selectedPage = parseInt(getHashParam('page')) || 1;
+        let displayedShips = this.renderedShips;
+
+        this.app.innerHTML = `<h1>${this.title}</h1>` + displayedShips.map(p =>
+            `<div class="horizontal-card" onclick="showDetails(${p.id})">`
             + `<img src="${p.image}" alt="${p.nom}">`
             + `<h2>${p.nom}</h2>`
             + `</div>`
         ).join('');
-        
-        if (vaisseaux.length > this.shipsPerPage)  {
-            for (let i=1; i <= parseInt(vaisseaux.length / this.shipsPerPage) + 1; i++) {
+
+        if (this.ships.length > SHIPS_PER_PAGE) {
+            for (let i = 1; i <= parseInt(this.ships.length / SHIPS_PER_PAGE) + 1; i++) {
                 footer.innerHTML += `<button class='${i === selectedPage ? "selected" : ""}' onclick="setHashParam('page', ${i}); hideDetails(); window.scrollTo({top: 0, behavior: 'smooth'});">${i}</button>`
             }
         }
     }
+
+    hide() {
+        this.app.innerHTML = '';
+        this.details.innerHTML = '';
+        this.footer.innerHTML = '';
+    }
+
 }
+
+export const listingView = new ListingView();

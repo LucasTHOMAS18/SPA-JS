@@ -1,68 +1,19 @@
-import { SHIPS_PER_PAGE } from './config.js';
-import { getVaisseaux, searchVaisseaux } from './provider.js';
-import { getFavorites } from './services/favorisService.js';
-import { DetailView } from './views/detailView.js';
-import { ListingView } from './views/listingView.js';
-
-// URL management
-export function getHashAndParams() {
-    let [hashPart, paramString] = window.location.hash.split('?');
-    let hash = hashPart.replace('#', '');
-    let params = new URLSearchParams(paramString || '');
-    return { hash, params };
-}
-
-export function setHashParam(key, value) {
-    let { hash, params } = getHashAndParams();
-    params.set(key, value);
-    
-    let newHash = hash + (params.toString() ? `?${params.toString()}` : '');
-    
-    window.location.hash = newHash;
-}
-
-export function getHashParam(key) {
-    let { params } = getHashAndParams();
-    return params.get(key);
-}
+import { getHashAndParams } from "./lib/utils.js";
+import { listingView } from "./views/listingView.js";
 
 // Routing
-export const listingView = new ListingView(SHIPS_PER_PAGE);
-export const detailView = new DetailView();
-
-async function handleRouting() {
-    let {hash, params} = getHashAndParams();
-
-    let query = params.get('query');
-    let detailId = params.get('detail');
-    
-    switch (hash) {
-        case 'listing':
-            await listingView.render("Liste des vaisseaux", await getVaisseaux());
-            break;
-
-        case 'favorites':
-            await listingView.render("Liste des favoris", await getFavorites());
-            break;
-
-        case 'search':
-            if (query) await listingView.render("Resultats de la recherche", await searchVaisseaux(query));
-            break;
-
-        default:
-            location.hash = 'listing';
-            return;
-    }
-
-    if (detailId) {
-        let id = parseInt(detailId);
-        if (!isNaN(id)) detailView.render(id);
-    }
+const routes = {
+    "": listingView,
+    "listing": listingView,
+    "search": listingView,
+    "favorites": listingView,
 }
 
-window.addEventListener('DOMContentLoaded', handleRouting);
-window.addEventListener('hashchange', handleRouting);
+function handleRouting() {
+    let { hash, params } = getHashAndParams();
+    let route = hash.split('/')[0];
+    routes[route].handleRouting(hash, params);
+}
 
-window.loadDetail = detailView.render;
-window.hideDetails = detailView.hide;
-window.setHashParam = setHashParam;
+window.addEventListener('hashchange', handleRouting);
+window.addEventListener('load', handleRouting);
