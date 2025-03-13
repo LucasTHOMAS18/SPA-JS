@@ -1,6 +1,5 @@
 import { SHIPS_PER_PAGE } from './config.js';
-import { getVaisseaux, searchVaisseaux, getFabricant } from './provider.js';
-import { getFavorites } from './services/favorisService.js';
+import { getVaisseaux, searchVaisseaux, getFabricant, getVaisseauxByFabricant } from './provider.js';import { getFavorites } from './services/favorisService.js';
 import { DetailView } from './views/detailView.js';
 import { ListingView } from './views/listingView.js';
 
