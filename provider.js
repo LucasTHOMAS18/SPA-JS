@@ -42,10 +42,10 @@ export async function getVaisseauxByFabricant(fabricantId) {
     return response.json();
 }
 
-export async function getVaisseauxByRole(roleId) {
+export async function getVaisseauxByRole(rolesIds) {
     const response = await fetch(`${ENDPOINT}/vaisseaux`);
     const vaisseaux = await response.json();
-    return vaisseaux.filter(vaisseau => vaisseau.roles.includes(parseInt(roleId)));
+    return vaisseaux.filter(vaisseau => vaisseau.rolesIds.includes(parseInt(rolesIds)));
 }
 
 export let NUMBER_OF_SHIPS = null;

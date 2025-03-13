@@ -15,11 +15,12 @@ export class DetailView {
         
         const vaisseau = await getVaisseau(id);
         const fabricant = (await getFabricant(vaisseau.fabricantId)).nom;
-        const roles = await Promise.all(vaisseau.roles.map(async (roleId) => {
+        
+        const roles = await Promise.all(vaisseau.rolesIds.map(async (roleId) => {
             const role = await getRole(roleId);
             return `<span class="clickable-role" onclick="location.hash='role?roleId=${roleId}'">${role.nom}</span>`;
         }));
-
+    
         document.getElementById("details").innerHTML = 
         `<div>`
         + `<span onclick="hideDetails();" class='close-button material-symbols-rounded'>close</span>`
