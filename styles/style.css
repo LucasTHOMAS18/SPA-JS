@@ -182,3 +182,13 @@ footer button:last-child {
 footer .selected {
     background-color: #58b4f6;
 }
+
+.clickable-fabricant {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #58b4f6;
+}
+
+.clickable-fabricant:hover {
+    color: #95c7f4;
+}

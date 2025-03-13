@@ -26,7 +26,7 @@ export class DetailView {
         + "<section>"
         + `<h1>${vaisseau.nom}</h1>`
         + `<span id='favorite-button' class='material-symbols-rounded'>star</span>`
-        + `<p><strong>Fabricant:</strong> ${fabricant}</p>`
+        + `<p><strong>Fabricant:</strong> <span class="clickable-fabricant" onclick="location.hash='manufacturer?fabricantId=${vaisseau.fabricantId}'">${fabricant}</span></p>`
         + `<p><strong>Roles:</strong> ${roles}</p>`
         + "</section>"
         + '</div>';

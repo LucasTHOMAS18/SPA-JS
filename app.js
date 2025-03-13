@@ -1,5 +1,5 @@
 import { SHIPS_PER_PAGE } from './config.js';
-import { getVaisseaux, searchVaisseaux } from './provider.js';
+import { getVaisseaux, searchVaisseaux, getFabricant } from './provider.js';
 import { getFavorites } from './services/favorisService.js';
 import { DetailView } from './views/detailView.js';
 import { ListingView } from './views/listingView.js';
@@ -35,6 +35,7 @@ async function handleRouting() {
 
     let query = params.get('query');
     let detailId = params.get('detail');
+    let fabricantId = params.get('fabricantId');
     
     switch (hash) {
         case 'listing':
@@ -47,6 +48,13 @@ async function handleRouting() {
 
         case 'search':
             if (query) await listingView.render("Resultats de la recherche", await searchVaisseaux(query));
+            break;
+
+        case 'manufacturer':
+            if (fabricantId) {
+                const fabricant = await getFabricant(fabricantId);
+                await listingView.render(`Vaisseaux de ${fabricant.nom}`, await getVaisseauxByFabricant(fabricantId));
+            }
             break;
 
         default:
