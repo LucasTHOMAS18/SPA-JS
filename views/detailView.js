@@ -5,11 +5,6 @@ import { GenericView } from './genericView.js';
 
 class DetailView extends GenericView {
     async render(id) {
-        const {hash, params} = getHashAndParams();
-    
-        params.set('detail', id);
-        location.hash = `${hash}?${params.toString()}`;
-        
         const vaisseau = await getVaisseau(id);
         const fabricant = (await getFabricant(vaisseau.fabricantId)).nom;
         const roles = await Promise.all(vaisseau.rolesIds.map(async (roleId) => {
@@ -18,7 +13,7 @@ class DetailView extends GenericView {
 
         document.getElementById("details").innerHTML = 
         `<div>`
-        + `<span onclick="hideDetails();" class='close-button material-symbols-rounded'>close</span>`
+        + `<span onclick="removeHashParam('detail');" class='close-button material-symbols-rounded'>close</span>`
         + `<img src="${vaisseau.image}">`
         + "<section>"
         + `<h1>${vaisseau.nom}</h1>`
@@ -30,16 +25,21 @@ class DetailView extends GenericView {
         
         if (isFavorited(vaisseau.id)) document.getElementById("favorite-button").classList.add("filled");
         document.getElementById('favorite-button').addEventListener('click', () => {
-            toggleFavorite(vaisseau.id);
+            const added = toggleFavorite(vaisseau.id);
+
+            if (added) {
+                document.getElementById("favorite-button").classList.add("filled");
+            } else {
+                document.getElementById("favorite-button").classList.remove("filled")
+                if (getHashAndParams().hash === 'favorites') {
+                    this.hide();
+                    document.getElementById(vaisseau.id).remove();
+                }
+            }
         });
     }
     
     async hide() {
-        let {hash, params} = getHashAndParams();
-    
-        params.delete('detail');
-        location.hash = params.toString() ? `${hash}?${params.toString()}` : hash;
-        
         document.getElementById('details').innerHTML = '';
     }
 }

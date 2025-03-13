@@ -1,6 +1,4 @@
 import { getVaisseau } from '../lib/provider.js';
-import { getHashAndParams } from '../lib/utils.js';
-import { detailView } from '../views/detailView.js';
 
 export async function addFavorite(id) {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -28,15 +26,9 @@ export function isFavorited(id) {
 export function toggleFavorite(id) {
     if (getFavorites().find(fav => fav.id === id)) {
         removeFavorite(id);
-
-        document.getElementById("favorite-button").classList.remove("filled")
-        
-        if (getHashAndParams().hash === 'favorites') {
-            document.getElementById('details').innerHTML = '';
-            detailView.hide();
-        }
+        return false;
     } else {
-        document.getElementById("favorite-button").classList.add("filled");
         addFavorite(id);
+        return true;
     }
 }

@@ -31,27 +31,34 @@ class ListingView extends GenericView {
         // Handle detail view
         if (detail) {
             detailView.render(detail);
+        } else {
+            detailView.hide();
         }
 
         // Handle page index change
-        if (hash === this.previousHash && query === this.previousParams.get('query') && page !== this.previousParams.get('page')) {
-            this.previousParams = params;
-            this.render();
-            return;
+        if (hash === this.previousHash && query === this.previousParams.get('query')) {
+            if (page !== this.previousParams.get('page')) { // Prevent re-rendering if detail view is openned
+                this.previousParams = params;
+                this.render();
+                return;
+            } else {
+                return;
+            }
         }
 
         // Handle page change
+        console.log("Page changed")
         switch (hash) {
             case 'search':
                 this.title = `Résultats de la recherche pour "${query}"`;
                 this.ships = await searchVaisseaux(query);
                 break;
-            
+
             case 'favorites':
                 this.title = "Liste des favoris";
                 this.ships = await getFavorites();
                 break;
-            
+
             default:
                 this.title = "Liste des vaisseaux";
                 this.ships = await getVaisseaux();
@@ -71,7 +78,7 @@ class ListingView extends GenericView {
         let displayedShips = this.renderedShips;
 
         this.app.innerHTML = `<h1>${this.title}</h1>` + displayedShips.map(p =>
-            `<div class="horizontal-card" onclick="showDetails(${p.id})">`
+            `<div id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">`
             + `<img src="${p.image}" alt="${p.nom}">`
             + `<h2>${p.nom}</h2>`
             + `</div>`
@@ -79,7 +86,7 @@ class ListingView extends GenericView {
 
         if (this.ships.length > SHIPS_PER_PAGE) {
             for (let i = 1; i <= parseInt(this.ships.length / SHIPS_PER_PAGE) + 1; i++) {
-                footer.innerHTML += `<button class='${i === selectedPage ? "selected" : ""}' onclick="setHashParam('page', ${i}); hideDetails(); window.scrollTo({top: 0, behavior: 'smooth'});">${i}</button>`
+                footer.innerHTML += `<button class='${i === selectedPage ? "selected" : ""}' onclick="setHashParam('page', ${i}); removeHashParam('detail'); window.scrollTo({top: 0, behavior: 'smooth'});">${i}</button>`
             }
         }
     }
