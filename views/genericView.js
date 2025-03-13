@@ -7,7 +7,13 @@ export class GenericView {
         });
     }
 
-    handleRouting(hash, params) {}
+    async handleRouting(hash, params) {this.render();}
 
-    render() {}
+    async render() {}
+
+    async hide() {
+        this.app.innerHTML = '';
+        this.details.innerHTML = '';
+        this.footer.innerHTML = '';
+    }
 }

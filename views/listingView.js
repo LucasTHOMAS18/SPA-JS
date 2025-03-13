@@ -83,13 +83,6 @@ class ListingView extends GenericView {
             }
         }
     }
-
-    hide() {
-        this.app.innerHTML = '';
-        this.details.innerHTML = '';
-        this.footer.innerHTML = '';
-    }
-
 }
 
 export const listingView = new ListingView();

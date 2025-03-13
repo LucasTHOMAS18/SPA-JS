@@ -1,4 +1,5 @@
 import { getHashAndParams } from "./lib/utils.js";
+import { notFoundView } from "./views/404View.js";
 import { listingView } from "./views/listingView.js";
 
 // Routing
@@ -7,12 +8,19 @@ const routes = {
     "listing": listingView,
     "search": listingView,
     "favorites": listingView,
+    "404": notFoundView,
 }
 
 function handleRouting() {
     let { hash, params } = getHashAndParams();
     let route = hash.split('/')[0];
-    routes[route].handleRouting(hash, params);
+
+    console.log(route);
+    if (routes.hasOwnProperty(route)) {
+        routes[route].handleRouting(hash, params);
+    } else {
+        routes["404"].handleRouting();
+    }
 }
 
 window.addEventListener('hashchange', handleRouting);
