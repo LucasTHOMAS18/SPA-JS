@@ -182,3 +182,38 @@ footer button:last-child {
 footer .selected {
     background-color: #58b4f6;
 }
+
+#not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 130px);
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+#not-found h1 {
+    font-weight: 600;
+    font-size: 200px;
+    color: #af2d2d;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#not-found a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}

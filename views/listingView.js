@@ -36,7 +36,7 @@ class ListingView extends GenericView {
         }
 
         // Handle page index change
-        if (hash === this.previousHash && query === this.previousParams.get('query')) {
+        if (hash != "" && hash === this.previousHash && query === this.previousParams.get('query')) {
             if (page !== this.previousParams.get('page')) { // Prevent re-rendering if detail view is openned
                 this.previousParams = params;
                 this.render();
@@ -78,10 +78,10 @@ class ListingView extends GenericView {
         let displayedShips = this.renderedShips;
 
         this.app.innerHTML = `<h1>${this.title}</h1>` + displayedShips.map(p =>
-            `<div id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">`
-            + `<img src="${p.image}" alt="${p.nom}">`
-            + `<h2>${p.nom}</h2>`
-            + `</div>`
+            `<div id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">
+                <img src="${p.image}" alt="${p.nom}">
+                <h2>${p.nom}</h2>
+            </div>`
         ).join('');
 
         if (this.ships.length > SHIPS_PER_PAGE) {

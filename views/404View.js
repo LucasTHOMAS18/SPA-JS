@@ -10,8 +10,11 @@ class NotFoundView extends GenericView {
     this.details.innerHTML = '';
 
     this.app.innerHTML = `
-      <h1>404</h1>
-      <p>La page demandée n'existe pas.</p>
+      <div id="not-found">
+        <h1>404</h1>
+        <p>La page demandée n'existe pas.</p>
+        <a onclick="location.hash='listing'">Retour à l'accueil</a>
+      </div>
     `;
   }
 }

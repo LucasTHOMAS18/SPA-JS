@@ -11,18 +11,18 @@ class DetailView extends GenericView {
             return " " + (await getRole(roleId)).nom;
         }));
 
-        document.getElementById("details").innerHTML = 
-        `<div>`
-        + `<span onclick="removeHashParam('detail');" class='close-button material-symbols-rounded'>close</span>`
-        + `<img src="${vaisseau.image}">`
-        + "<section>"
-        + `<h1>${vaisseau.nom}</h1>`
-        + `<span id='favorite-button' class='material-symbols-rounded'>star</span>`
-        + `<p><strong>Fabricant:</strong> ${fabricant}</p>`
-        + `<p><strong>Roles:</strong> ${roles}</p>`
-        + "</section>"
-        + '</div>';
-        
+        document.getElementById("details").innerHTML =
+            `<div>
+                <span onclick="removeHashParam('detail');" class='close-button material-symbols-rounded'>close</span>
+                <img src="${vaisseau.image}">
+                <section>
+                    <h1>${vaisseau.nom}</h1>
+                    <span id='favorite-button' class='material-symbols-rounded'>star</span>
+                    <p><strong>Fabricant:</strong> ${fabricant}</p>
+                    <p><strong>Roles:</strong> ${roles}</p>
+                </section>
+            </div>`;
+
         if (isFavorited(vaisseau.id)) document.getElementById("favorite-button").classList.add("filled");
         document.getElementById('favorite-button').addEventListener('click', () => {
             const added = toggleFavorite(vaisseau.id);
@@ -38,7 +38,7 @@ class DetailView extends GenericView {
             }
         });
     }
-    
+
     async hide() {
         document.getElementById('details').innerHTML = '';
     }
