@@ -1,5 +1,5 @@
 import { getHashAndParams } from '../app.js';
-import { getFabricant, getVaisseau } from '../provider.js';
+import { getFabricant, getRole, getVaisseau } from '../provider.js';
 import { isFavorited, toggleFavorite } from '../services/favorisService.js';
 
 export class DetailView {
@@ -8,28 +8,32 @@ export class DetailView {
     }
 
     async render(id) {
-        let {hash, params} = getHashAndParams();
+        const {hash, params} = getHashAndParams();
     
         params.set('detail', id);
         location.hash = `${hash}?${params.toString()}`;
         
-        let vaiseau = await getVaisseau(id);
-    
+        const vaisseau = await getVaisseau(id);
+        const fabricant = (await getFabricant(vaisseau.fabricantId)).nom;
+        const roles = await Promise.all(vaisseau.rolesIds.map(async (roleId) => {
+            return " " + (await getRole(roleId)).nom;
+        }));
+
         document.getElementById("details").innerHTML = 
         `<div>`
         + `<span onclick="hideDetails();" class='close-button material-symbols-rounded'>close</span>`
-        + `<img src="${vaiseau.image}">`
+        + `<img src="${vaisseau.image}">`
         + "<section>"
-        + `<h1>${vaiseau.nom}</h1>`
+        + `<h1>${vaisseau.nom}</h1>`
         + `<span id='favorite-button' class='material-symbols-rounded'>star</span>`
-        + `<p><strong>Fabricant:</strong> ${(await getFabricant(vaiseau.fabricant)).nom}</p>`
-        + `<p><strong>Roles:</strong> ${await vaiseau.roles}</p>`
+        + `<p><strong>Fabricant:</strong> ${fabricant}</p>`
+        + `<p><strong>Roles:</strong> ${roles}</p>`
         + "</section>"
         + '</div>';
         
-        if (isFavorited(vaiseau.id)) document.getElementById("favorite-button").classList.add("filled");
+        if (isFavorited(vaisseau.id)) document.getElementById("favorite-button").classList.add("filled");
         document.getElementById('favorite-button').addEventListener('click', () => {
-            toggleFavorite(vaiseau.id);
+            toggleFavorite(vaisseau.id);
         });
     }
     
