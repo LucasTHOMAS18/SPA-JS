@@ -37,6 +37,17 @@ export async function getRole(id) {
     return response.json();
 }
 
+export async function getVaisseauxByFabricant(fabricantId) {
+    const response = await fetch(`${ENDPOINT}/vaisseaux?fabricantId=${fabricantId}`);
+    return response.json();
+}
+
+export async function getVaisseauxByRole(rolesIds) {
+    const response = await fetch(`${ENDPOINT}/vaisseaux`);
+    const vaisseaux = await response.json();
+    return vaisseaux.filter(vaisseau => vaisseau.rolesIds.includes(parseInt(rolesIds)));
+}
+
 export let NUMBER_OF_SHIPS = null;
 export async function getNumberOfShips() {
     if (NUMBER_OF_SHIPS) return NUMBER_OF_SHIPS;
