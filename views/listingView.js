@@ -20,6 +20,11 @@ class ListingView extends GenericView {
 
     get renderedShips() {
         let selectedPage = parseInt(getHashParam('page')) || 1;
+
+        if (selectedPage > Math.ceil(this.ships.length / SHIPS_PER_PAGE)) {
+            selectedPage = Math.ceil(this.ships.length / SHIPS_PER_PAGE);
+        }
+
         return this.ships.slice((selectedPage - 1) * SHIPS_PER_PAGE, selectedPage * SHIPS_PER_PAGE);
     }
 

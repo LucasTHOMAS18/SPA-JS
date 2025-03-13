@@ -1,7 +1,8 @@
 import { getFabricant, getRole, getVaisseau } from '../lib/provider.js';
-import { getHashAndParams } from '../lib/utils.js';
+import { getHashAndParams, removeHashParam } from '../lib/utils.js';
 import { isFavorited, toggleFavorite } from '../services/favorisService.js';
 import { GenericView } from './genericView.js';
+import { listingView } from './listingView.js';
 
 class DetailView extends GenericView {
     async render(id) {
@@ -34,12 +35,15 @@ class DetailView extends GenericView {
                 if (getHashAndParams().hash === 'favorites') {
                     this.hide();
                     document.getElementById(vaisseau.id).remove();
+                    listingView.ships.splice(listingView.ships.findIndex(ship => ship.id === vaisseau.id), 1);
+                    listingView.render();
                 }
             }
         });
     }
 
     async hide() {
+        removeHashParam('detail');
         document.getElementById('details').innerHTML = '';
     }
 }
