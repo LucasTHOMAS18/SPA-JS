@@ -8,8 +8,10 @@ class DetailView extends GenericView {
     async render(id) {
         const vaisseau = await getVaisseau(id);
         const fabricant = (await getFabricant(vaisseau.fabricantId)).nom;
+        
         const roles = await Promise.all(vaisseau.rolesIds.map(async (roleId) => {
-            return " " + (await getRole(roleId)).nom;
+            const role = await getRole(roleId);
+            return `<span class="clickable-role" onclick="location.hash='search?roleId=${roleId}'">${role.nom}</span>`;
         }));
 
         document.getElementById("details").innerHTML =
