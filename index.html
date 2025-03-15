@@ -23,9 +23,7 @@
 
         <div class="search-bar">
             <input placeholder="Rechercher par nom" type="text" onkeydown="if(event.key === 'Enter') location.hash = `search?query=${encodeURIComponent(this.value)}`;" id="search-field">
-            <button type="button" onclick="location.hash = `search?query=${document.getElementById('search-field').value}`;">
-                <span class='material-symbols-rounded'>search</span>
-            </button>
+            <span class='material-symbols-rounded' onclick="location.hash = `search?query=${document.getElementById('search-field').value}`;">search</span>
         </div>
     </header>
 

@@ -17,8 +17,8 @@ class DetailView extends GenericView {
                 <span onclick="removeHashParam('detail');" class='close-button material-symbols-rounded'>close</span>
                 <img src="${vaisseau.image}">
                 <section>
-                    <h1>${vaisseau.nom}</h1>
-                    <span id='favorite-button' class='material-symbols-rounded'>star</span>
+                    <h1>${vaisseau.nom} <span id='favorite-button' class='material-symbols-rounded'>star</span></h1>
+                    
                     <p><strong>Fabricant:</strong> ${fabricant}</p>
                     <p><strong>Roles:</strong> ${roles}</p>
                 </section>

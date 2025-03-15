@@ -84,7 +84,10 @@ class ListingView extends GenericView {
 
         this.app.innerHTML = `<h1>${this.title}</h1>` + displayedShips.map(p =>
             `<div id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">
-                <img src="${p.image}" alt="${p.nom}">
+                
+                <div class='image-container'>
+                    <img src="${p.image}" alt="${p.nom}">
+                </div>
                 <h2>${p.nom}</h2>
             </div>`
         ).join('');

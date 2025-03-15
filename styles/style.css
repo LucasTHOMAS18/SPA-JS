@@ -67,6 +67,9 @@ main > div {
     font-size: 30px;
     margin-top: 0px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #details img {
@@ -90,12 +93,25 @@ main > div {
     outline: 2px solid #6fb2c6;
 }
 
-.horizontal-card img {
-    border-radius: 10px 0px 0px 10px;
+.horizontal-card:hover img {
+    transform: scale(1.15);
+}
+
+.horizontal-card .image-container {
     height: 80px;
     width: 150px;
-    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px 0px 0px 10px;
     margin-right: 10px;
+}
+
+.horizontal-card img {
+    height: 80px;
+    width: 150px;
+    transition: 0.3s;
+    overflow: hidden;
+    border-radius: 10px 0px 0px 10px;
+    object-fit: cover;
 }
 
 .close-button {
@@ -118,30 +134,25 @@ main > div {
     align-items: center;
     margin-right: 10px;
     gap: 5px;
+    background-color: #0a1d29;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+*:focus {
+    outline: none;
 }
 
 .search-bar input {
-    border-radius: 10px 5px 5px 10px;
-    padding: 10px;
     border: none;
     height: calc(44px - 20px);
-
+    background-color: transparent;
+    color: white;   
 }
 
-.search-bar button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-color: #58b4f6;
-    transition: .3s;
-    border: none;
-    border-radius: 5px 10px 10px 5px;
+.search-bar span {
     cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: #95c7f4;
+    color: #ADD3EB;
 }
 
 footer {
