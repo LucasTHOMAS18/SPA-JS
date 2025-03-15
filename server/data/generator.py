@@ -47,6 +47,7 @@ def get_ships(limit=500):
                 "image": get_thumbnail(ship["title"]),
                 "roles": role_refs,
                 "fabricantId": manufacturer_ids[manufacturer],
+                "score": 0,
             })
         except:
             pass
@@ -69,4 +70,4 @@ def get_roles(title):
     return list(result["query"]["results"].values())[0]["printouts"]["Role"]
 
 if __name__ == "__main__":
-    json.dump(get_ships(), open("data/vaisseaux.json", "w"), indent=4)
+    json.dump(get_ships(), open("server/data/vaisseaux.json", "w"), indent=4)
