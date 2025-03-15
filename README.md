@@ -1,6 +1,6 @@
 ## Installation :
 ``` bash
-npm install -g json-server http-server
+npm install -g json-server@0.17.0 http-server
 ```
 
 ## Lancement de l'application :
