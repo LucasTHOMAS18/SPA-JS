@@ -60,7 +60,7 @@ class ListingView extends GenericView {
                 break;
 
             case 'favorites':
-                this.title = "Liste des favoris";
+                this.title = "Liste des favoris"; 
                 this.ships = await getFavorites();
                 break;
 

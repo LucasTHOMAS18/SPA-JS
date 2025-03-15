@@ -66,7 +66,7 @@ main > div {
 #details section h1 {
     font-size: 30px;
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -74,6 +74,44 @@ main > div {
 
 #details img {
     border-radius: 10px 20px 0px 0px;
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#favorite-button {
+    cursor: pointer;
+    background-color: #0f2c3e;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .3s;
+    transition-timing-function: ease-in;
+    font-size: 24px;
+}
+
+#favorite-button.filled {
+    background-color: #58b4f6;
+}
+
+.vote-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #0f2c3e;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#like, #dislike {
+    cursor: pointer;
+}
+
+.vote-section p {
+    margin: 0px;
 }
 
 .horizontal-card {
@@ -121,10 +159,6 @@ main > div {
     background-color: #0f2c3e;
     padding: 5px;
     border-radius: 0px 0px 0px 10px;
-    cursor: pointer;
-}
-
-#favorite-button {
     cursor: pointer;
 }
 
@@ -202,6 +236,7 @@ footer .selected {
     flex-direction: column;
     opacity: 0;
     animation: fadeIn 3s forwards;
+    animation-timing-function: linear;
 }
 
 #not-found h1 {

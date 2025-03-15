@@ -13,9 +13,9 @@ def get_ships(limit=500):
         "roles": []
     }
     
-    manufacturer_id = 0
+    manufacturer_id = 1
     manufacturer_ids = {}
-    role_id = 0
+    role_id = 1
     role_ids = {}
     
     for ship_id, ship in enumerate(ships):
@@ -42,7 +42,7 @@ def get_ships(limit=500):
                 role_refs.append(role_ids[role])
 
             result["vaisseaux"].append({
-                "id": ship_id,
+                "id": ship_id + 1,
                 "nom": ship["title"],
                 "image": get_thumbnail(ship["title"]),
                 "roles": role_refs,
