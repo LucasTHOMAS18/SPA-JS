@@ -1,6 +1,7 @@
 import { getFabricant, getRole, getVaisseau } from '../lib/provider.js';
 import { getHashAndParams, removeHashParam } from '../lib/utils.js';
 import { isFavorited, toggleFavorite } from '../services/favorisService.js';
+import { dislike, isDisliked, isLiked, like } from '../services/voteService.js';
 import { GenericView } from './genericView.js';
 import { listingView } from './listingView.js';
 
@@ -48,6 +49,36 @@ class DetailView extends GenericView {
                     listingView.ships.splice(listingView.ships.findIndex(ship => ship.id === vaisseau.id), 1);
                     listingView.render();
                 }
+            }
+        });
+
+        if (await isLiked(vaisseau.id)) document.getElementById('like').classList.add('filled');
+        if (await isDisliked(vaisseau.id)) document.getElementById('dislike').classList.add('filled');
+
+        document.getElementById('like').addEventListener('click', async () => {
+            const response = await like(vaisseau.id);
+            if (response) {
+                document.getElementById('dislike').classList.remove('filled');
+                document.getElementById('like').classList.remove('filled');
+
+                if (await isLiked(vaisseau.id)) document.getElementById('like').classList.add('filled');
+                if (await isDisliked(vaisseau.id)) document.getElementById('dislike').classList.add('filled');
+                
+                document.getElementById('score').innerText = response.currentScore;
+            }
+        });
+        
+        document.getElementById('dislike').addEventListener('click', async () => {
+            const response = await dislike(vaisseau.id);
+            if (response) {
+                
+                document.getElementById('dislike').classList.remove('filled');
+                document.getElementById('like').classList.remove('filled');
+
+                if (await isLiked(vaisseau.id)) document.getElementById('like').classList.add('filled');
+                if (await isDisliked(vaisseau.id)) document.getElementById('dislike').classList.add('filled');
+
+                document.getElementById('score').innerText = response.currentScore;
             }
         });
     }

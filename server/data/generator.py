@@ -10,7 +10,8 @@ def get_ships(limit=500):
     result = {
         "vaisseaux": [],
         "fabricants": [],
-        "roles": []
+        "roles": [],
+        "votes": [],
     }
     
     manufacturer_id = 1

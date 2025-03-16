@@ -1,63 +1,66 @@
 module.exports = (req, res, next) => {
-    if (req.method === 'POST' && (req.path.startsWith('/like/') || req.path.startsWith('/dislike/'))) {
-        const db = req.app.db;
-        const ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress).split(',')[0].trim();
-        const vaisseauId = parseInt(req.query.id, 10);
-        const voteType = req.path.startsWith('/like/') ? 'like' : 'dislike';
-        const value = voteType === 'like' ? 1 : -1;
+  const db = req.app.db;
+  const ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress).split(',')[0].trim();
+  
+  // Route: Vérifier l'état du vote
+  if (req.method === 'GET' && req.path.startsWith('/vote-status')) {
+      const vaisseauId = parseInt(req.query.id, 10);
+      const existingVote = db.get('votes').find({ ip, vaisseauId }).value();
+      
+      return res.json({
+          hasVoted: !!existingVote,
+          voteType: existingVote?.value === 1 ? 'like' : existingVote?.value === -1 ? 'dislike' : null,
+          score: db.get('vaisseaux').find({ id: vaisseauId }).value()?.score || 0
+      });
+  }
 
-        const existingVote = db.get('votes').find({ ip, vaisseauId }).value();
+  // Routes: Gestion des votes
+  if (req.method === 'POST' && (req.path.startsWith('/like') || req.path.startsWith('/dislike'))) {
+      const vaisseauId = parseInt(req.query.id, 10);
+      const isLike = req.path.startsWith('/like');
+      const value = isLike ? 1 : -1;
 
-        // Change existing vote
-        if (existingVote) {
-            const oldValue = existingVote.value;
-            
-            // Remove vote
-            db.get('votes')
-              .remove({ ip, vaisseauId })
-              .write();
+      const existingVote = db.get('votes').find({ ip, vaisseauId }).value();
+      const vaisseau = db.get('vaisseaux').find({ id: vaisseauId });
 
-            // Update score
-            db.get('vaisseaux')
-              .find({ id: vaisseauId })
-              .update('score', s => s - oldValue)
-              .write();
+      if (!vaisseau.value()) {
+          return res.status(404).json({ error: 'Vaisseau non trouvé' });
+      }
 
-            // Update score if value changed from a like to a dislike or vice versa
-            if (oldValue !== value) {
-                db.get('votes')
-                  .push({ ip, vaisseauId, value })
-                  .write();
+      let status = '';
+      let scoreChange = 0;
 
-                db.get('vaisseaux')
-                  .find({ id: vaisseauId })
-                  .update('score', s => s + value)
-                  .write();
-            }
+      if (existingVote) {
+          // Annuler ou modifier le vote existant
+          const oldValue = existingVote.value;
+          db.get('votes').remove({ ip, vaisseauId }).write();
+          vaisseau.update('score', s => s - oldValue).write();
+          scoreChange -= oldValue;
 
-            return res.json({
-                status: oldValue === value ? 'removed' : 'changed',
-                score: db.get('vaisseaux').find({ id: vaisseauId }).value().score,
-                current: oldValue === value ? null : value
-            });
-        }
+          if (oldValue !== value) {
+              // Changer de type de vote
+              db.get('votes').push({ ip, vaisseauId, value }).write();
+              vaisseau.update('score', s => s + value).write();
+              scoreChange += value;
+              status = 'changed';
+          } else {
+              status = 'removed';
+          }
+      } else {
+          // Nouveau vote
+          db.get('votes').push({ ip, vaisseauId, value }).write();
+          vaisseau.update('score', s => s + value).write();
+          scoreChange = value;
+          status = 'added';
+      }
 
-        // Add new vote
-        db.get('votes')
-          .push({ ip, vaisseauId, value })
-          .write();
+      return res.json({
+          status,
+          currentScore: vaisseau.value().score,
+          scoreChange,
+          currentVote: status === 'removed' ? null : (value === 1 ? 'like' : 'dislike')
+      });
+  }
 
-        db.get('vaisseaux')
-          .find({ id: vaisseauId })
-          .update('score', s => s + value)
-          .write();
-
-        return res.json({
-            status: 'added',
-            score: db.get('vaisseaux').find({ id: vaisseauId }).value().score,
-            current: value
-        });
-    }
-
-    next();
+  next();
 };
