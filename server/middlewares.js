@@ -1,44 +1,63 @@
 module.exports = (req, res, next) => {
-    const votes = req.app.votes || {};
-    const db = req.app.db;
+    if (req.method === 'POST' && (req.path.startsWith('/like/') || req.path.startsWith('/dislike/'))) {
+        const db = req.app.db;
+        const ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress).split(',')[0].trim();
+        const vaisseauId = parseInt(req.query.id, 10);
+        const voteType = req.path.startsWith('/like/') ? 'like' : 'dislike';
+        const value = voteType === 'like' ? 1 : -1;
 
-    const vaisseaux = db.get('vaisseaux');
-    console.log(vaisseaux)
+        const existingVote = db.get('votes').find({ ip, vaisseauId }).value();
 
-    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-    const id = parseInt(req.params.id, 10);
-    if (!votes[ip]) votes[ip] = {};
+        // Change existing vote
+        if (existingVote) {
+            const oldValue = existingVote.value;
+            
+            // Remove vote
+            db.get('votes')
+              .remove({ ip, vaisseauId })
+              .write();
 
-    // Like
-    if (req.method === 'POST' && req.path.startsWith('/like/')) {
-        if (votes[ip][id]) {
-            return res.status(400).json({ error: 'Vous avez déjà voté pour ce vaisseau !' });
+            // Update score
+            db.get('vaisseaux')
+              .find({ id: vaisseauId })
+              .update('score', s => s - oldValue)
+              .write();
+
+            // Update score if value changed from a like to a dislike or vice versa
+            if (oldValue !== value) {
+                db.get('votes')
+                  .push({ ip, vaisseauId, value })
+                  .write();
+
+                db.get('vaisseaux')
+                  .find({ id: vaisseauId })
+                  .update('score', s => s + value)
+                  .write();
+            }
+
+            return res.json({
+                status: oldValue === value ? 'removed' : 'changed',
+                score: db.get('vaisseaux').find({ id: vaisseauId }).value().score,
+                current: oldValue === value ? null : value
+            });
         }
-        const vaisseau = vaisseaux.find({ id }).value();
-        if (!vaisseau) return res.status(404).json({ error: 'Vaisseau non trouvé' });
 
-        vaisseau.score += 1;
-        votes[ip][id] = 'like';
-        db.write(); 
+        // Add new vote
+        db.get('votes')
+          .push({ ip, vaisseauId, value })
+          .write();
 
-        return res.json({ success: true, score: vaisseau.score });
+        db.get('vaisseaux')
+          .find({ id: vaisseauId })
+          .update('score', s => s + value)
+          .write();
+
+        return res.json({
+            status: 'added',
+            score: db.get('vaisseaux').find({ id: vaisseauId }).value().score,
+            current: value
+        });
     }
 
-    // Dislike
-    if (req.method === 'POST' && req.path.startsWith('/dislike/')) {
-        if (votes[ip][id]) {
-            return res.status(400).json({ error: 'Vous avez déjà voté pour ce vaisseau !' });
-        }
-        const vaisseau = vaisseaux.find({ id }).value();
-        if (!vaisseau) return res.status(404).json({ error: 'Vaisseau non trouvé' });
-
-        vaisseau.score -= 1;
-        votes[ip][id] = 'dislike';
-        db.write();
-
-        return res.json({ success: true, score: vaisseau.score });
-    }
-
-    req.app.set('votes', votes);
     next();
 };

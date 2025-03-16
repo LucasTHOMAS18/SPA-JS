@@ -24,7 +24,7 @@ class DetailView extends GenericView {
 
                         <div class='vote-section'>
                             <span id='like' class='material-symbols-rounded'>thumb_up</span>
-                            <p id='score'>0</p>
+                            <p id='score'>${vaisseau.score}</p>
                             <span id='dislike' class='material-symbols-rounded'>thumb_down</span>
                         </div>
                     </div>
