@@ -1,80 +1,26 @@
-import { SHIPS_PER_PAGE } from './config.js';
-import { getFabricant, getRole, getVaisseaux, getVaisseauxByFabricant, getVaisseauxByRole, searchVaisseaux } from './provider.js';
-import { DetailView } from './views/detailView.js';
-import { ListingView } from './views/listingView.js';
-
-// URL management
-export function getHashAndParams() {
-    let [hashPart, paramString] = window.location.hash.split('?');
-    let hash = hashPart.replace('#', '');
-    let params = new URLSearchParams(paramString || '');
-    return { hash, params };
-}
-
-export function setHashParam(key, value) {
-    let { hash, params } = getHashAndParams();
-    params.set(key, value);
-    
-    let newHash = hash + (params.toString() ? `?${params.toString()}` : '');
-    
-    window.location.hash = newHash;
-}
-
-export function getHashParam(key) {
-    let { params } = getHashAndParams();
-    return params.get(key);
-}
+import { getHashAndParams } from "./lib/utils.js";
+import { notFoundView } from "./views/404View.js";
+import { listingView } from "./views/listingView.js";
 
 // Routing
-export const listingView = new ListingView(SHIPS_PER_PAGE);
-export const detailView = new DetailView();
+const routes = {
+    "": listingView,
+    "listing": listingView,
+    "search": listingView,
+    "favorites": listingView,
+    "404": notFoundView,
+}
 
-async function handleRouting() {
-    let {hash, params} = getHashAndParams();
+function handleRouting() {
+    let { hash, params } = getHashAndParams();
+    let route = hash.split('/')[0];
 
-    let query = params.get('query');
-    let detailId = params.get('detail');
-    let fabricantId = params.get('fabricantId');
-    let roleId = params.get('roleId');
-    
-    switch (hash) {
-        case 'listing':
-            await listingView.render("Liste des vaisseaux", await getVaisseaux());
-            break;
-
-        case 'favorites':
-            await listingView.render("Liste des favoris", await getFavorites());
-            break;
-
-        case 'search':
-            if (query) await listingView.render("Resultats de la recherche", await searchVaisseaux(query));
-            
-            if (fabricantId) {
-                const fabricant = await getFabricant(fabricantId);
-                await listingView.render(`Vaisseaux de ${fabricant.nom}`, await getVaisseauxByFabricant(fabricantId));
-            }
-
-            if (roleId) {
-                const role = await getRole(roleId);
-                await listingView.render(`Vaisseaux avec rôle: ${role.nom}`, await getVaisseauxByRole(roleId));
-            }
-
-            break;
-
-        default:
-            location.hash = 'listing';
-            return;
-    }
-
-    if (detailId) {
-        let id = parseInt(detailId);
-        if (!isNaN(id)) detailView.render(id);
+    if (routes.hasOwnProperty(route)) {
+        routes[route].handleRouting(hash, params);
+    } else {
+        routes["404"].handleRouting();
     }
 }
 
-window.addEventListener('DOMContentLoaded', handleRouting);
 window.addEventListener('hashchange', handleRouting);
-
-window.loadDetail = detailView.render;
-window.hideDetails = detailView.hide;
-window.setHashParam = setHashParam;
+window.addEventListener('load', handleRouting);

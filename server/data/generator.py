@@ -10,12 +10,13 @@ def get_ships(limit=500):
     result = {
         "vaisseaux": [],
         "fabricants": [],
-        "roles": []
+        "roles": [],
+        "votes": [],
     }
     
-    manufacturer_id = 0
+    manufacturer_id = 1
     manufacturer_ids = {}
-    role_id = 0
+    role_id = 1
     role_ids = {}
     
     for ship_id, ship in enumerate(ships):
@@ -42,11 +43,12 @@ def get_ships(limit=500):
                 role_refs.append(role_ids[role])
 
             result["vaisseaux"].append({
-                "id": ship_id,
+                "id": ship_id + 1,
                 "nom": ship["title"],
                 "image": get_thumbnail(ship["title"]),
                 "roles": role_refs,
                 "fabricantId": manufacturer_ids[manufacturer],
+                "score": 0,
             })
         except:
             pass
@@ -69,4 +71,4 @@ def get_roles(title):
     return list(result["query"]["results"].values())[0]["printouts"]["Role"]
 
 if __name__ == "__main__":
-    json.dump(get_ships(), open("data/vaisseaux.json", "w"), indent=4)
+    json.dump(get_ships(), open("server/data/vaisseaux.json", "w"), indent=4)
