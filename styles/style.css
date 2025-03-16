@@ -182,3 +182,24 @@ footer button:last-child {
 footer .selected {
     background-color: #58b4f6;
 }
+
+.clickable-fabricant {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #58b4f6;
+}
+
+.clickable-fabricant:hover {
+    color: #95c7f4;
+}
+
+.clickable-role {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #58b4f6;
+    margin-right: 5px;
+}
+
+.clickable-role:hover {
+    color: #95c7f4;
+}
