@@ -36,7 +36,7 @@ class ManufacterListingView extends GenericView {
         let displayedmanufacters = this.renderedmanufacters;
 
         this.app.innerHTML = `<h1>${this.title}</h1>` + displayedmanufacters.map(p =>
-            `<div id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">
+            `<div id=${p.id} class="horizontal-card" onclick="location.hash='manufacturer'; setHashParam('fabricantId', ${p.id}); window.scrollTo({top: 0, behavior: 'smooth'});">
                 
                 <div class='image-container'>
                     <img class="logo" src="${p.logo}" alt="${p.nom}">
