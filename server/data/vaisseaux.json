@@ -351,7 +351,7 @@
         20
       ],
       "fabricantId": 2,
-      "score": 0
+      "score": -1
     },
     {
       "id": 40,
@@ -2728,5 +2728,11 @@
       "nom": "Bounty Hunter"
     }
   ],
-  "votes": []
+  "votes": [
+    {
+      "ip": "127.0.0.1",
+      "vaisseauId": 39,
+      "value": -1
+    }
+  ]
 }

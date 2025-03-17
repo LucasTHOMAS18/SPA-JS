@@ -30,7 +30,7 @@ class DetailView extends GenericView {
                         </div>
                     </div>
                     
-                    <p><strong>Fabricant:</strong> ${fabricant}</p>
+                    <p><strong>Fabricant:</strong> <span class="clickable-fabricant" onclick="location.hash='manufacturer?fabricantId=${vaisseau.fabricantId}'">${fabricant}</span></p>
                     <p><strong>Roles:</strong> ${roles}</p>
                 </section>
             </div>`;
