@@ -143,6 +143,11 @@ main > div {
     margin-right: 10px;
 }
 
+.logo {
+    object-fit: fill !important ;
+    background-color: whitesmoke;
+}
+
 .horizontal-card img {
     height: 80px;
     width: 150px;
