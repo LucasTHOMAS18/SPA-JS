@@ -1,5 +1,5 @@
 import { SHIPS_PER_PAGE } from '../lib/config.js';
-import { getVaisseaux, searchVaisseaux } from '../lib/provider.js';
+import { getFabricant, getRole, getVaisseaux, getVaisseauxByFabricant, getVaisseauxByRole, searchVaisseaux } from '../lib/provider.js';
 import { getHashParam } from '../lib/utils.js';
 import { getFavorites } from '../services/favorisService.js';
 import { detailView } from './detailView.js';
@@ -9,8 +9,7 @@ class ListingView extends GenericView {
     constructor() {
         super();
 
-        this.previousHash = '';
-        this.previousParams = new URLSearchParams();
+        GenericView.previousParams = new URLSearchParams();
 
         this.title = '';
         this.ships = [];
@@ -32,6 +31,8 @@ class ListingView extends GenericView {
         const query = params.get('query');
         const page = params.get('page');
         const detail = params.get('detail');
+        const fabricantId = params.get('fabricantId');
+        const roleId = params.get('roleId');
 
         // Handle detail view
         if (detail) {
@@ -41,9 +42,12 @@ class ListingView extends GenericView {
         }
 
         // Handle page index change
-        if (hash != "" && hash === this.previousHash && query === this.previousParams.get('query')) {
-            if (page !== this.previousParams.get('page')) { // Prevent re-rendering if detail view is openned
-                this.previousParams = params;
+        if (hash != "" && hash === GenericView.previousHash && 
+            query === GenericView.previousParams.get('query') &&
+            fabricantId === GenericView.previousParams.get('fabricantId') &&
+            roleId === GenericView.previousParams.get('roleId')) {
+            if (page !== GenericView.previousParams.get('page')) { // Prevent re-rendering if detail view is openned
+                GenericView.previousParams = params;
                 this.render();
                 return;
             } else {
@@ -63,7 +67,27 @@ class ListingView extends GenericView {
                 this.title = "Liste des favoris"; 
                 this.ships = await getFavorites();
                 break;
+                
+            case 'manufacturer':
+                if (fabricantId) {
+                    const fabricant = await getFabricant(fabricantId);
+                    this.title = `Vaisseaux de ${fabricant.nom}`;
+                    this.ships = await getVaisseauxByFabricant(fabricantId);
+                } else {
+                    this.title = "Liste des vaisseaux";
+                    this.ships = await getVaisseaux();
+                }
+                break;
+                
+            case 'role':
+                if (roleId) {
+                    const role = await getRole(roleId);
+                    this.title = `Vaisseaux avec rôle: ${role.nom}`;
+                    this.ships = await getVaisseauxByRole(roleId); // <-- Doit appeler la fonction corrigée
+                }
+                break;
 
+                
             default:
                 this.title = "Liste des vaisseaux";
                 this.ships = await getVaisseaux();
@@ -71,8 +95,8 @@ class ListingView extends GenericView {
         }
 
         this.render();
-        this.previousHash = hash;
-        this.previousParams = params
+        GenericView.previousHash = hash;
+        GenericView.previousParams = params
     }
 
     async render() {

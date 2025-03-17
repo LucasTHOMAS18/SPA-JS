@@ -12,7 +12,7 @@ class DetailView extends GenericView {
         
         const roles = await Promise.all(vaisseau.rolesIds.map(async (roleId) => {
             const role = await getRole(roleId);
-            return `<span class="clickable-role" onclick="location.hash='search?roleId=${roleId}'">${role.nom}</span>`;
+            return `<span class="clickable-role" onclick="location.hash='role?roleId=${roleId}'">${role.nom}</span>`;
         }));
 
         document.getElementById("details").innerHTML =
@@ -30,7 +30,7 @@ class DetailView extends GenericView {
                         </div>
                     </div>
                     
-                    <p><strong>Fabricant:</strong> ${fabricant}</p>
+                    <p><strong>Fabricant:</strong> <span class="clickable-fabricant" onclick="location.hash='manufacturer?fabricantId=${vaisseau.fabricantId}'; window.scrollTo({top: 0, behavior: 'smooth'});">${fabricant}</span></p>
                     <p><strong>Roles:</strong> ${roles}</p>
                 </section>
             </div>`;

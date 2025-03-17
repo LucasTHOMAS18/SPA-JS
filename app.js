@@ -1,6 +1,8 @@
+import { getVaisseauxByFabricant, getVaisseauxByRole, getFabricant, getRole } from './lib/provider.js';
 import { getHashAndParams } from "./lib/utils.js";
 import { notFoundView } from "./views/404View.js";
 import { listingView } from "./views/listingView.js";
+import { manufacterListingView } from "./views/manufactersListingView.js";
 
 // Routing
 const routes = {
@@ -8,6 +10,9 @@ const routes = {
     "listing": listingView,
     "search": listingView,
     "favorites": listingView,
+    "manufacturer": listingView, 
+    "role": listingView,         
+    "manufacters": manufacterListingView,
     "404": notFoundView,
 }
 

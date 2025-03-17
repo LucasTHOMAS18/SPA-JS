@@ -143,6 +143,11 @@ main > div {
     margin-right: 10px;
 }
 
+.logo {
+    object-fit: fill !important ;
+    background-color: whitesmoke;
+}
+
 .horizontal-card img {
     height: 80px;
     width: 150px;
@@ -263,4 +268,25 @@ footer .selected {
     color: white;
     cursor: pointer;
     text-align: center;
+}
+
+.clickable-fabricant {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #58b4f6;
+}
+
+.clickable-fabricant:hover {
+    color: #95c7f4;
+}
+
+.clickable-role {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #58b4f6;
+    margin-right: 5px;
+}
+
+.clickable-role:hover {
+    color: #95c7f4;
 }
