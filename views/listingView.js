@@ -83,13 +83,11 @@ class ListingView extends GenericView {
                 if (roleId) {
                     const role = await getRole(roleId);
                     this.title = `Vaisseaux avec rôle: ${role.nom}`;
-                    this.ships = await getVaisseauxByRole(roleId);
-                } else {
-                    this.title = "Liste des vaisseaux";
-                    this.ships = await getVaisseaux();
+                    this.ships = await getVaisseauxByRole(roleId); // <-- Doit appeler la fonction corrigée
                 }
                 break;
 
+                
             default:
                 this.title = "Liste des vaisseaux";
                 this.ships = await getVaisseaux();
