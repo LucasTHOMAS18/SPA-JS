@@ -1,5 +1,5 @@
 import { SHIPS_PER_PAGE } from '../lib/config.js';
-import { getVaisseaux, searchVaisseaux, getVaisseauxByFabricant, getVaisseauxByRole, getFabricant, getRole } from '../lib/provider.js';
+import { getFabricant, getRole, getVaisseaux, getVaisseauxByFabricant, getVaisseauxByRole, searchVaisseaux } from '../lib/provider.js';
 import { getHashParam } from '../lib/utils.js';
 import { getFavorites } from '../services/favorisService.js';
 import { detailView } from './detailView.js';
@@ -9,8 +9,7 @@ class ListingView extends GenericView {
     constructor() {
         super();
 
-        this.previousHash = '';
-        this.previousParams = new URLSearchParams();
+        GenericView.previousParams = new URLSearchParams();
 
         this.title = '';
         this.ships = [];
@@ -43,12 +42,12 @@ class ListingView extends GenericView {
         }
 
         // Handle page index change
-        if (hash != "" && hash === this.previousHash && 
-            query === this.previousParams.get('query') &&
-            fabricantId === this.previousParams.get('fabricantId') &&
-            roleId === this.previousParams.get('roleId')) {
-            if (page !== this.previousParams.get('page')) { // Prevent re-rendering if detail view is openned
-                this.previousParams = params;
+        if (hash != "" && hash === GenericView.previousHash && 
+            query === GenericView.previousParams.get('query') &&
+            fabricantId === GenericView.previousParams.get('fabricantId') &&
+            roleId === GenericView.previousParams.get('roleId')) {
+            if (page !== GenericView.previousParams.get('page')) { // Prevent re-rendering if detail view is openned
+                GenericView.previousParams = params;
                 this.render();
                 return;
             } else {
@@ -98,8 +97,8 @@ class ListingView extends GenericView {
         }
 
         this.render();
-        this.previousHash = hash;
-        this.previousParams = params
+        GenericView.previousHash = hash;
+        GenericView.previousParams = params
     }
 
     async render() {

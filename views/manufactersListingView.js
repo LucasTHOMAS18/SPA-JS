@@ -24,6 +24,7 @@ class ManufacterListingView extends GenericView {
     }
 
     async handleRouting(hash, params) {
+        super.handleRouting(hash, params);
         this.manufacters = await getFabricants();
         this.render();
     }
