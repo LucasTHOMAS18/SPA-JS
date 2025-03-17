@@ -10,13 +10,12 @@ def get_ships(limit=500):
     result = {
         "vaisseaux": [],
         "fabricants": [],
-        "roles": [],
-        "votes": [],
+        "roles": []
     }
     
-    manufacturer_id = 1
+    manufacturer_id = 0
     manufacturer_ids = {}
-    role_id = 1
+    role_id = 0
     role_ids = {}
     
     for ship_id, ship in enumerate(ships):
@@ -26,6 +25,7 @@ def get_ships(limit=500):
                 result["fabricants"].append({
                     "id": manufacturer_id,
                     "nom": manufacturer,
+                    "logo": get_thumbnail(manufacturer),
                 })
                 manufacturer_ids[manufacturer] = manufacturer_id
                 manufacturer_id += 1
@@ -43,12 +43,11 @@ def get_ships(limit=500):
                 role_refs.append(role_ids[role])
 
             result["vaisseaux"].append({
-                "id": ship_id + 1,
+                "id": ship_id,
                 "nom": ship["title"],
                 "image": get_thumbnail(ship["title"]),
-                "roles": role_refs,
+                "rolesIds": role_refs,
                 "fabricantId": manufacturer_ids[manufacturer],
-                "score": 0,
             })
         except:
             pass
