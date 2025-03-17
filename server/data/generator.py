@@ -10,7 +10,8 @@ def get_ships(limit=500):
     result = {
         "vaisseaux": [],
         "fabricants": [],
-        "roles": []
+        "roles": [],
+        "votes": [],
     }
     
     manufacturer_id = 0
@@ -48,6 +49,7 @@ def get_ships(limit=500):
                 "image": get_thumbnail(ship["title"]),
                 "rolesIds": role_refs,
                 "fabricantId": manufacturer_ids[manufacturer],
+                "score": 0,
             })
         except:
             pass
