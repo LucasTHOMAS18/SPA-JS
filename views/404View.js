@@ -5,6 +5,11 @@ class NotFoundView extends GenericView {
     super();
   }
 
+  async handleRouting(hash, params) {
+    super.handleRouting(hash, params)
+    this.render()
+  }
+
   async render() {
     this.footer.innerHTML = '';
     this.details.innerHTML = '';

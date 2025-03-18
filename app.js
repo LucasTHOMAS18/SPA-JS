@@ -1,4 +1,3 @@
-import { getVaisseauxByFabricant, getVaisseauxByRole, getFabricant, getRole } from './lib/provider.js';
 import { getHashAndParams } from "./lib/utils.js";
 import { notFoundView } from "./views/404View.js";
 import { listingView } from "./views/listingView.js";
