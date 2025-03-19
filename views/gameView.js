@@ -8,6 +8,15 @@ class GameView extends GenericView {
         this.currentShips = [];
     }
 
+    getBestScore() {
+        const bestScore = localStorage.getItem('bestScore');
+        return bestScore ? parseInt(bestScore) : 0;
+    }
+
+    setBestScore(score) {
+        localStorage.setItem('bestScore', score);
+    }
+
     async handleRouting() {
         this.render();
     }
@@ -72,6 +81,9 @@ class GameView extends GenericView {
         });
 
         this.app.appendChild(resultElement);
+        if (this.score > this.getBestScore()) {
+            this.setBestScore(this.score);
+        }
     }
 
     animatePrice(element, targetPrice) {
@@ -121,7 +133,10 @@ class GameView extends GenericView {
                     </div>
                 </div>
             </div>
-            <div class="score-container">Score: ${this.score}</div>
+            <div class="score-container">
+                <div>Score: ${this.score}</div>
+                <div>Meilleur score: ${this.getBestScore()}</div>
+            </div>
         `;
 
         document.querySelector('.higher').addEventListener('click', () => {
