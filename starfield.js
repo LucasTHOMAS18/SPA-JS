@@ -20,7 +20,7 @@
           y: Math.random() * canvas.height,
           radius: Math.random() * 1.5,
           alpha: Math.random(),
-          alphaChange: (Math.random() * 0.02) + 0.005
+          alphaChange: (Math.random() * 0.005) + 0.0025
         });
       }
     }
@@ -65,7 +65,7 @@
       for (let star of stars) {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
-        ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+        ctx.fillStyle = `rgba(88, 180, 246, ${star.alpha})`;
         ctx.fill();
         star.alpha += star.alphaChange;
         if (star.alpha <= 0 || star.alpha >= 1) {
@@ -78,7 +78,7 @@
       for (let s of shootingStars) {
         ctx.save();
         ctx.globalAlpha = s.opacity;
-        ctx.strokeStyle = 'rgba(255,255,255,0.8)';
+        ctx.strokeStyle = 'rgba(88, 180, 246,0.8)';
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(s.x, s.y);
