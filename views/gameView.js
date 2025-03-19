@@ -1,5 +1,5 @@
-import { GenericView } from './genericView.js';
 import { getVaisseaux } from '../lib/provider.js';
+import { GenericView } from './genericView.js';
 
 class GameView extends GenericView {
     constructor() {
@@ -42,26 +42,22 @@ class GameView extends GenericView {
         resultElement.className = `game-result ${isCorrect ? 'correct' : 'incorrect'}`;
         
         resultElement.innerHTML = `
-            <div class="popup-content">
-                <div class="popup-header ${isCorrect ? 'correct' : 'incorrect'}">
-                    <h2>${isCorrect ? 'Bien joué !' : 'Raté !'}</h2>
+            <div class="popup-header ${isCorrect ? 'correct' : 'incorrect'}">
+                <h2>${isCorrect ? 'Bien joué !' : 'Raté !'}</h2>
+            </div>
+            <div class="popup-body">
+                <div class="ship-info">
+                    <h3>${leftShip.nom}</h3>
+                    <p>${Number(leftShip.prix).toLocaleString()} €</p>
                 </div>
-                <div class="popup-body">
-                    <div class="ship-details">
-                        <div class="ship-info">
-                            <h3>${leftShip.nom}</h3>
-                            <p>${Number(leftShip.prix).toLocaleString()} €</p>
-                        </div>
-                        <div class="vs">VS</div>
-                        <div class="ship-info">
-                            <h3>${rightShip.nom}</h3>
-                            <div class="price-reveal"></div>
-                        </div>
-                    </div>
+                <div class="separator"></div>
+                <div class="ship-info">
+                    <h3>${rightShip.nom}</h3>
+                    <div class="price-reveal"></div>
                 </div>
-                <div class="popup-footer">
-                    <button class="guess-btn continue-btn">Continuer</button>
-                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="continue-btn">Continuer</button>
             </div>
         `;
         
@@ -110,18 +106,18 @@ class GameView extends GenericView {
             <h1>Devinez le prix</h1>
             <div class="game-container">
                 <div class="ship-card">
-                    <h2>${leftShip.nom}</h2>
                     <img src="${leftShip.image}">
+                    <h2>${leftShip.nom}</h2>
                     <p class="price">${Number(leftShip.prix).toLocaleString()} €</p>
                 </div>
 
                 <div class="ship-card mystery">
-                    <h2>${rightShip.nom}</h2>
                     <img src="${rightShip.image}">
+                    <h2>${rightShip.nom}</h2>
                     <p class="price">???</p>
                     <div class="guess-buttons">
-                        <button class="guess-btn higher">+ Cher</button>
-                        <button class="guess-btn lower">- Cher</button>
+                        <button class="guess-btn higher"><span class="material-symbols-rounded">trending_up</span>Plus cher</button>
+                        <button class="guess-btn lower"><span class="material-symbols-rounded">trending_down</span>Moins cher</button>
                     </div>
                 </div>
             </div>

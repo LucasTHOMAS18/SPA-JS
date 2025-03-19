@@ -35,17 +35,17 @@ header nav button:hover {
     background-color: #143a52;
 }
 
-main { 
+main {
     padding-top: 60px;
     display: flex;
 }
 
-main > div {
+main>div {
     flex-grow: 1;
     padding: 20px;
 }
 
-#details > div {
+#details>div {
     background-color: #143a52;
     border-radius: 10px;
     margin: 20px;
@@ -106,7 +106,8 @@ main > div {
     border-radius: 5px;
 }
 
-#like, #dislike {
+#like,
+#dislike {
     cursor: pointer;
 }
 
@@ -186,7 +187,7 @@ main > div {
     border: none;
     height: calc(44px - 20px);
     background-color: transparent;
-    color: white;   
+    color: white;
 }
 
 .search-bar span {
@@ -255,6 +256,7 @@ footer .selected {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -300,28 +302,106 @@ footer .selected {
 
 .ship-card {
     background: #143a52;
-    padding: 20px;
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    animation: cardEntrance 0.6s ease-out forwards;
+    padding-bottom: 11px;
 }
 
-.vs-container {
+/* Animation d'entrée des cartes */
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ship-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.game-result {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 5px 20px 5px 20px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 250px;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
-.vs-container h2 {
-    font-size: 40px;
+/* Bande du haut */
+.game-result::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.3) 0 10px,
+            transparent 10px 20px);
+}
+
+/* Bande du bas */
+.game-result::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.3) 0 10px,
+            transparent 10px 20px);
+}
+
+
+.game-result.correct {
+    background-color: #289A3D;
+    color: #165522;
+}
+
+.game-result.incorrect {
+    background-color: #9A2828;
+    color: #551616;
+}
+
+.price {
+    font-size: 24px;
     color: #58b4f6;
-    margin: 0;
+    font-weight: bold;
 }
 
-.buttons {
+.popup-header {
+    color: white;
+}
+
+/* Animation des boutons */
+.guess-buttons {
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -333,141 +413,30 @@ footer .selected {
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .guess-btn:hover {
     background: #58b4f6;
 }
 
-.guess-btn:active {
-    transform: translateY(1px);
-}
-
-.game-result {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #143a52;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid;
-    animation: resultPop 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    box-shadow: 0 0 30px rgba(88, 180, 246, 0.2);
-}
-
-.game-result.correct {
-    border-color: #4CAF50;
-}
-
-.game-result.incorrect {
-    border-color: #f44336;
-}
-
-@keyframes resultPop {
-    0% {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 0;
-    }
-    80% {
-        transform: translate(-50%, -50%) scale(1.1);
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-}
-
-.price {
-    font-size: 24px;
-    color: #58b4f6;
-    font-weight: bold;
-}
-
-.ship-card {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.ship-card img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-/* Animation d'entrée des cartes */
-@keyframes cardEntrance {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.ship-card {
-    animation: cardEntrance 0.6s ease-out forwards;
-}
-
-/* Amélioration du conteneur VS */
-.vs-container {
-    position: relative;
-    padding: 20px;
-}
-
-.vs-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(to bottom, #58b4f6 0%, transparent 100%);
-    animation: beam 2s infinite;
-}
-
-@keyframes beam {
-    0% { opacity: 0.3; }
-    50% { opacity: 1; }
-    100% { opacity: 0.3; }
-}
-
-/* Animation des boutons */
-.guess-btn {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.guess-btn::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s ease;
-}
-
-.guess-btn:hover::after {
-    transform: translate(-50%, -50%) scale(1);
-}
-
 /* Animation du score */
 @keyframes scoreBounce {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .score {
@@ -479,43 +448,9 @@ footer .selected {
     animation: scoreBounce 0.5s ease;
 }
 
-@media (max-width: 768px) {
-    .game-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .vs-container {
-        order: 1;
-        margin: 20px 0;
-    }
-    
-    .ship-card {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-}
-
-/* Effet holographique */
-.ship-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent 40%, rgba(88, 180, 246, 0.1) 50%, transparent 60%);
-}
-
-/* ============================= */
-/* AJOUT DES NOUVEAUX STYLES      */
-/* ============================= */
-
 .price-reveal {
     font-size: 24px;
     font-weight: bold;
-    color: #58b4f6;
     margin: 10px 0;
 }
 
@@ -523,10 +458,22 @@ footer .selected {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background: #0f2c3e;
     color: white;
     cursor: pointer;
+    border-radius: 2px 10px 2px 10px;
     transition: 0.3s;
+}
+
+.continue-btn:hover {
+    filter: brightness(1.2);
+}
+
+.correct .continue-btn {
+    background-color: #165522;
+}
+
+.incorrect .continue-btn {
+    background-color: #551616;
 }
 
 .score-container {
@@ -535,6 +482,30 @@ footer .selected {
     margin-top: 20px;
 }
 
+.popup-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ship-info {
+    width: 50%;
+    color: white;
+}
+
+.separator {
+    height: 120px;
+    width: 2px;
+}
+
+.correct .separator {
+    background-color: #165522;
+}
+
+.incorrect .separator {
+    background-color: #551616;
+}
 
 #starfield-canvas {
     position: fixed;
@@ -542,5 +513,6 @@ footer .selected {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2; 
-  }
+    z-index: -2;
+}
+
