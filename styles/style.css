@@ -291,3 +291,76 @@ footer .selected {
     color: #95c7f4;
 }
 
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.ship-card {
+    background: #143a52;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.vs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.vs-container h2 {
+    font-size: 40px;
+    color: #58b4f6;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.guess-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #0f2c3e;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.guess-btn:hover {
+    background: #58b4f6;
+}
+
+.game-result {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #143a52;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid;
+}
+
+.game-result.correct {
+    border-color: #4CAF50;
+}
+
+.game-result.incorrect {
+    border-color: #f44336;
+}
+
+.price {
+    font-size: 24px;
+    color: #58b4f6;
+    font-weight: bold;
+}
