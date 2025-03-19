@@ -126,6 +126,8 @@ main>div {
     cursor: pointer;
     transition: 0.3s;
     outline: 2px solid transparent;
+    transition: transform 0.3s ease;
+    animation: cardEntrance 0.6s ease-out forwards;
 }
 
 .horizontal-card:hover {
