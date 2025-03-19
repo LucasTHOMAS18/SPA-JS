@@ -296,7 +296,6 @@ footer .selected {
 .game-container {
     display: flex;
     justify-content: center;
-    gap: 50px;
     margin-top: 40px;
 }
 
@@ -528,3 +527,13 @@ footer .selected {
     z-index: -2;
 }
 
+.vs-container {
+    position: relative;
+    color: #58b4f6;
+    font-style: italic;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -80px;
+}

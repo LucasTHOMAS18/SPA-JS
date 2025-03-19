@@ -123,6 +123,10 @@ class GameView extends GenericView {
                     <p class="price">${Number(leftShip.prix).toLocaleString()} €</p>
                 </div>
 
+                <div class="vs-container">
+                    <h1>VS</h1>
+                </div>
+
                 <div class="ship-card mystery">
                     <img src="${rightShip.image}">
                     <h2>${rightShip.nom}</h2>
