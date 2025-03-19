@@ -146,7 +146,7 @@ class GameView extends GenericView {
         document.querySelector('.higher').addEventListener('click', () => {
             const leftPrice = Number(leftShip.prix);
             const rightPrice = Number(rightShip.prix);
-            const isCorrect = leftPrice < rightPrice;
+            const isCorrect = leftPrice <= rightPrice;
             if (isCorrect) {
                 this.score++;
             } else {
