@@ -35,27 +35,33 @@ class GameView extends GenericView {
         const resultElement = document.createElement('div');
         resultElement.className = `game-result ${isCorrect ? 'correct' : 'incorrect'}`;
         
-        const priceElement = document.createElement('div');
-        priceElement.className = 'price-reveal';
-        this.animatePrice(priceElement, rightShip.prix);
-
         resultElement.innerHTML = `
-            ${isCorrect ? '✅ Correct !' : '❌ Incorrect !'}
+            ${isCorrect ? '✓ Correct !' : '✗ Incorrect !'}
             <div class="comparison">
-                <div>${leftShip.nom}<br>${leftShip.prix.toLocaleString()} €</div>
+                <div class="ship-info">
+                    <h3>${leftShip.nom}</h3>
+                    <p>${Number(leftShip.prix).toLocaleString()} €</p>
+                </div>
                 <div class="vs">VS</div>
-                ${priceElement.outerHTML}
+                <div class="ship-info">
+                    <h3>${rightShip.nom}</h3>
+                    <div class="price-reveal"></div>
+                </div>
             </div>
-            <button class="continue-btn">Continuer →</button>
+            <button class="guess-btn continue-btn">Continuer →</button>
         `;
-
-        this.app.appendChild(resultElement);
         
-        resultElement.querySelector('.continue-btn').addEventListener('click', () => {
+        const priceRevealElement = resultElement.querySelector('.price-reveal');
+        this.animatePrice(priceRevealElement, Number(rightShip.prix));
+
+        resultElement.querySelector('.continue-btn').addEventListener('click', async () => {
             resultElement.remove();
-            this.currentShips = [rightShip, null];
+            this.currentShips[0] = rightShip;
+            this.currentShips[1] = await this.getNewRightShip();
             this.render();
         });
+
+        this.app.appendChild(resultElement);
     }
 
     animatePrice(element, targetPrice) {
@@ -74,7 +80,7 @@ class GameView extends GenericView {
     }
 
     async render() {
-        this.footer.innerHTML = '';
+        this.footer.innerHTML = "";
 
         if (!this.currentShips.length || !this.currentShips[1]) {
             const newRightShip = await this.getNewRightShip();
@@ -92,7 +98,7 @@ class GameView extends GenericView {
                 <div class="ship-card">
                     <h2>${leftShip.nom}</h2>
                     <img src="${leftShip.image}">
-                    <p class="price">${leftShip.prix.toLocaleString()} €</p>
+                    <p class="price">${Number(leftShip.prix).toLocaleString()} €</p>
                 </div>
 
                 <div class="ship-card mystery">
@@ -109,14 +115,18 @@ class GameView extends GenericView {
         `;
 
         document.querySelector('.higher').addEventListener('click', () => {
-            const isCorrect = leftShip.prix < rightShip.prix;
-            if(isCorrect) this.score++;
+            const leftPrice = Number(leftShip.prix);
+            const rightPrice = Number(rightShip.prix);
+            const isCorrect = leftPrice < rightPrice;
+            if (isCorrect) this.score++;
             this.showResult(isCorrect);
         });
 
         document.querySelector('.lower').addEventListener('click', () => {
-            const isCorrect = leftShip.prix > rightShip.prix;
-            if(isCorrect) this.score++;
+            const leftPrice = Number(leftShip.prix);
+            const rightPrice = Number(rightShip.prix);
+            const isCorrect = leftPrice > rightPrice;
+            if (isCorrect) this.score++;
             this.showResult(isCorrect);
         });
     }

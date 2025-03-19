@@ -144,7 +144,7 @@ main > div {
 }
 
 .logo {
-    object-fit: fill !important ;
+    object-fit: fill !important;
     background-color: whitesmoke;
 }
 
@@ -339,6 +339,10 @@ footer .selected {
     background: #58b4f6;
 }
 
+.guess-btn:active {
+    transform: translateY(1px);
+}
+
 .game-result {
     position: fixed;
     top: 50%;
@@ -349,6 +353,8 @@ footer .selected {
     border-radius: 10px;
     text-align: center;
     border: 2px solid;
+    animation: resultPop 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    box-shadow: 0 0 30px rgba(88, 180, 246, 0.2);
 }
 
 .game-result.correct {
@@ -359,12 +365,25 @@ footer .selected {
     border-color: #f44336;
 }
 
+@keyframes resultPop {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    80% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
 .price {
     font-size: 24px;
     color: #58b4f6;
     font-weight: bold;
 }
-
 
 .ship-card {
     position: relative;
@@ -440,36 +459,8 @@ footer .selected {
     transition: transform 0.5s ease;
 }
 
-.guess-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(88, 180, 246, 0.3);
-}
-
-.guess-btn:active {
-    transform: translateY(1px);
-}
-
 .guess-btn:hover::after {
     transform: translate(-50%, -50%) scale(1);
-}
-
-@keyframes resultPop {
-    0% {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 0;
-    }
-    80% {
-        transform: translate(-50%, -50%) scale(1.1);
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-}
-
-.game-result {
-    animation: resultPop 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    box-shadow: 0 0 30px rgba(88, 180, 246, 0.2);
 }
 
 /* Animation du score */
@@ -517,3 +508,29 @@ footer .selected {
     background: linear-gradient(45deg, transparent 40%, rgba(88, 180, 246, 0.1) 50%, transparent 60%);
 }
 
+/* ============================= */
+/* AJOUT DES NOUVEAUX STYLES      */
+/* ============================= */
+
+.price-reveal {
+    font-size: 24px;
+    font-weight: bold;
+    color: #58b4f6;
+    margin: 10px 0;
+}
+
+.continue-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #0f2c3e;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.score-container {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
