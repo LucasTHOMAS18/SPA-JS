@@ -31,24 +31,38 @@ class GameView extends GenericView {
     }
 
     async showResult(isCorrect) {
+        const guessButtons = document.querySelectorAll('.guess-buttons button');
+        guessButtons.forEach(btn => {
+            btn.disabled = true;
+            btn.style.pointerEvents = 'none';
+        });
+        
         const [leftShip, rightShip] = this.currentShips;
         const resultElement = document.createElement('div');
         resultElement.className = `game-result ${isCorrect ? 'correct' : 'incorrect'}`;
         
         resultElement.innerHTML = `
-            ${isCorrect ? '✓ Correct !' : '✗ Incorrect !'}
-            <div class="comparison">
-                <div class="ship-info">
-                    <h3>${leftShip.nom}</h3>
-                    <p>${Number(leftShip.prix).toLocaleString()} €</p>
+            <div class="popup-content">
+                <div class="popup-header ${isCorrect ? 'correct' : 'incorrect'}">
+                    <h2>${isCorrect ? 'Bien joué !' : 'Raté !'}</h2>
                 </div>
-                <div class="vs">VS</div>
-                <div class="ship-info">
-                    <h3>${rightShip.nom}</h3>
-                    <div class="price-reveal"></div>
+                <div class="popup-body">
+                    <div class="ship-details">
+                        <div class="ship-info">
+                            <h3>${leftShip.nom}</h3>
+                            <p>${Number(leftShip.prix).toLocaleString()} €</p>
+                        </div>
+                        <div class="vs">VS</div>
+                        <div class="ship-info">
+                            <h3>${rightShip.nom}</h3>
+                            <div class="price-reveal"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <button class="guess-btn continue-btn">Continuer</button>
                 </div>
             </div>
-            <button class="guess-btn continue-btn">Continuer →</button>
         `;
         
         const priceRevealElement = resultElement.querySelector('.price-reveal');
@@ -69,7 +83,7 @@ class GameView extends GenericView {
         const increment = Math.ceil(targetPrice / 50);
         const animation = () => {
             current += increment;
-            if(current >= targetPrice) {
+            if (current >= targetPrice) {
                 element.innerHTML = `${targetPrice.toLocaleString()} €`;
                 return;
             }
@@ -118,7 +132,11 @@ class GameView extends GenericView {
             const leftPrice = Number(leftShip.prix);
             const rightPrice = Number(rightShip.prix);
             const isCorrect = leftPrice < rightPrice;
-            if (isCorrect) this.score++;
+            if (isCorrect) {
+                this.score++;
+            } else {
+                this.score = 0; 
+            }
             this.showResult(isCorrect);
         });
 
@@ -126,7 +144,11 @@ class GameView extends GenericView {
             const leftPrice = Number(leftShip.prix);
             const rightPrice = Number(rightShip.prix);
             const isCorrect = leftPrice > rightPrice;
-            if (isCorrect) this.score++;
+            if (isCorrect) {
+                this.score++;
+            } else {
+                this.score = 0; 
+            }
             this.showResult(isCorrect);
         });
     }
