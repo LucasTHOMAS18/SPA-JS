@@ -147,8 +147,8 @@ main>div {
 }
 
 .logo {
-    object-fit: fill !important;
-    background-color: whitesmoke;
+    object-fit: contain !important;
+    background-color: white;
 }
 
 .horizontal-card img {
