@@ -14,11 +14,13 @@ class GameView extends GenericView {
 
     async getRandomShips() {
         const ships = await getVaisseaux();
+        const shipsWithPrice = ships.filter(ship => ship.prix !== undefined && ship.prix !== null);
+        
         const randomIndexes = new Set();
         while(randomIndexes.size < 2) {
-            randomIndexes.add(Math.floor(Math.random() * ships.length));
+            randomIndexes.add(Math.floor(Math.random() * shipsWithPrice.length));
         }
-        this.currentShips = Array.from(randomIndexes).map(i => ships[i]);
+        this.currentShips = Array.from(randomIndexes).map(i => shipsWithPrice[i]);
     }
 
     async showResult(isCorrect) {
@@ -26,8 +28,9 @@ class GameView extends GenericView {
         this.app.innerHTML += `
             <div class="game-result ${isCorrect ? 'correct' : 'incorrect'}">
                 ${isCorrect ? 'Correct !' : 'Incorrect !'}
-                <p>${rightShip.nom} : ${rightShip.prix} UEC</p>
-                <button onclick="location.reload()">Continuer</button>
+                <p>${leftShip.nom} : ${leftShip.prix.toLocaleString()} €</p>
+                <p>${rightShip.nom} : ${rightShip.prix.toLocaleString()} €</p>
+                <button onclick="gameView.render()">Continuer</button>
             </div>
         `;
     }
@@ -35,14 +38,14 @@ class GameView extends GenericView {
     async render() {
         await this.getRandomShips();
         const [leftShip, rightShip] = this.currentShips;
-
+    
         this.app.innerHTML = `
             <h1>Devinez le prix</h1>
             <div class="game-container">
                 <div class="ship-card">
                     <h2>${leftShip.nom}</h2>
                     <img src="${leftShip.image}">
-                    <p class="price">${leftShip.prix} UEC</p>
+                    <p class="price">${leftShip.prix.toLocaleString()} €</p>
                 </div>
                 
                 <div class="vs-container">
@@ -53,7 +56,7 @@ class GameView extends GenericView {
                     </div>
                     <p class="score">Score: ${this.score}</p>
                 </div>
-
+    
                 <div class="ship-card">
                     <h2>${rightShip.nom}</h2>
                     <img src="${rightShip.image}">
@@ -61,15 +64,15 @@ class GameView extends GenericView {
                 </div>
             </div>
         `;
-
+    
         document.querySelector('.higher').addEventListener('click', () => {
-            const isCorrect = leftShip.prix > rightShip.prix;
+            const isCorrect = leftShip.prix < rightShip.prix;
             if(isCorrect) this.score++;
             this.showResult(isCorrect);
         });
-
+    
         document.querySelector('.lower').addEventListener('click', () => {
-            const isCorrect = leftShip.prix < rightShip.prix;
+            const isCorrect = leftShip.prix > rightShip.prix;
             if(isCorrect) this.score++;
             this.showResult(isCorrect);
         });
