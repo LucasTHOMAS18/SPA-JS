@@ -515,10 +515,5 @@ footer .selected {
     width: 200%;
     height: 200%;
     background: linear-gradient(45deg, transparent 40%, rgba(88, 180, 246, 0.1) 50%, transparent 60%);
-    animation: hologram 6s infinite linear;
 }
 
-@keyframes hologram {
-    0% { transform: translate(-25%, -25%) rotate(45deg); }
-    100% { transform: translate(25%, 25%) rotate(45deg); }
-}
