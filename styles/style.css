@@ -327,7 +327,7 @@ footer .selected {
 
 .ship-card img {
     width: 100%;
-    max-height: 200px;
+    height: 150px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
     transition: transform 0.3s ease;
@@ -349,6 +349,18 @@ footer .selected {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    animation: resultPop 0.3s ease;
+}
+
+@keyframes resultPop {
+    0% {
+        transform: translate(-50%, -40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
 }
 
 /* Bande du haut */
