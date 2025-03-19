@@ -1,5 +1,5 @@
 import { SHIPS_PER_PAGE } from '../lib/config.js';
-import { getFabricant, getRole, getVaisseaux, getVaisseauxByFabricant, getVaisseauxByRole, searchVaisseaux } from '../lib/provider.js';
+import { getFabricant, getRole, getVaisseau, getVaisseaux, getVaisseauxByFabricant, getVaisseauxByRole, searchVaisseaux } from '../lib/provider.js';
 import { getHashParam } from '../lib/utils.js';
 import { getFavorites } from '../services/favorisService.js';
 import { detailView } from './detailView.js';
@@ -15,6 +15,8 @@ class ListingView extends GenericView {
         this.ships = [];
 
         window.currentPage = this.currentPage;
+        window.showVideo = ListingView.showVideo;
+        window.hideVideo = ListingView.hideVideo;
     }
 
     get renderedShips() {
@@ -99,6 +101,35 @@ class ListingView extends GenericView {
         GenericView.previousParams = params
     }
 
+    static async showVideo(id) {
+        ListingView.hideVideo();
+
+        const card = document.getElementById(id);
+        const container = card.querySelector(".image-container");
+        const overlay = card.querySelector(".overlay");
+        
+        const vaisseau = await getVaisseau(id);
+
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube-nocookie.com/embed/${vaisseau.trailer_url}?autoplay=1&showinfo=0&controls=0&mute=1&loop=1&playlist=${vaisseau.trailer_url}&modestbranding=1&rel=0&disablekb=1`;
+        iframe.allowFullscreen = true;
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin');
+        iframe.setAttribute('data-noresize', '1');
+        iframe.setAttribute('data-optimize', '1');
+
+        container.insertBefore(iframe, overlay);
+    }
+
+    static async hideVideo(id) {
+        const iframe = document.querySelector("iframe");
+        if (iframe) {
+            iframe.src = '';
+            iframe.remove();
+        }
+    }
+
     async render() {
         this.details.innerHTML = '';
 
@@ -107,9 +138,10 @@ class ListingView extends GenericView {
         let displayedShips = this.renderedShips;
 
         this.app.innerHTML = `<h1>${this.title}</h1>` + displayedShips.map(p =>
-            `<div id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">
-                
+            `<div onmouseleave="hideVideo(${p.id})" onmouseenter="showVideo(${p.id})" id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">
                 <div class='image-container'>
+
+                    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
                     <img src="${p.image}" alt="${p.nom}">
                 </div>
                 <h2>${p.nom}</h2>

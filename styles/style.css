@@ -143,6 +143,10 @@ main > div {
     margin-right: 10px;
 }
 
+.image-container {
+    position: relative;
+}
+
 .logo {
     object-fit: fill !important ;
     background-color: whitesmoke;
@@ -363,4 +367,15 @@ footer .selected {
     font-size: 24px;
     color: #58b4f6;
     font-weight: bold;
+}
+
+iframe {
+    border: none;
+    pointer-events: none; /* Empêche l'interaction */
+}
+.ytp-chrome-bottom, 
+.ytp-show-cards-title,
+.ytp-title,
+.ytp-gradient-top {
+    display: none !important;
 }
