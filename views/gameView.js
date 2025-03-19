@@ -1,4 +1,5 @@
 import { getVaisseaux } from '../lib/provider.js';
+import { detailView } from './detailView.js';
 import { GenericView } from './genericView.js';
 
 class GameView extends GenericView {
@@ -103,6 +104,7 @@ class GameView extends GenericView {
     }
 
     async render() {
+        detailView.hide();
         this.footer.innerHTML = "";
 
         if (!this.currentShips.length || !this.currentShips[1]) {
