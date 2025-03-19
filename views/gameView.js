@@ -17,7 +17,8 @@ class GameView extends GenericView {
         localStorage.setItem('bestScore', score);
     }
 
-    async handleRouting() {
+    async handleRouting(hash, params) {
+        super.handleRouting(hash, params);
         this.render();
     }
 
