@@ -13,6 +13,7 @@ const routes = {
     "role": listingView,         
     "manufacters": manufacterListingView,
     "404": notFoundView,
+    "game": gameView
 }
 
 function handleRouting() {

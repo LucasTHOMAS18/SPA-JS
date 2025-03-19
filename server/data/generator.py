@@ -1,5 +1,5 @@
 import json
-
+import random
 import requests
 
 
@@ -50,6 +50,8 @@ def get_ships(limit=500):
                 "rolesIds": role_refs,
                 "fabricantId": manufacturer_ids[manufacturer],
                 "score": 0,
+                "prix": random.randint(50000, 500000) 
+
             })
         except:
             pass
