@@ -10,7 +10,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "50",
-            "trailer_url": "https://www.youtube.com/watch?v=QGMxGdzYVY8"
+            "trailer_url": "QGMxGdzYVY8"
         },
         {
             "id": 1,
@@ -22,7 +22,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "60",
-            "trailer_url": "https://www.youtube.com/watch?v=QGMxGdzYVY8"
+            "trailer_url": "QGMxGdzYVY8"
         },
         {
             "id": 2,
@@ -34,7 +34,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "65",
-            "trailer_url": "https://www.youtube.com/watch?v=QGMxGdzYVY8"
+            "trailer_url": "QGMxGdzYVY8"
         },
         {
             "id": 3,
@@ -47,7 +47,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "60",
-            "trailer_url": "https://www.youtube.com/watch?v=qDQ8dbE8qSo"
+            "trailer_url": "qDQ8dbE8qSo"
         },
         {
             "id": 4,
@@ -59,7 +59,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "65",
-            "trailer_url": "https://www.youtube.com/watch?v=qDQ8dbE8qSo"
+            "trailer_url": "qDQ8dbE8qSo"
         },
         {
             "id": 5,
@@ -72,7 +72,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "70",
-            "trailer_url": "https://youtu.be/qDQ8dbE8qSo"
+            "trailer_url": "qDQ8dbE8qSo"
         },
         {
             "id": 6,
@@ -84,7 +84,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "125",
-            "trailer_url": "https://www.youtube.com/watch?v=qDQ8dbE8qSo"
+            "trailer_url": "qDQ8dbE8qSo"
         },
         {
             "id": 7,
@@ -96,7 +96,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "250",
-            "trailer_url": "https://youtu.be/SNtwvxjF4Zg"
+            "trailer_url": "SNtwvxjF4Zg"
         },
         {
             "id": 8,
@@ -120,7 +120,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "475",
-            "trailer_url": "https://youtu.be/gbCSQDhPOlk"
+            "trailer_url": "gbCSQDhPOlk"
         },
         {
             "id": 10,
@@ -132,7 +132,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "435",
-            "trailer_url": "https://youtu.be/gbCSQDhPOlk"
+            "trailer_url": "gbCSQDhPOlk"
         },
         {
             "id": 11,
@@ -156,7 +156,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "950",
-            "trailer_url": "https://www.youtube.com/watch?v=rvKS70FDZV8"
+            "trailer_url": "rvKS70FDZV8"
         },
         {
             "id": 13,
@@ -168,7 +168,7 @@
             "fabricantId": 1,
             "score": 0,
             "prix": "200",
-            "trailer_url": "https://www.youtube.com/watch?v=UsxZ_9eDsUQ"
+            "trailer_url": "UsxZ_9eDsUQ"
         },
         {
             "id": 14,
@@ -180,7 +180,7 @@
             "fabricantId": 1,
             "score": 0,
             "prix": "750",
-            "trailer_url": "https://youtu.be/TamoB9ubodE"
+            "trailer_url": "TamoB9ubodE"
         },
         {
             "id": 15,
@@ -216,7 +216,7 @@
             "fabricantId": 1,
             "score": 0,
             "prix": "250",
-            "trailer_url": "https://youtu.be/sn7A6En6ROA"
+            "trailer_url": "sn7A6En6ROA"
         },
         {
             "id": 18,
@@ -228,7 +228,7 @@
             "fabricantId": 1,
             "score": 0,
             "prix": "250",
-            "trailer_url": "https://youtu.be/sn7A6En6ROA"
+            "trailer_url": "sn7A6En6ROA"
         },
         {
             "id": 20,
@@ -252,7 +252,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "75",
-            "trailer_url": "https://youtu.be/PpUnRqOsQUM"
+            "trailer_url": "PpUnRqOsQUM"
         },
         {
             "id": 22,
@@ -264,7 +264,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "45",
-            "trailer_url": "https://www.youtube.com/watch?v=UvDs7RDKCag"
+            "trailer_url": "UvDs7RDKCag"
         },
         {
             "id": 23,
@@ -277,7 +277,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "20",
-            "trailer_url": "https://www.youtube.com/watch?v=UvDs7RDKCag"
+            "trailer_url": "UvDs7RDKCag"
         },
         {
             "id": 24,
@@ -289,7 +289,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "40",
-            "trailer_url": "https://www.youtube.com/watch?v=UvDs7RDKCag"
+            "trailer_url": "UvDs7RDKCag"
         },
         {
             "id": 25,
@@ -301,7 +301,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "35",
-            "trailer_url": "https://www.youtube.com/watch?v=UvDs7RDKCag"
+            "trailer_url": "UvDs7RDKCag"
         },
         {
             "id": 26,
@@ -313,7 +313,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "30",
-            "trailer_url": "https://www.youtube.com/watch?v=UvDs7RDKCag"
+            "trailer_url": "UvDs7RDKCag"
         },
         {
             "id": 27,
@@ -325,7 +325,7 @@
             "fabricantId": 4,
             "score": 0,
             "prix": "60",
-            "trailer_url": "https://www.youtube.com/watch?v=2FcJykFmMc0"
+            "trailer_url": "2FcJykFmMc0"
         },
         {
             "id": 28,
@@ -337,7 +337,7 @@
             "fabricantId": 4,
             "score": 0,
             "prix": "60",
-            "trailer_url": "https://www.youtube.com/watch?v=2FcJykFmMc0"
+            "trailer_url": "2FcJykFmMc0"
         },
         {
             "id": 29,
@@ -349,7 +349,7 @@
             "fabricantId": 4,
             "score": 0,
             "prix": "75",
-            "trailer_url": "https://www.youtube.com/watch?v=2FcJykFmMc0"
+            "trailer_url": "2FcJykFmMc0"
         },
         {
             "id": 30,
@@ -409,7 +409,7 @@
             "fabricantId": 7,
             "score": 0,
             "prix": "110",
-            "trailer_url": "https://www.youtube.com/watch?v=TGNsjNIGOC4"
+            "trailer_url": "TGNsjNIGOC4"
         },
         {
             "id": 38,
@@ -421,7 +421,7 @@
             "fabricantId": 1,
             "score": 0,
             "prix": "125",
-            "trailer_url": "https://youtu.be/Vs3qmjNT_7k"
+            "trailer_url": "Vs3qmjNT_7k"
         },
         {
             "id": 39,
@@ -433,7 +433,7 @@
             "fabricantId": 1,
             "score": 0,
             "prix": "400",
-            "trailer_url": "https://youtu.be/TamoB9ubodE"
+            "trailer_url": "TamoB9ubodE"
         },
         {
             "id": 40,
@@ -481,7 +481,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "600",
-            "trailer_url": "https://www.youtube.com/watch?v=5BBg3BTbcLo"
+            "trailer_url": "5BBg3BTbcLo"
         },
         {
             "id": 44,
@@ -493,7 +493,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "625",
-            "trailer_url": "https://www.youtube.com/watch?v=5BBg3BTbcLo"
+            "trailer_url": "5BBg3BTbcLo"
         },
         {
             "id": 45,
@@ -542,7 +542,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "240",
-            "trailer_url": "https://youtu.be/zG-82TakEqk"
+            "trailer_url": "zG-82TakEqk"
         },
         {
             "id": 50,
@@ -554,7 +554,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "315",
-            "trailer_url": "https://youtu.be/zG-82TakEqk"
+            "trailer_url": "zG-82TakEqk"
         },
         {
             "id": 51,
@@ -566,7 +566,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "350",
-            "trailer_url": "https://youtu.be/zG-82TakEqk"
+            "trailer_url": "zG-82TakEqk"
         },
         {
             "id": 52,
@@ -590,7 +590,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "200",
-            "trailer_url": "https://youtu.be/NQAFU1eP5ys"
+            "trailer_url": "NQAFU1eP5ys"
         },
         {
             "id": 54,
@@ -602,7 +602,7 @@
             "fabricantId": 7,
             "score": 0,
             "prix": "250",
-            "trailer_url": "https://www.youtube.com/watch?v=ZQV3HnBS9Jg"
+            "trailer_url": "ZQV3HnBS9Jg"
         },
         {
             "id": 55,
@@ -626,7 +626,7 @@
             "fabricantId": 7,
             "score": 0,
             "prix": "110",
-            "trailer_url": "https://www.youtube.com/watch?v=fUAlEOhkdok"
+            "trailer_url": "fUAlEOhkdok"
         },
         {
             "id": 58,
@@ -638,7 +638,7 @@
             "fabricantId": 7,
             "score": 0,
             "prix": "175",
-            "trailer_url": "https://youtu.be/Bo77GDdDAtE"
+            "trailer_url": "Bo77GDdDAtE"
         },
         {
             "id": 59,
@@ -662,7 +662,7 @@
             "fabricantId": 7,
             "score": 0,
             "prix": "235",
-            "trailer_url": "https://www.youtube.com/watch?v=zPSX_K8UyQk"
+            "trailer_url": "zPSX_K8UyQk"
         },
         {
             "id": 61,
@@ -737,7 +737,7 @@
             "fabricantId": 9,
             "score": 0,
             "prix": "220",
-            "trailer_url": "https://www.youtube.com/watch?v=O6hXjxQ0_lk"
+            "trailer_url": "O6hXjxQ0_lk"
         },
         {
             "id": 68,
@@ -749,7 +749,7 @@
             "fabricantId": 7,
             "score": 0,
             "prix": "40",
-            "trailer_url": "https://www.youtube.com/watch?v=Qoa38oaosW4"
+            "trailer_url": "Qoa38oaosW4"
         },
         {
             "id": 69,
@@ -761,7 +761,7 @@
             "fabricantId": 7,
             "score": 0,
             "prix": null,
-            "trailer_url": "https://www.youtube.com/watch?v=Qoa38oaosW4"
+            "trailer_url": "Qoa38oaosW4"
         },
         {
             "id": 70,
@@ -773,7 +773,7 @@
             "fabricantId": 7,
             "score": 0,
             "prix": "40",
-            "trailer_url": "https://www.youtube.com/watch?v=Qoa38oaosW4"
+            "trailer_url": "Qoa38oaosW4"
         },
         {
             "id": 71,
@@ -797,7 +797,7 @@
             "fabricantId": 1,
             "score": 0,
             "prix": "150",
-            "trailer_url": "https://www.youtube.com/watch?v=u4r2golEmyw"
+            "trailer_url": "u4r2golEmyw"
         },
         {
             "id": 73,
@@ -809,7 +809,7 @@
             "fabricantId": 4,
             "score": 0,
             "prix": "300",
-            "trailer_url": "https://youtu.be/sOPGbBY56zM"
+            "trailer_url": "sOPGbBY56zM"
         },
         {
             "id": 74,
@@ -845,7 +845,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": null,
-            "trailer_url": "https://www.youtube.com/watch?v=g0gZES2pTWk"
+            "trailer_url": "g0gZES2pTWk"
         },
         {
             "id": 77,
@@ -869,7 +869,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "125",
-            "trailer_url": "https://www.youtube.com/watch?v=g0gZES2pTWk"
+            "trailer_url": "g0gZES2pTWk"
         },
         {
             "id": 79,
@@ -881,7 +881,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "175",
-            "trailer_url": "https://www.youtube.com/watch?v=tyiTOAqHoCA"
+            "trailer_url": "tyiTOAqHoCA"
         },
         {
             "id": 80,
@@ -905,7 +905,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "30",
-            "trailer_url": "https://www.youtube.com/watch?v=aI4nAuwO1fE"
+            "trailer_url": "aI4nAuwO1fE"
         },
         {
             "id": 82,
@@ -929,7 +929,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "180",
-            "trailer_url": "https://www.youtube.com/watch?v=g0gZES2pTWk"
+            "trailer_url": "g0gZES2pTWk"
         },
         {
             "id": 84,
@@ -941,7 +941,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "240",
-            "trailer_url": "https://www.youtube.com/watch?v=gWdOey3RkAg"
+            "trailer_url": "gWdOey3RkAg"
         },
         {
             "id": 85,
@@ -953,7 +953,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "150",
-            "trailer_url": "https://www.youtube.com/watch?v=g0gZES2pTWk"
+            "trailer_url": "g0gZES2pTWk"
         },
         {
             "id": 86,
@@ -977,7 +977,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "140",
-            "trailer_url": "https://www.youtube.com/watch?v=g0gZES2pTWk"
+            "trailer_url": "g0gZES2pTWk"
         },
         {
             "id": 88,
@@ -1049,7 +1049,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "175",
-            "trailer_url": "https://www.youtube.com/watch?v=RuDAIUv4wDE"
+            "trailer_url": "RuDAIUv4wDE"
         },
         {
             "id": 94,
@@ -1061,7 +1061,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "110",
-            "trailer_url": "https://www.youtube.com/watch?v=xOPAsg77PsI"
+            "trailer_url": "xOPAsg77PsI"
         },
         {
             "id": 95,
@@ -1073,7 +1073,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "135",
-            "trailer_url": "https://www.youtube.com/watch?v=xOPAsg77PsI"
+            "trailer_url": "xOPAsg77PsI"
         },
         {
             "id": 96,
@@ -1085,7 +1085,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "150",
-            "trailer_url": "https://www.youtube.com/watch?v=xOPAsg77PsI"
+            "trailer_url": "xOPAsg77PsI"
         },
         {
             "id": 97,
@@ -1097,7 +1097,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "175",
-            "trailer_url": "https://www.youtube.com/watch?v=xOPAsg77PsI"
+            "trailer_url": "xOPAsg77PsI"
         },
         {
             "id": 98,
@@ -1109,7 +1109,7 @@
             "fabricantId": 11,
             "score": 0,
             "prix": "55",
-            "trailer_url": "https://youtu.be/jQNfHkf1zoo"
+            "trailer_url": "jQNfHkf1zoo"
         },
         {
             "id": 99,
@@ -1121,7 +1121,7 @@
             "fabricantId": 11,
             "score": 0,
             "prix": "55",
-            "trailer_url": "https://youtu.be/qmfMWzm4KXY"
+            "trailer_url": "qmfMWzm4KXY"
         },
         {
             "id": 100,
@@ -1133,7 +1133,7 @@
             "fabricantId": 11,
             "score": 0,
             "prix": "55",
-            "trailer_url": "https://youtu.be/jQNfHkf1zoo"
+            "trailer_url": "jQNfHkf1zoo"
         },
         {
             "id": 101,
@@ -1181,7 +1181,7 @@
             "fabricantId": 4,
             "score": 0,
             "prix": "90",
-            "trailer_url": "https://youtu.be/IBIFpEPl8kk"
+            "trailer_url": "IBIFpEPl8kk"
         },
         {
             "id": 106,
@@ -1229,7 +1229,7 @@
             "fabricantId": 11,
             "score": 0,
             "prix": "250",
-            "trailer_url": "https://youtu.be/pQxnN4MiTig"
+            "trailer_url": "pQxnN4MiTig"
         },
         {
             "id": 110,
@@ -1241,7 +1241,7 @@
             "fabricantId": 11,
             "score": 0,
             "prix": "260",
-            "trailer_url": "https://youtu.be/pQxnN4MiTig"
+            "trailer_url": "pQxnN4MiTig"
         },
         {
             "id": 111,
@@ -1253,7 +1253,7 @@
             "fabricantId": 4,
             "score": 0,
             "prix": "725",
-            "trailer_url": "https://youtu.be/30EC-W5jNGU"
+            "trailer_url": "30EC-W5jNGU"
         },
         {
             "id": 114,
@@ -1265,7 +1265,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "100",
-            "trailer_url": "https://www.youtube.com/watch?v=S1yXxrdrfdM"
+            "trailer_url": "S1yXxrdrfdM"
         },
         {
             "id": 115,
@@ -1289,7 +1289,7 @@
             "fabricantId": 12,
             "score": 0,
             "prix": "30",
-            "trailer_url": "https://youtu.be/Qrb-StrkUqk"
+            "trailer_url": "Qrb-StrkUqk"
         },
         {
             "id": 117,
@@ -1325,7 +1325,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "500",
-            "trailer_url": "https://www.youtube.com/watch?v=wSvx94GtAew"
+            "trailer_url": "wSvx94GtAew"
         },
         {
             "id": 120,
@@ -1373,7 +1373,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "210",
-            "trailer_url": "https://www.youtube.com/watch?v=rVvO2iSWjS0"
+            "trailer_url": "rVvO2iSWjS0"
         },
         {
             "id": 124,
@@ -1421,7 +1421,7 @@
             "fabricantId": 1,
             "score": 0,
             "prix": "65",
-            "trailer_url": "https://www.youtube.com/watch?v=5DMBZjickDw"
+            "trailer_url": "5DMBZjickDw"
         },
         {
             "id": 128,
@@ -1494,7 +1494,7 @@
             "fabricantId": 7,
             "score": 0,
             "prix": "1650",
-            "trailer_url": "https://youtu.be/to1kDbR4L4I"
+            "trailer_url": "to1kDbR4L4I"
         },
         {
             "id": 135,
@@ -1567,7 +1567,7 @@
             "fabricantId": 1,
             "score": 0,
             "prix": "520",
-            "trailer_url": "https://youtu.be/TamoB9ubodE"
+            "trailer_url": "TamoB9ubodE"
         },
         {
             "id": 141,
@@ -1579,7 +1579,7 @@
             "fabricantId": 0,
             "score": 0,
             "prix": "100",
-            "trailer_url": "https://www.youtube.com/watch?v=_SpsjUHj_II"
+            "trailer_url": "_SpsjUHj_II"
         },
         {
             "id": 142,
@@ -1591,7 +1591,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "150",
-            "trailer_url": "https://youtu.be/6exXWnz9CWY"
+            "trailer_url": "6exXWnz9CWY"
         },
         {
             "id": 143,
@@ -1641,7 +1641,7 @@
             "fabricantId": 14,
             "score": 0,
             "prix": "315",
-            "trailer_url": "https://youtu.be/NYQKyhXii2Y"
+            "trailer_url": "NYQKyhXii2Y"
         },
         {
             "id": 148,
@@ -1654,7 +1654,7 @@
             "fabricantId": 14,
             "score": 0,
             "prix": "315",
-            "trailer_url": "https://youtu.be/NYQKyhXii2Y"
+            "trailer_url": "NYQKyhXii2Y"
         },
         {
             "id": 149,
@@ -1667,7 +1667,7 @@
             "fabricantId": 14,
             "score": 0,
             "prix": "315",
-            "trailer_url": "https://youtu.be/NYQKyhXii2Y"
+            "trailer_url": "NYQKyhXii2Y"
         },
         {
             "id": 150,
@@ -1679,7 +1679,7 @@
             "fabricantId": 14,
             "score": 0,
             "prix": "35",
-            "trailer_url": "https://youtu.be/4eI3w0kRLUM"
+            "trailer_url": "4eI3w0kRLUM"
         },
         {
             "id": 151,
@@ -1691,7 +1691,7 @@
             "fabricantId": 14,
             "score": 0,
             "prix": "40",
-            "trailer_url": "https://youtu.be/4eI3w0kRLUM"
+            "trailer_url": "4eI3w0kRLUM"
         },
         {
             "id": 152,
@@ -1727,7 +1727,7 @@
             "fabricantId": 12,
             "score": 0,
             "prix": "30",
-            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
+            "trailer_url": "BR07oZC0QHU"
         },
         {
             "id": 155,
@@ -1740,7 +1740,7 @@
             "fabricantId": 12,
             "score": 0,
             "prix": "30",
-            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
+            "trailer_url": "BR07oZC0QHU"
         },
         {
             "id": 156,
@@ -1752,7 +1752,7 @@
             "fabricantId": 12,
             "score": 0,
             "prix": "40",
-            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
+            "trailer_url": "BR07oZC0QHU"
         },
         {
             "id": 157,
@@ -1764,7 +1764,7 @@
             "fabricantId": 12,
             "score": 0,
             "prix": "65",
-            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
+            "trailer_url": "BR07oZC0QHU"
         },
         {
             "id": 158,
@@ -1776,7 +1776,7 @@
             "fabricantId": 12,
             "score": 0,
             "prix": "55",
-            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
+            "trailer_url": "BR07oZC0QHU"
         },
         {
             "id": 159,
@@ -1788,7 +1788,7 @@
             "fabricantId": 12,
             "score": 0,
             "prix": null,
-            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
+            "trailer_url": "BR07oZC0QHU"
         },
         {
             "id": 160,
@@ -1812,7 +1812,7 @@
             "fabricantId": 12,
             "score": 0,
             "prix": "80",
-            "trailer_url": "https://youtu.be/JbaNf0YvpLs"
+            "trailer_url": "JbaNf0YvpLs"
         },
         {
             "id": 162,
@@ -1824,7 +1824,7 @@
             "fabricantId": 13,
             "score": 0,
             "prix": "45",
-            "trailer_url": "https://www.youtube.com/watch?v=A2vgYRiO07M"
+            "trailer_url": "A2vgYRiO07M"
         },
         {
             "id": 163,
@@ -1836,7 +1836,7 @@
             "fabricantId": 13,
             "score": 0,
             "prix": "45",
-            "trailer_url": "https://www.youtube.com/watch?v=A2vgYRiO07M"
+            "trailer_url": "A2vgYRiO07M"
         },
         {
             "id": 164,
@@ -1884,7 +1884,7 @@
             "fabricantId": 15,
             "score": 0,
             "prix": "25",
-            "trailer_url": "https://www.youtube.com/watch?v=EJbItSsu8A8"
+            "trailer_url": "EJbItSsu8A8"
         },
         {
             "id": 169,
@@ -1956,7 +1956,7 @@
             "fabricantId": 12,
             "score": 0,
             "prix": "925",
-            "trailer_url": "https://www.youtube.com/watch?v=olxI7X7eac8"
+            "trailer_url": "olxI7X7eac8"
         },
         {
             "id": 175,
@@ -1981,7 +1981,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "155",
-            "trailer_url": "https://www.youtube.com/watch?v=hXmbmWYF5Go"
+            "trailer_url": "hXmbmWYF5Go"
         },
         {
             "id": 177,
@@ -1993,7 +1993,7 @@
             "fabricantId": 6,
             "score": 0,
             "prix": "440",
-            "trailer_url": "https://youtu.be/Op0YkiMm8TQ"
+            "trailer_url": "Op0YkiMm8TQ"
         },
         {
             "id": 178,
@@ -2065,7 +2065,7 @@
             "fabricantId": 11,
             "score": 0,
             "prix": "155",
-            "trailer_url": "https://youtu.be/N6N3uJB_Xjw"
+            "trailer_url": "N6N3uJB_Xjw"
         },
         {
             "id": 184,
@@ -2077,7 +2077,7 @@
             "fabricantId": 11,
             "score": 0,
             "prix": "150",
-            "trailer_url": "https://youtu.be/N6N3uJB_Xjw"
+            "trailer_url": "N6N3uJB_Xjw"
         },
         {
             "id": 185,
@@ -2089,7 +2089,7 @@
             "fabricantId": 4,
             "score": 0,
             "prix": "400",
-            "trailer_url": "https://youtu.be/1Vb4QpA354A"
+            "trailer_url": "1Vb4QpA354A"
         },
         {
             "id": 187,
@@ -2114,7 +2114,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "65",
-            "trailer_url": "https://youtu.be/xAxt4JU2n98"
+            "trailer_url": "xAxt4JU2n98"
         },
         {
             "id": 189,
@@ -2126,7 +2126,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "95",
-            "trailer_url": "https://youtu.be/xAxt4JU2n98"
+            "trailer_url": "xAxt4JU2n98"
         },
         {
             "id": 190,
@@ -2138,7 +2138,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "85",
-            "trailer_url": "https://youtu.be/xAxt4JU2n98"
+            "trailer_url": "xAxt4JU2n98"
         },
         {
             "id": 191,
@@ -2150,7 +2150,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "75",
-            "trailer_url": "https://youtu.be/xAxt4JU2n98"
+            "trailer_url": "xAxt4JU2n98"
         },
         {
             "id": 192,
@@ -2210,7 +2210,7 @@
             "fabricantId": 4,
             "score": 0,
             "prix": "185",
-            "trailer_url": "https://www.youtube.com/watch?v=6-gIsZMQZWI"
+            "trailer_url": "6-gIsZMQZWI"
         },
         {
             "id": 198,
@@ -2222,7 +2222,7 @@
             "fabricantId": 4,
             "score": 0,
             "prix": "185",
-            "trailer_url": "https://youtu.be/er8eoQNqtxQ"
+            "trailer_url": "er8eoQNqtxQ"
         },
         {
             "id": 199,
@@ -2234,7 +2234,7 @@
             "fabricantId": 4,
             "score": 0,
             "prix": null,
-            "trailer_url": "https://youtu.be/ZnMdQXl0vyg"
+            "trailer_url": "ZnMdQXl0vyg"
         },
         {
             "id": 200,
@@ -2246,7 +2246,7 @@
             "fabricantId": 13,
             "score": 0,
             "prix": "240",
-            "trailer_url": "https://www.youtube.com/watch?v=6n_QlTlSJJw"
+            "trailer_url": "6n_QlTlSJJw"
         },
         {
             "id": 201,
@@ -2258,7 +2258,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "240",
-            "trailer_url": "https://www.youtube.com/watch?v=jH-CL-ksQsk"
+            "trailer_url": "jH-CL-ksQsk"
         },
         {
             "id": 202,
@@ -2270,7 +2270,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "230",
-            "trailer_url": "https://www.youtube.com/watch?v=cNRhBR8mSQI"
+            "trailer_url": "cNRhBR8mSQI"
         },
         {
             "id": 204,
@@ -2306,7 +2306,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "300",
-            "trailer_url": "https://youtu.be/qzFcpQTEVAk"
+            "trailer_url": "qzFcpQTEVAk"
         },
         {
             "id": 208,
@@ -2342,7 +2342,7 @@
             "fabricantId": 10,
             "score": 0,
             "prix": "250",
-            "trailer_url": "https://www.youtube.com/watch?v=RMpwYYnQS6k"
+            "trailer_url": "RMpwYYnQS6k"
         },
         {
             "id": 211,
@@ -2378,7 +2378,7 @@
             "fabricantId": 16,
             "score": 0,
             "prix": "70",
-            "trailer_url": "https://www.youtube.com/watch?v=_XhngLncdVU"
+            "trailer_url": "_XhngLncdVU"
         },
         {
             "id": 215,
@@ -2426,7 +2426,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "220",
-            "trailer_url": "https://youtu.be/jtIK0BuYm0U"
+            "trailer_url": "jtIK0BuYm0U"
         },
         {
             "id": 219,
@@ -2474,7 +2474,7 @@
             "fabricantId": 3,
             "score": 0,
             "prix": "375",
-            "trailer_url": "https://www.youtube.com/watch?v=_RmaaxMW2uQ"
+            "trailer_url": "_RmaaxMW2uQ"
         },
         {
             "id": 223,
@@ -2595,7 +2595,7 @@
             "fabricantId": 7,
             "score": 0,
             "prix": "175",
-            "trailer_url": "https://www.youtube.com/watch?v=BA7E1z8vMQE"
+            "trailer_url": "BA7E1z8vMQE"
         },
         {
             "id": 234,
@@ -2643,7 +2643,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "175",
-            "trailer_url": "https://youtu.be/GieY5c59s1o"
+            "trailer_url": "GieY5c59s1o"
         },
         {
             "id": 238,
@@ -2655,7 +2655,7 @@
             "fabricantId": 2,
             "score": 0,
             "prix": "175",
-            "trailer_url": "https://youtu.be/GieY5c59s1o"
+            "trailer_url": "GieY5c59s1o"
         },
         {
             "id": 239,

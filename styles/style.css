@@ -146,6 +146,10 @@ main>div {
     margin-right: 10px;
 }
 
+.image-container {
+    position: relative;
+}
+
 .logo {
     object-fit: contain !important;
     background-color: white;
@@ -538,4 +542,17 @@ footer .selected {
     align-items: center;
     flex-direction: column;
     margin-top: -80px;
+}
+
+}
+
+iframe {
+    border: none;
+    pointer-events: none; /* Empêche l'interaction */
+}
+.ytp-chrome-bottom, 
+.ytp-show-cards-title,
+.ytp-title,
+.ytp-gradient-top {
+    display: none !important;
 }
