@@ -70,10 +70,13 @@ main>div {
     display: flex;
     align-items: center;
     gap: 10px;
+    max-width: 300px;
 }
 
-#details img {
+#details img, #details iframe {
     border-radius: 10px 20px 0px 0px;
+    width: 500px;
+    aspect-ratio: 16/9;
 }
 
 .details-header {
@@ -362,6 +365,7 @@ footer .selected {
         transform: translate(-50%, -40%);
         opacity: 0;
     }
+
     100% {
         transform: translate(-50%, -50%);
         opacity: 1;
@@ -542,17 +546,4 @@ footer .selected {
     align-items: center;
     flex-direction: column;
     margin-top: -80px;
-}
-
-}
-
-iframe {
-    border: none;
-    pointer-events: none; /* Empêche l'interaction */
-}
-.ytp-chrome-bottom, 
-.ytp-show-cards-title,
-.ytp-title,
-.ytp-gradient-top {
-    display: none !important;
 }

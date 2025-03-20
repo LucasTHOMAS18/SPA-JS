@@ -9,16 +9,25 @@ class DetailView extends GenericView {
     async render(id) {
         const vaisseau = await getVaisseau(id);
         const fabricant = (await getFabricant(vaisseau.fabricantId)).nom;
-        
+
         const roles = await Promise.all(vaisseau.rolesIds.map(async (roleId) => {
             const role = await getRole(roleId);
             return `<span class="clickable-role" onclick="location.hash='role?roleId=${roleId}'">${role.nom}</span>`;
         }));
 
-        document.getElementById("details").innerHTML =
-            `<div>
+        document.getElementById("details").innerHTML = `
+            <div>
                 <span onclick="removeHashParam('detail');" class='close-button material-symbols-rounded'>close</span>
-                <img src="${vaisseau.image}">
+                
+                ${vaisseau.trailer_url ? `
+                    <iframe 
+                        src="https://www.youtube-nocookie.com/embed/${vaisseau.trailer_url}?autoplay=1&controls=1&mute=1&loop=1&modestbranding=1&rel=0&disablekb=1" 
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope"
+                        allowfullscreen>
+                    </iframe>` : 
+                `<img src="${vaisseau.image}">`}
+                
                 <section>
                     <div class="details-header">
                         <h1>${vaisseau.nom} <span id="favorite-button" class='material-symbols-rounded'>star</span></h1>
@@ -63,15 +72,15 @@ class DetailView extends GenericView {
 
                 if (await isLiked(vaisseau.id)) document.getElementById('like').classList.add('filled');
                 if (await isDisliked(vaisseau.id)) document.getElementById('dislike').classList.add('filled');
-                
+
                 document.getElementById('score').innerText = response.currentScore;
             }
         });
-        
+
         document.getElementById('dislike').addEventListener('click', async () => {
             const response = await dislike(vaisseau.id);
             if (response) {
-                
+
                 document.getElementById('dislike').classList.remove('filled');
                 document.getElementById('like').classList.remove('filled');
 

@@ -103,24 +103,25 @@ class ListingView extends GenericView {
 
     static async showVideo(id) {
         ListingView.hideVideo();
-
+    
         const card = document.getElementById(id);
         const container = card.querySelector(".image-container");
         const overlay = card.querySelector(".overlay");
-        
+    
         const vaisseau = await getVaisseau(id);
-
+    
         const iframe = document.createElement("iframe");
-        iframe.src = `https://www.youtube-nocookie.com/embed/${vaisseau.trailer_url}?autoplay=1&showinfo=0&controls=0&mute=1&loop=1&playlist=${vaisseau.trailer_url}&modestbranding=1&rel=0&disablekb=1`;
+        iframe.src = `https://www.youtube-nocookie.com/embed/${vaisseau.trailer_url}?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0&disablekb=1&playsinline=1&color=white&showinfo=0`;
         iframe.allowFullscreen = true;
         iframe.style.width = "100%";
         iframe.style.height = "100%";
         iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin');
         iframe.setAttribute('data-noresize', '1');
         iframe.setAttribute('data-optimize', '1');
-
+    
         container.insertBefore(iframe, overlay);
     }
+    
 
     static async hideVideo(id) {
         const iframe = document.querySelector("iframe");
@@ -138,9 +139,8 @@ class ListingView extends GenericView {
         let displayedShips = this.renderedShips;
 
         this.app.innerHTML = `<h1>${this.title}</h1>` + displayedShips.map(p =>
-            `<div onmouseleave="hideVideo(${p.id})" onmouseenter="showVideo(${p.id})" id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">
+            `<div id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">
                 <div class='image-container'>
-
                     <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
                     <img src="${p.image}" alt="${p.nom}">
                 </div>
