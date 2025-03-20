@@ -57,6 +57,7 @@ main>div {
     top: 80px;
     overflow: hidden;
     margin-right: 20px;
+    overflow-y: auto;
 }
 
 #details section {
@@ -70,10 +71,13 @@ main>div {
     display: flex;
     align-items: center;
     gap: 10px;
+    max-width: 300px;
 }
 
-#details img {
+#details img, #details iframe {
     border-radius: 10px 20px 0px 0px;
+    width: 500px;
+    aspect-ratio: 16/9;
 }
 
 .details-header {
@@ -144,6 +148,10 @@ main>div {
     overflow: hidden;
     border-radius: 10px 0px 0px 10px;
     margin-right: 10px;
+}
+
+.image-container {
+    position: relative;
 }
 
 .logo {
@@ -358,6 +366,7 @@ footer .selected {
         transform: translate(-50%, -40%);
         opacity: 0;
     }
+
     100% {
         transform: translate(-50%, -50%);
         opacity: 1;
@@ -538,4 +547,9 @@ footer .selected {
     align-items: center;
     flex-direction: column;
     margin-top: -80px;
+}
+
+.interaction-section {
+    display: flex;
+    gap: 10px;
 }
