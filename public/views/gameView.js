@@ -9,12 +9,12 @@ class GameView extends GenericView {
         this.currentShips = [];
     }
 
-    getBestScore() {
+    get bestScore() {
         const bestScore = localStorage.getItem('bestScore');
         return bestScore ? parseInt(bestScore) : 0;
     }
 
-    setBestScore(score) {
+    set bestScore(score) {
         localStorage.setItem('bestScore', score);
     }
 
@@ -83,8 +83,8 @@ class GameView extends GenericView {
         });
 
         this.app.appendChild(resultElement);
-        if (this.score > this.getBestScore()) {
-            this.setBestScore(this.score);
+        if (this.score > this.bestScore) {
+            this.bestScore = this.score;
         }
     }
 
@@ -142,7 +142,7 @@ class GameView extends GenericView {
             </div>
             <div class="score-container">
                 <div>Score: ${this.score}</div>
-                <div>Meilleur score: ${this.getBestScore()}</div>
+                <div>Meilleur score: ${this.bestScore}</div>
             </div>
         `;
 
