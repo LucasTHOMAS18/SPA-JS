@@ -8,7 +8,9 @@
                 0
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "50",
+            "trailer_url": "https://www.youtube.com/watch?v=QGMxGdzYVY8"
         },
         {
             "id": 1,
@@ -18,7 +20,9 @@
                 1
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "60",
+            "trailer_url": "https://www.youtube.com/watch?v=QGMxGdzYVY8"
         },
         {
             "id": 2,
@@ -28,7 +32,9 @@
                 2
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "65",
+            "trailer_url": "https://www.youtube.com/watch?v=QGMxGdzYVY8"
         },
         {
             "id": 3,
@@ -39,7 +45,9 @@
                 4
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "60",
+            "trailer_url": "https://www.youtube.com/watch?v=qDQ8dbE8qSo"
         },
         {
             "id": 4,
@@ -49,7 +57,9 @@
                 5
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "65",
+            "trailer_url": "https://www.youtube.com/watch?v=qDQ8dbE8qSo"
         },
         {
             "id": 5,
@@ -60,7 +70,9 @@
                 6
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "70",
+            "trailer_url": "https://youtu.be/qDQ8dbE8qSo"
         },
         {
             "id": 6,
@@ -70,7 +82,9 @@
                 7
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "125",
+            "trailer_url": "https://www.youtube.com/watch?v=qDQ8dbE8qSo"
         },
         {
             "id": 7,
@@ -80,7 +94,9 @@
                 8
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "250",
+            "trailer_url": "https://youtu.be/SNtwvxjF4Zg"
         },
         {
             "id": 8,
@@ -90,7 +106,9 @@
                 9
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "475",
+            "trailer_url": null
         },
         {
             "id": 9,
@@ -100,7 +118,9 @@
                 10
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "475",
+            "trailer_url": "https://youtu.be/gbCSQDhPOlk"
         },
         {
             "id": 10,
@@ -110,7 +130,9 @@
                 3
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "435",
+            "trailer_url": "https://youtu.be/gbCSQDhPOlk"
         },
         {
             "id": 11,
@@ -120,7 +142,9 @@
                 3
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "50",
+            "trailer_url": null
         },
         {
             "id": 12,
@@ -130,7 +154,9 @@
                 11
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "950",
+            "trailer_url": "https://www.youtube.com/watch?v=rvKS70FDZV8"
         },
         {
             "id": 13,
@@ -140,7 +166,9 @@
                 12
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "200",
+            "trailer_url": "https://www.youtube.com/watch?v=UsxZ_9eDsUQ"
         },
         {
             "id": 14,
@@ -150,7 +178,9 @@
                 13
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "750",
+            "trailer_url": "https://youtu.be/TamoB9ubodE"
         },
         {
             "id": 15,
@@ -160,7 +190,9 @@
                 14
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "275",
+            "trailer_url": null
         },
         {
             "id": 16,
@@ -170,7 +202,9 @@
                 14
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "250",
+            "trailer_url": null
         },
         {
             "id": 17,
@@ -180,7 +214,9 @@
                 15
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "250",
+            "trailer_url": "https://youtu.be/sn7A6En6ROA"
         },
         {
             "id": 18,
@@ -190,7 +226,9 @@
                 15
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "250",
+            "trailer_url": "https://youtu.be/sn7A6En6ROA"
         },
         {
             "id": 20,
@@ -200,7 +238,9 @@
                 16
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "575",
+            "trailer_url": null
         },
         {
             "id": 21,
@@ -210,7 +250,9 @@
                 1
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "75",
+            "trailer_url": "https://youtu.be/PpUnRqOsQUM"
         },
         {
             "id": 22,
@@ -220,7 +262,9 @@
                 2
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "45",
+            "trailer_url": "https://www.youtube.com/watch?v=UvDs7RDKCag"
         },
         {
             "id": 23,
@@ -231,7 +275,9 @@
                 5
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "20",
+            "trailer_url": "https://www.youtube.com/watch?v=UvDs7RDKCag"
         },
         {
             "id": 24,
@@ -241,7 +287,9 @@
                 1
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "40",
+            "trailer_url": "https://www.youtube.com/watch?v=UvDs7RDKCag"
         },
         {
             "id": 25,
@@ -251,7 +299,9 @@
                 5
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "35",
+            "trailer_url": "https://www.youtube.com/watch?v=UvDs7RDKCag"
         },
         {
             "id": 26,
@@ -261,7 +311,9 @@
                 1
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "30",
+            "trailer_url": "https://www.youtube.com/watch?v=UvDs7RDKCag"
         },
         {
             "id": 27,
@@ -271,7 +323,9 @@
                 6
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "60",
+            "trailer_url": "https://www.youtube.com/watch?v=2FcJykFmMc0"
         },
         {
             "id": 28,
@@ -281,7 +335,9 @@
                 2
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "60",
+            "trailer_url": "https://www.youtube.com/watch?v=2FcJykFmMc0"
         },
         {
             "id": 29,
@@ -291,7 +347,9 @@
                 2
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "75",
+            "trailer_url": "https://www.youtube.com/watch?v=2FcJykFmMc0"
         },
         {
             "id": 30,
@@ -301,7 +359,9 @@
                 6
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "85",
+            "trailer_url": null
         },
         {
             "id": 32,
@@ -311,7 +371,9 @@
                 18
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 35,
@@ -321,7 +383,9 @@
                 1
             ],
             "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 36,
@@ -331,7 +395,9 @@
                 1
             ],
             "fabricantId": 6,
-            "score": 0
+            "score": 0,
+            "prix": "275",
+            "trailer_url": null
         },
         {
             "id": 37,
@@ -341,7 +407,9 @@
                 1
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "110",
+            "trailer_url": "https://www.youtube.com/watch?v=TGNsjNIGOC4"
         },
         {
             "id": 38,
@@ -351,7 +419,9 @@
                 19
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "125",
+            "trailer_url": "https://youtu.be/Vs3qmjNT_7k"
         },
         {
             "id": 39,
@@ -361,7 +431,9 @@
                 20
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "400",
+            "trailer_url": "https://youtu.be/TamoB9ubodE"
         },
         {
             "id": 40,
@@ -371,7 +443,9 @@
                 5
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 41,
@@ -381,7 +455,9 @@
                 14
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "65",
+            "trailer_url": null
         },
         {
             "id": 42,
@@ -391,7 +467,9 @@
                 10
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "45",
+            "trailer_url": null
         },
         {
             "id": 43,
@@ -401,7 +479,9 @@
                 10
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "600",
+            "trailer_url": "https://www.youtube.com/watch?v=5BBg3BTbcLo"
         },
         {
             "id": 44,
@@ -411,7 +491,9 @@
                 10
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "625",
+            "trailer_url": "https://www.youtube.com/watch?v=5BBg3BTbcLo"
         },
         {
             "id": 45,
@@ -421,15 +503,9 @@
                 20
             ],
             "fabricantId": 7,
-            "score": 0
-        },
-        {
-            "id": 46,
-            "nom": "Caterpillar Best In Show Edition",
-            "image": "https://media.starcitizen.tools/thumb/1/1d/Caterpillar_Best_In_Show_Edition_2949_-_Cut.png/500px-Caterpillar_Best_In_Show_Edition_2949_-_Cut.png.webp",
-            "rolesIds": [],
-            "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "330",
+            "trailer_url": null
         },
         {
             "id": 47,
@@ -439,7 +515,9 @@
                 20
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "330",
+            "trailer_url": null
         },
         {
             "id": 48,
@@ -449,7 +527,9 @@
                 21
             ],
             "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 49,
@@ -460,7 +540,9 @@
                 22
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "240",
+            "trailer_url": "https://youtu.be/zG-82TakEqk"
         },
         {
             "id": 50,
@@ -470,7 +552,9 @@
                 10
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "315",
+            "trailer_url": "https://youtu.be/zG-82TakEqk"
         },
         {
             "id": 51,
@@ -480,7 +564,9 @@
                 11
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "350",
+            "trailer_url": "https://youtu.be/zG-82TakEqk"
         },
         {
             "id": 52,
@@ -490,7 +576,9 @@
                 3
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "350",
+            "trailer_url": null
         },
         {
             "id": 53,
@@ -500,7 +588,9 @@
                 19
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "200",
+            "trailer_url": "https://youtu.be/NQAFU1eP5ys"
         },
         {
             "id": 54,
@@ -510,7 +600,9 @@
                 10
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "250",
+            "trailer_url": "https://www.youtube.com/watch?v=ZQV3HnBS9Jg"
         },
         {
             "id": 55,
@@ -520,7 +612,9 @@
                 23
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "350",
+            "trailer_url": null
         },
         {
             "id": 56,
@@ -530,15 +624,9 @@
                 19
             ],
             "fabricantId": 7,
-            "score": 0
-        },
-        {
-            "id": 57,
-            "nom": "Cutlass Black Best In Show Edition",
-            "image": "https://media.starcitizen.tools/thumb/5/5d/Cutlass_Black_Best_In_Show_Edition_2949_-_Cut_2.png/500px-Cutlass_Black_Best_In_Show_Edition_2949_-_Cut_2.png.webp",
-            "rolesIds": [],
-            "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "110",
+            "trailer_url": "https://www.youtube.com/watch?v=fUAlEOhkdok"
         },
         {
             "id": 58,
@@ -548,7 +636,9 @@
                 6
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": "https://youtu.be/Bo77GDdDAtE"
         },
         {
             "id": 59,
@@ -558,7 +648,9 @@
                 14
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "135",
+            "trailer_url": null
         },
         {
             "id": 60,
@@ -568,7 +660,9 @@
                 24
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "235",
+            "trailer_url": "https://www.youtube.com/watch?v=zPSX_K8UyQk"
         },
         {
             "id": 61,
@@ -579,7 +673,9 @@
                 2
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "45",
+            "trailer_url": null
         },
         {
             "id": 62,
@@ -589,7 +685,9 @@
                 25
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 63,
@@ -600,7 +698,9 @@
                 10
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "50",
+            "trailer_url": null
         },
         {
             "id": 64,
@@ -611,7 +711,9 @@
                 27
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "50",
+            "trailer_url": null
         },
         {
             "id": 65,
@@ -621,7 +723,9 @@
                 28
             ],
             "fabricantId": 8,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 66,
@@ -631,15 +735,9 @@
                 29
             ],
             "fabricantId": 9,
-            "score": 0
-        },
-        {
-            "id": 67,
-            "nom": "Devastator",
-            "image": "https://media.starcitizen.tools/thumb/9/93/Placeholderv2.png/500px-Placeholderv2.png.webp",
-            "rolesIds": [],
-            "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "220",
+            "trailer_url": "https://www.youtube.com/watch?v=O6hXjxQ0_lk"
         },
         {
             "id": 68,
@@ -649,7 +747,9 @@
                 7
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "40",
+            "trailer_url": "https://www.youtube.com/watch?v=Qoa38oaosW4"
         },
         {
             "id": 69,
@@ -659,7 +759,9 @@
                 30
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": "https://www.youtube.com/watch?v=Qoa38oaosW4"
         },
         {
             "id": 70,
@@ -669,7 +771,9 @@
                 7
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "40",
+            "trailer_url": "https://www.youtube.com/watch?v=Qoa38oaosW4"
         },
         {
             "id": 71,
@@ -679,7 +783,9 @@
                 31
             ],
             "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 72,
@@ -689,7 +795,9 @@
                 32
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "150",
+            "trailer_url": "https://www.youtube.com/watch?v=u4r2golEmyw"
         },
         {
             "id": 73,
@@ -699,7 +807,9 @@
                 33
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "300",
+            "trailer_url": "https://youtu.be/sOPGbBY56zM"
         },
         {
             "id": 74,
@@ -709,7 +819,9 @@
                 34
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "350",
+            "trailer_url": null
         },
         {
             "id": 75,
@@ -719,7 +831,9 @@
                 35
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "150",
+            "trailer_url": null
         },
         {
             "id": 76,
@@ -729,7 +843,9 @@
                 29
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": "https://www.youtube.com/watch?v=g0gZES2pTWk"
         },
         {
             "id": 77,
@@ -739,7 +855,9 @@
                 36
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 78,
@@ -749,7 +867,9 @@
                 29
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "125",
+            "trailer_url": "https://www.youtube.com/watch?v=g0gZES2pTWk"
         },
         {
             "id": 79,
@@ -759,7 +879,9 @@
                 29
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": "https://www.youtube.com/watch?v=tyiTOAqHoCA"
         },
         {
             "id": 80,
@@ -769,7 +891,9 @@
                 29
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": null
         },
         {
             "id": 81,
@@ -779,7 +903,9 @@
                 29
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "30",
+            "trailer_url": "https://www.youtube.com/watch?v=aI4nAuwO1fE"
         },
         {
             "id": 82,
@@ -789,7 +915,9 @@
                 37
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "200",
+            "trailer_url": null
         },
         {
             "id": 83,
@@ -799,7 +927,9 @@
                 29
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "180",
+            "trailer_url": "https://www.youtube.com/watch?v=g0gZES2pTWk"
         },
         {
             "id": 84,
@@ -809,7 +939,9 @@
                 29
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "240",
+            "trailer_url": "https://www.youtube.com/watch?v=gWdOey3RkAg"
         },
         {
             "id": 85,
@@ -819,7 +951,9 @@
                 5
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "150",
+            "trailer_url": "https://www.youtube.com/watch?v=g0gZES2pTWk"
         },
         {
             "id": 86,
@@ -829,7 +963,9 @@
                 29
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "185",
+            "trailer_url": null
         },
         {
             "id": 87,
@@ -839,7 +975,9 @@
                 38
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "140",
+            "trailer_url": "https://www.youtube.com/watch?v=g0gZES2pTWk"
         },
         {
             "id": 88,
@@ -849,7 +987,9 @@
                 38
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "185",
+            "trailer_url": null
         },
         {
             "id": 89,
@@ -859,7 +999,9 @@
                 29
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 90,
@@ -869,7 +1011,9 @@
                 39
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 91,
@@ -879,7 +1023,9 @@
                 39
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "300",
+            "trailer_url": null
         },
         {
             "id": 92,
@@ -889,7 +1035,9 @@
                 39
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 93,
@@ -899,7 +1047,9 @@
                 40
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": "https://www.youtube.com/watch?v=RuDAIUv4wDE"
         },
         {
             "id": 94,
@@ -909,7 +1059,9 @@
                 19
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "110",
+            "trailer_url": "https://www.youtube.com/watch?v=xOPAsg77PsI"
         },
         {
             "id": 95,
@@ -919,7 +1071,9 @@
                 10
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "135",
+            "trailer_url": "https://www.youtube.com/watch?v=xOPAsg77PsI"
         },
         {
             "id": 96,
@@ -929,7 +1083,9 @@
                 19
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "150",
+            "trailer_url": "https://www.youtube.com/watch?v=xOPAsg77PsI"
         },
         {
             "id": 97,
@@ -939,7 +1095,9 @@
                 22
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": "https://www.youtube.com/watch?v=xOPAsg77PsI"
         },
         {
             "id": 98,
@@ -949,7 +1107,9 @@
                 41
             ],
             "fabricantId": 11,
-            "score": 0
+            "score": 0,
+            "prix": "55",
+            "trailer_url": "https://youtu.be/jQNfHkf1zoo"
         },
         {
             "id": 99,
@@ -959,7 +1119,9 @@
                 7
             ],
             "fabricantId": 11,
-            "score": 0
+            "score": 0,
+            "prix": "55",
+            "trailer_url": "https://youtu.be/qmfMWzm4KXY"
         },
         {
             "id": 100,
@@ -969,7 +1131,9 @@
                 41
             ],
             "fabricantId": 11,
-            "score": 0
+            "score": 0,
+            "prix": "55",
+            "trailer_url": "https://youtu.be/jQNfHkf1zoo"
         },
         {
             "id": 101,
@@ -979,7 +1143,9 @@
                 42
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "380",
+            "trailer_url": null
         },
         {
             "id": 102,
@@ -989,7 +1155,9 @@
                 32
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "400",
+            "trailer_url": null
         },
         {
             "id": 103,
@@ -999,7 +1167,9 @@
                 12
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "165",
+            "trailer_url": null
         },
         {
             "id": 104,
@@ -1009,15 +1179,9 @@
                 1
             ],
             "fabricantId": 4,
-            "score": 0
-        },
-        {
-            "id": 105,
-            "nom": "Gladius Pirate",
-            "image": "https://media.starcitizen.tools/thumb/9/95/Gladius_Pirate_x5_-_Attacking_station_over_world_-_cropped.jpg/500px-Gladius_Pirate_x5_-_Attacking_station_over_world_-_cropped.jpg.webp",
-            "rolesIds": [],
-            "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "90",
+            "trailer_url": "https://youtu.be/IBIFpEPl8kk"
         },
         {
             "id": 106,
@@ -1027,7 +1191,9 @@
                 1
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "110",
+            "trailer_url": null
         },
         {
             "id": 107,
@@ -1037,7 +1203,9 @@
                 29
             ],
             "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 108,
@@ -1047,7 +1215,9 @@
                 29
             ],
             "fabricantId": 6,
-            "score": 0
+            "score": 0,
+            "prix": "350",
+            "trailer_url": null
         },
         {
             "id": 109,
@@ -1057,7 +1227,9 @@
                 39
             ],
             "fabricantId": 11,
-            "score": 0
+            "score": 0,
+            "prix": "250",
+            "trailer_url": "https://youtu.be/pQxnN4MiTig"
         },
         {
             "id": 110,
@@ -1067,7 +1239,9 @@
                 15
             ],
             "fabricantId": 11,
-            "score": 0
+            "score": 0,
+            "prix": "260",
+            "trailer_url": "https://youtu.be/pQxnN4MiTig"
         },
         {
             "id": 111,
@@ -1077,15 +1251,9 @@
                 43
             ],
             "fabricantId": 4,
-            "score": 0
-        },
-        {
-            "id": 112,
-            "nom": "Hammerhead Best In Show Edition",
-            "image": "https://media.starcitizen.tools/thumb/4/40/Hammerhead_Best_In_Show_Edition_2949_-_Cut_2.png/500px-Hammerhead_Best_In_Show_Edition_2949_-_Cut_2.png.webp",
-            "rolesIds": [],
-            "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "725",
+            "trailer_url": "https://youtu.be/30EC-W5jNGU"
         },
         {
             "id": 114,
@@ -1095,7 +1263,9 @@
                 1
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "100",
+            "trailer_url": "https://www.youtube.com/watch?v=S1yXxrdrfdM"
         },
         {
             "id": 115,
@@ -1105,7 +1275,9 @@
                 44
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "85",
+            "trailer_url": null
         },
         {
             "id": 116,
@@ -1115,7 +1287,9 @@
                 7
             ],
             "fabricantId": 12,
-            "score": 0
+            "score": 0,
+            "prix": "30",
+            "trailer_url": "https://youtu.be/Qrb-StrkUqk"
         },
         {
             "id": 117,
@@ -1125,7 +1299,9 @@
                 19
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "90",
+            "trailer_url": null
         },
         {
             "id": 118,
@@ -1135,7 +1311,9 @@
                 20
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "140",
+            "trailer_url": null
         },
         {
             "id": 119,
@@ -1145,7 +1323,9 @@
                 20
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "500",
+            "trailer_url": "https://www.youtube.com/watch?v=wSvx94GtAew"
         },
         {
             "id": 120,
@@ -1155,7 +1335,9 @@
                 20
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "550",
+            "trailer_url": null
         },
         {
             "id": 121,
@@ -1165,7 +1347,9 @@
                 20
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "750",
+            "trailer_url": null
         },
         {
             "id": 122,
@@ -1175,7 +1359,9 @@
                 45
             ],
             "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 123,
@@ -1185,7 +1371,9 @@
                 15
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "210",
+            "trailer_url": "https://www.youtube.com/watch?v=rVvO2iSWjS0"
         },
         {
             "id": 124,
@@ -1195,7 +1383,9 @@
                 46
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "1800",
+            "trailer_url": null
         },
         {
             "id": 125,
@@ -1205,7 +1395,9 @@
                 46
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "1500",
+            "trailer_url": null
         },
         {
             "id": 126,
@@ -1215,7 +1407,9 @@
                 46
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "1500",
+            "trailer_url": null
         },
         {
             "id": 127,
@@ -1225,7 +1419,9 @@
                 47
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "65",
+            "trailer_url": "https://www.youtube.com/watch?v=5DMBZjickDw"
         },
         {
             "id": 128,
@@ -1235,7 +1431,9 @@
                 48
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "450",
+            "trailer_url": null
         },
         {
             "id": 129,
@@ -1245,7 +1443,9 @@
                 49
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "535",
+            "trailer_url": null
         },
         {
             "id": 131,
@@ -1255,7 +1455,9 @@
                 50
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "3000",
+            "trailer_url": null
         },
         {
             "id": 132,
@@ -1265,7 +1467,9 @@
                 1
             ],
             "fabricantId": 13,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": null
         },
         {
             "id": 133,
@@ -1275,7 +1479,9 @@
                 18
             ],
             "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 134,
@@ -1286,7 +1492,9 @@
                 52
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "1650",
+            "trailer_url": "https://youtu.be/to1kDbR4L4I"
         },
         {
             "id": 135,
@@ -1297,7 +1505,9 @@
                 52
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "2000",
+            "trailer_url": null
         },
         {
             "id": 136,
@@ -1307,7 +1517,9 @@
                 1
             ],
             "fabricantId": 13,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 137,
@@ -1317,7 +1529,9 @@
                 21
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "120",
+            "trailer_url": null
         },
         {
             "id": 138,
@@ -1327,7 +1541,9 @@
                 52
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "575",
+            "trailer_url": null
         },
         {
             "id": 139,
@@ -1337,7 +1553,9 @@
                 53
             ],
             "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 140,
@@ -1347,7 +1565,9 @@
                 54
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "520",
+            "trailer_url": "https://youtu.be/TamoB9ubodE"
         },
         {
             "id": 141,
@@ -1357,7 +1577,9 @@
                 7
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "100",
+            "trailer_url": "https://www.youtube.com/watch?v=_SpsjUHj_II"
         },
         {
             "id": 142,
@@ -1367,7 +1589,9 @@
                 55
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "150",
+            "trailer_url": "https://youtu.be/6exXWnz9CWY"
         },
         {
             "id": 143,
@@ -1377,7 +1601,9 @@
                 56
             ],
             "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 145,
@@ -1387,7 +1613,9 @@
                 20
             ],
             "fabricantId": 9,
-            "score": 0
+            "score": 0,
+            "prix": "650",
+            "trailer_url": null
         },
         {
             "id": 146,
@@ -1398,7 +1626,9 @@
                 57
             ],
             "fabricantId": 1,
-            "score": 0
+            "score": 0,
+            "prix": "260",
+            "trailer_url": null
         },
         {
             "id": 147,
@@ -1409,7 +1639,9 @@
                 58
             ],
             "fabricantId": 14,
-            "score": 0
+            "score": 0,
+            "prix": "315",
+            "trailer_url": "https://youtu.be/NYQKyhXii2Y"
         },
         {
             "id": 148,
@@ -1420,7 +1652,9 @@
                 58
             ],
             "fabricantId": 14,
-            "score": 0
+            "score": 0,
+            "prix": "315",
+            "trailer_url": "https://youtu.be/NYQKyhXii2Y"
         },
         {
             "id": 149,
@@ -1431,7 +1665,9 @@
                 58
             ],
             "fabricantId": 14,
-            "score": 0
+            "score": 0,
+            "prix": "315",
+            "trailer_url": "https://youtu.be/NYQKyhXii2Y"
         },
         {
             "id": 150,
@@ -1441,7 +1677,9 @@
                 2
             ],
             "fabricantId": 14,
-            "score": 0
+            "score": 0,
+            "prix": "35",
+            "trailer_url": "https://youtu.be/4eI3w0kRLUM"
         },
         {
             "id": 151,
@@ -1451,7 +1689,9 @@
                 32
             ],
             "fabricantId": 14,
-            "score": 0
+            "score": 0,
+            "prix": "40",
+            "trailer_url": "https://youtu.be/4eI3w0kRLUM"
         },
         {
             "id": 152,
@@ -1461,7 +1701,9 @@
                 59
             ],
             "fabricantId": 14,
-            "score": 0
+            "score": 0,
+            "prix": "40",
+            "trailer_url": null
         },
         {
             "id": 153,
@@ -1471,7 +1713,9 @@
                 60
             ],
             "fabricantId": 14,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 154,
@@ -1481,7 +1725,9 @@
                 61
             ],
             "fabricantId": 12,
-            "score": 0
+            "score": 0,
+            "prix": "30",
+            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
         },
         {
             "id": 155,
@@ -1492,7 +1738,9 @@
                 2
             ],
             "fabricantId": 12,
-            "score": 0
+            "score": 0,
+            "prix": "30",
+            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
         },
         {
             "id": 156,
@@ -1502,7 +1750,9 @@
                 5
             ],
             "fabricantId": 12,
-            "score": 0
+            "score": 0,
+            "prix": "40",
+            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
         },
         {
             "id": 157,
@@ -1512,7 +1762,9 @@
                 1
             ],
             "fabricantId": 12,
-            "score": 0
+            "score": 0,
+            "prix": "65",
+            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
         },
         {
             "id": 158,
@@ -1522,7 +1774,9 @@
                 7
             ],
             "fabricantId": 12,
-            "score": 0
+            "score": 0,
+            "prix": "55",
+            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
         },
         {
             "id": 159,
@@ -1532,7 +1786,9 @@
                 7
             ],
             "fabricantId": 12,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": "https://www.youtube.com/watch?v=BR07oZC0QHU"
         },
         {
             "id": 160,
@@ -1542,7 +1798,9 @@
                 62
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "725",
+            "trailer_url": null
         },
         {
             "id": 161,
@@ -1552,7 +1810,9 @@
                 17
             ],
             "fabricantId": 12,
-            "score": 0
+            "score": 0,
+            "prix": "80",
+            "trailer_url": "https://youtu.be/JbaNf0YvpLs"
         },
         {
             "id": 162,
@@ -1562,7 +1822,9 @@
                 7
             ],
             "fabricantId": 13,
-            "score": 0
+            "score": 0,
+            "prix": "45",
+            "trailer_url": "https://www.youtube.com/watch?v=A2vgYRiO07M"
         },
         {
             "id": 163,
@@ -1572,7 +1834,9 @@
                 7
             ],
             "fabricantId": 13,
-            "score": 0
+            "score": 0,
+            "prix": "45",
+            "trailer_url": "https://www.youtube.com/watch?v=A2vgYRiO07M"
         },
         {
             "id": 164,
@@ -1582,7 +1846,9 @@
                 10
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "700",
+            "trailer_url": null
         },
         {
             "id": 165,
@@ -1592,15 +1858,9 @@
                 63
             ],
             "fabricantId": 2,
-            "score": 0
-        },
-        {
-            "id": 166,
-            "nom": "Osprey",
-            "image": "https://media.starcitizen.tools/thumb/9/93/Placeholderv2.png/500px-Placeholderv2.png.webp",
-            "rolesIds": [],
-            "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "650",
+            "trailer_url": null
         },
         {
             "id": 167,
@@ -1610,7 +1870,9 @@
                 64
             ],
             "fabricantId": 14,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 168,
@@ -1620,7 +1882,9 @@
                 41
             ],
             "fabricantId": 15,
-            "score": 0
+            "score": 0,
+            "prix": "25",
+            "trailer_url": "https://www.youtube.com/watch?v=EJbItSsu8A8"
         },
         {
             "id": 169,
@@ -1630,7 +1894,9 @@
                 7
             ],
             "fabricantId": 15,
-            "score": 0
+            "score": 0,
+            "prix": "35",
+            "trailer_url": null
         },
         {
             "id": 170,
@@ -1640,7 +1906,9 @@
                 7
             ],
             "fabricantId": 15,
-            "score": 0
+            "score": 0,
+            "prix": "35",
+            "trailer_url": null
         },
         {
             "id": 171,
@@ -1650,7 +1918,9 @@
                 22
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "300",
+            "trailer_url": null
         },
         {
             "id": 172,
@@ -1660,7 +1930,9 @@
                 31
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 173,
@@ -1670,7 +1942,9 @@
                 65
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "675",
+            "trailer_url": null
         },
         {
             "id": 174,
@@ -1680,7 +1954,9 @@
                 66
             ],
             "fabricantId": 12,
-            "score": 0
+            "score": 0,
+            "prix": "925",
+            "trailer_url": "https://www.youtube.com/watch?v=olxI7X7eac8"
         },
         {
             "id": 175,
@@ -1690,7 +1966,9 @@
                 67
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "975",
+            "trailer_url": null
         },
         {
             "id": 176,
@@ -1701,7 +1979,9 @@
                 58
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "155",
+            "trailer_url": "https://www.youtube.com/watch?v=hXmbmWYF5Go"
         },
         {
             "id": 177,
@@ -1711,7 +1991,9 @@
                 24
             ],
             "fabricantId": 6,
-            "score": 0
+            "score": 0,
+            "prix": "440",
+            "trailer_url": "https://youtu.be/Op0YkiMm8TQ"
         },
         {
             "id": 178,
@@ -1721,7 +2003,9 @@
                 7
             ],
             "fabricantId": 11,
-            "score": 0
+            "score": 0,
+            "prix": "30",
+            "trailer_url": null
         },
         {
             "id": 179,
@@ -1731,7 +2015,9 @@
                 7
             ],
             "fabricantId": 11,
-            "score": 0
+            "score": 0,
+            "prix": "30",
+            "trailer_url": null
         },
         {
             "id": 180,
@@ -1741,7 +2027,9 @@
                 19
             ],
             "fabricantId": 14,
-            "score": 0
+            "score": 0,
+            "prix": "125",
+            "trailer_url": null
         },
         {
             "id": 181,
@@ -1751,7 +2039,9 @@
                 19
             ],
             "fabricantId": 16,
-            "score": 0
+            "score": 0,
+            "prix": "225",
+            "trailer_url": null
         },
         {
             "id": 182,
@@ -1761,7 +2051,9 @@
                 7
             ],
             "fabricantId": 11,
-            "score": 0
+            "score": 0,
+            "prix": "145",
+            "trailer_url": null
         },
         {
             "id": 183,
@@ -1771,7 +2063,9 @@
                 68
             ],
             "fabricantId": 11,
-            "score": 0
+            "score": 0,
+            "prix": "155",
+            "trailer_url": "https://youtu.be/N6N3uJB_Xjw"
         },
         {
             "id": 184,
@@ -1781,7 +2075,9 @@
                 4
             ],
             "fabricantId": 11,
-            "score": 0
+            "score": 0,
+            "prix": "150",
+            "trailer_url": "https://youtu.be/N6N3uJB_Xjw"
         },
         {
             "id": 185,
@@ -1791,15 +2087,9 @@
                 69
             ],
             "fabricantId": 4,
-            "score": 0
-        },
-        {
-            "id": 186,
-            "nom": "Reclaimer Best In Show Edition",
-            "image": "https://media.starcitizen.tools/thumb/8/87/Reclaimer_Best_In_Show_Edition_2949_-_Cut_2.png/500px-Reclaimer_Best_In_Show_Edition_2949_-_Cut_2.png.webp",
-            "rolesIds": [],
-            "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "400",
+            "trailer_url": "https://youtu.be/1Vb4QpA354A"
         },
         {
             "id": 187,
@@ -1809,7 +2099,9 @@
                 22
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "330",
+            "trailer_url": null
         },
         {
             "id": 188,
@@ -1820,7 +2112,9 @@
                 2
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "65",
+            "trailer_url": "https://youtu.be/xAxt4JU2n98"
         },
         {
             "id": 189,
@@ -1830,7 +2124,9 @@
                 70
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "95",
+            "trailer_url": "https://youtu.be/xAxt4JU2n98"
         },
         {
             "id": 190,
@@ -1840,7 +2136,9 @@
                 71
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "85",
+            "trailer_url": "https://youtu.be/xAxt4JU2n98"
         },
         {
             "id": 191,
@@ -1850,7 +2148,9 @@
                 1
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "75",
+            "trailer_url": "https://youtu.be/xAxt4JU2n98"
         },
         {
             "id": 192,
@@ -1860,7 +2160,9 @@
                 72
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": null
         },
         {
             "id": 194,
@@ -1870,7 +2172,9 @@
                 73
             ],
             "fabricantId": 17,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 195,
@@ -1880,7 +2184,9 @@
                 38
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": null
         },
         {
             "id": 196,
@@ -1890,7 +2196,9 @@
                 29
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "185",
+            "trailer_url": null
         },
         {
             "id": 197,
@@ -1900,7 +2208,9 @@
                 29
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "185",
+            "trailer_url": "https://www.youtube.com/watch?v=6-gIsZMQZWI"
         },
         {
             "id": 198,
@@ -1910,7 +2220,9 @@
                 7
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "185",
+            "trailer_url": "https://youtu.be/er8eoQNqtxQ"
         },
         {
             "id": 199,
@@ -1920,7 +2232,9 @@
                 6
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": "https://youtu.be/ZnMdQXl0vyg"
         },
         {
             "id": 200,
@@ -1930,7 +2244,9 @@
                 29
             ],
             "fabricantId": 13,
-            "score": 0
+            "score": 0,
+            "prix": "240",
+            "trailer_url": "https://www.youtube.com/watch?v=6n_QlTlSJJw"
         },
         {
             "id": 201,
@@ -1940,7 +2256,9 @@
                 15
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "240",
+            "trailer_url": "https://www.youtube.com/watch?v=jH-CL-ksQsk"
         },
         {
             "id": 202,
@@ -1950,15 +2268,9 @@
                 15
             ],
             "fabricantId": 2,
-            "score": 0
-        },
-        {
-            "id": 203,
-            "nom": "Scythe",
-            "image": "https://media.starcitizen.tools/thumb/b/b0/Scythe_ISC_2020-06-18.png/500px-Scythe_ISC_2020-06-18.png.webp",
-            "rolesIds": [],
-            "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": "230",
+            "trailer_url": "https://www.youtube.com/watch?v=cNRhBR8mSQI"
         },
         {
             "id": 204,
@@ -1968,7 +2280,9 @@
                 29
             ],
             "fabricantId": 6,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 206,
@@ -1978,7 +2292,9 @@
                 74
             ],
             "fabricantId": 14,
-            "score": 0
+            "score": 0,
+            "prix": "165",
+            "trailer_url": null
         },
         {
             "id": 207,
@@ -1988,7 +2304,9 @@
                 75
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "300",
+            "trailer_url": "https://youtu.be/qzFcpQTEVAk"
         },
         {
             "id": 208,
@@ -1998,7 +2316,9 @@
                 75
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "340",
+            "trailer_url": null
         },
         {
             "id": 209,
@@ -2008,7 +2328,9 @@
                 76
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 210,
@@ -2018,7 +2340,9 @@
                 77
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "250",
+            "trailer_url": "https://www.youtube.com/watch?v=RMpwYYnQS6k"
         },
         {
             "id": 211,
@@ -2028,7 +2352,9 @@
                 78
             ],
             "fabricantId": 10,
-            "score": 0
+            "score": 0,
+            "prix": "330",
+            "trailer_url": null
         },
         {
             "id": 213,
@@ -2038,7 +2364,9 @@
                 15
             ],
             "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 214,
@@ -2048,7 +2376,9 @@
                 17
             ],
             "fabricantId": 16,
-            "score": 0
+            "score": 0,
+            "prix": "70",
+            "trailer_url": "https://www.youtube.com/watch?v=_XhngLncdVU"
         },
         {
             "id": 215,
@@ -2058,7 +2388,9 @@
                 79
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 216,
@@ -2068,7 +2400,9 @@
                 1
             ],
             "fabricantId": 6,
-            "score": 0
+            "score": 0,
+            "prix": "115",
+            "trailer_url": null
         },
         {
             "id": 217,
@@ -2078,7 +2412,9 @@
                 1
             ],
             "fabricantId": 6,
-            "score": 0
+            "score": 0,
+            "prix": "115",
+            "trailer_url": null
         },
         {
             "id": 218,
@@ -2088,7 +2424,9 @@
                 5
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "220",
+            "trailer_url": "https://youtu.be/jtIK0BuYm0U"
         },
         {
             "id": 219,
@@ -2098,7 +2436,9 @@
                 80
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "220",
+            "trailer_url": null
         },
         {
             "id": 220,
@@ -2108,7 +2448,9 @@
                 81
             ],
             "fabricantId": 9,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 221,
@@ -2118,7 +2460,9 @@
                 15
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 222,
@@ -2128,7 +2472,9 @@
                 24
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "375",
+            "trailer_url": "https://www.youtube.com/watch?v=_RmaaxMW2uQ"
         },
         {
             "id": 223,
@@ -2138,7 +2484,9 @@
                 24
             ],
             "fabricantId": 3,
-            "score": 0
+            "score": 0,
+            "prix": "375",
+            "trailer_url": null
         },
         {
             "id": 224,
@@ -2148,15 +2496,9 @@
                 82
             ],
             "fabricantId": 5,
-            "score": 0
-        },
-        {
-            "id": 225,
-            "nom": "Vanduul McTyphoonFace",
-            "image": "https://media.starcitizen.tools/thumb/4/4c/Vanduul_McTyphoonFace_-_Squadron_42_CitizenCon_2954_Live_Gameplay_Reveal.jpg/500px-Vanduul_McTyphoonFace_-_Squadron_42_CitizenCon_2954_Live_Gameplay_Reveal.jpg.webp",
-            "rolesIds": [],
-            "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 226,
@@ -2166,7 +2508,9 @@
                 12
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "290",
+            "trailer_url": null
         },
         {
             "id": 227,
@@ -2176,7 +2520,9 @@
                 24
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "240",
+            "trailer_url": null
         },
         {
             "id": 228,
@@ -2186,7 +2532,9 @@
                 6
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "275",
+            "trailer_url": null
         },
         {
             "id": 229,
@@ -2196,7 +2544,9 @@
                 15
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "260",
+            "trailer_url": null
         },
         {
             "id": 230,
@@ -2206,7 +2556,9 @@
                 13
             ],
             "fabricantId": 5,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 231,
@@ -2216,7 +2568,9 @@
                 79
             ],
             "fabricantId": 13,
-            "score": 0
+            "score": 0,
+            "prix": null,
+            "trailer_url": null
         },
         {
             "id": 232,
@@ -2227,7 +2581,9 @@
                 84
             ],
             "fabricantId": 4,
-            "score": 0
+            "score": 0,
+            "prix": "200",
+            "trailer_url": null
         },
         {
             "id": 233,
@@ -2237,7 +2593,9 @@
                 85
             ],
             "fabricantId": 7,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": "https://www.youtube.com/watch?v=BA7E1z8vMQE"
         },
         {
             "id": 234,
@@ -2247,7 +2605,9 @@
                 3
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "45",
+            "trailer_url": null
         },
         {
             "id": 235,
@@ -2257,7 +2617,9 @@
                 37
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "55",
+            "trailer_url": null
         },
         {
             "id": 236,
@@ -2267,7 +2629,9 @@
                 7
             ],
             "fabricantId": 0,
-            "score": 0
+            "score": 0,
+            "prix": "50",
+            "trailer_url": null
         },
         {
             "id": 237,
@@ -2277,7 +2641,9 @@
                 19
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": "https://youtu.be/GieY5c59s1o"
         },
         {
             "id": 238,
@@ -2287,7 +2653,9 @@
                 10
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "175",
+            "trailer_url": "https://youtu.be/GieY5c59s1o"
         },
         {
             "id": 239,
@@ -2297,7 +2665,9 @@
                 86
             ],
             "fabricantId": 2,
-            "score": 0
+            "score": 0,
+            "prix": "190",
+            "trailer_url": null
         }
     ],
     "fabricants": [
@@ -2329,7 +2699,7 @@
         {
             "id": 5,
             "nom": "Vanduul Clans",
-            "logo": "https://media.starcitizen.tools/thumb/a/a1/Vanduul_fleet_-_CitizenCon_2954_Live_Gameplay_Reveal.jpg/500px-Vanduul_fleet_-_CitizenCon_2954_Live_Gameplay_Reveal.jpg.webp"
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4t_CLYExSTXBtkJFL20IX4Osy1aLiRxbdcA&s"
         },
         {
             "id": 6,
