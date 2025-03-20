@@ -35,17 +35,17 @@ header nav button:hover {
     background-color: #143a52;
 }
 
-main { 
+main {
     padding-top: 60px;
     display: flex;
 }
 
-main > div {
+main>div {
     flex-grow: 1;
     padding: 20px;
 }
 
-#details > div {
+#details>div {
     background-color: #143a52;
     border-radius: 10px;
     margin: 20px;
@@ -106,7 +106,8 @@ main > div {
     border-radius: 5px;
 }
 
-#like, #dislike {
+#like,
+#dislike {
     cursor: pointer;
 }
 
@@ -125,6 +126,8 @@ main > div {
     cursor: pointer;
     transition: 0.3s;
     outline: 2px solid transparent;
+    transition: transform 0.3s ease;
+    animation: cardEntrance 0.6s ease-out forwards;
 }
 
 .horizontal-card:hover {
@@ -148,8 +151,8 @@ main > div {
 }
 
 .logo {
-    object-fit: fill !important ;
-    background-color: whitesmoke;
+    object-fit: contain !important;
+    background-color: white;
 }
 
 .horizontal-card img {
@@ -190,7 +193,7 @@ main > div {
     border: none;
     height: calc(44px - 20px);
     background-color: transparent;
-    color: white;   
+    color: white;
 }
 
 .search-bar span {
@@ -259,6 +262,7 @@ footer .selected {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -298,34 +302,123 @@ footer .selected {
 .game-container {
     display: flex;
     justify-content: center;
-    gap: 50px;
     margin-top: 40px;
 }
 
 .ship-card {
     background: #143a52;
-    padding: 20px;
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    animation: cardEntrance 0.6s ease-out forwards;
+    padding-bottom: 11px;
 }
 
-.vs-container {
+/* Animation d'entrée des cartes */
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ship-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.game-result {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 5px 20px 5px 20px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 250px;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    overflow: hidden;
+    animation: resultPop 0.3s ease;
 }
 
-.vs-container h2 {
-    font-size: 40px;
+@keyframes resultPop {
+    0% {
+        transform: translate(-50%, -40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+/* Bande du haut */
+.game-result::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.3) 0 10px,
+            transparent 10px 20px);
+}
+
+/* Bande du bas */
+.game-result::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.3) 0 10px,
+            transparent 10px 20px);
+}
+
+
+.game-result.correct {
+    background-color: #289A3D;
+    color: #165522;
+}
+
+.game-result.incorrect {
+    background-color: #9A2828;
+    color: #551616;
+}
+
+.price {
+    font-size: 24px;
     color: #58b4f6;
-    margin: 0;
+    font-weight: bold;
 }
 
-.buttons {
+.popup-header {
+    color: white;
+}
+
+/* Animation des boutons */
+.guess-buttons {
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -337,36 +430,120 @@ footer .selected {
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .guess-btn:hover {
     background: #58b4f6;
 }
 
-.game-result {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #143a52;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid;
+/* Animation du score */
+@keyframes scoreBounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
-.game-result.correct {
-    border-color: #4CAF50;
-}
-
-.game-result.incorrect {
-    border-color: #f44336;
-}
-
-.price {
-    font-size: 24px;
-    color: #58b4f6;
+.score {
+    font-size: 1.5em;
     font-weight: bold;
+}
+
+.score-updated {
+    animation: scoreBounce 0.5s ease;
+}
+
+.price-reveal {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.continue-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px 10px 2px 10px;
+    transition: 0.3s;
+}
+
+.continue-btn:hover {
+    filter: brightness(1.2);
+}
+
+.correct .continue-btn {
+    background-color: #165522;
+}
+
+.incorrect .continue-btn {
+    background-color: #551616;
+}
+
+.score-container {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.popup-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ship-info {
+    width: 50%;
+    color: white;
+}
+
+.separator {
+    height: 120px;
+    width: 2px;
+}
+
+.correct .separator {
+    background-color: #165522;
+}
+
+.incorrect .separator {
+    background-color: #551616;
+}
+
+#starfield-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.vs-container {
+    position: relative;
+    color: #58b4f6;
+    font-style: italic;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -80px;
+}
+
 }
 
 iframe {
