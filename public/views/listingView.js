@@ -142,7 +142,7 @@ class ListingView extends GenericView {
             `<div id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">
                 <div class='image-container'>
                     <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
-                    <img src="${p.image}" alt="${p.nom}">
+                    <img loading="lazy" src="${p.image}" alt="${p.nom}">
                 </div>
                 <h2>${p.nom}</h2>
             </div>`

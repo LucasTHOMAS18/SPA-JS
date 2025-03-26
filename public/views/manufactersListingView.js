@@ -40,7 +40,7 @@ class ManufacterListingView extends GenericView {
             `<div id=${p.id} class="horizontal-card" onclick="location.hash='manufacturer'; setHashParam('fabricantId', ${p.id}); window.scrollTo({top: 0, behavior: 'smooth'});">
                 
                 <div class='image-container'>
-                    <img class="logo" src="${p.logo}" alt="${p.nom}">
+                    <img loading="lazy" class="logo" src="${p.logo}" alt="${p.nom}">
                 </div>
                 <h2>${p.nom}</h2>
             </div>`
