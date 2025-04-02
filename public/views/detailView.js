@@ -7,6 +7,22 @@ import { listingView } from './listingView.js';
 
 class DetailView extends GenericView {
     async render(id) {
+        // Loading animation
+        document.getElementById('details').innerHTML = `
+            <div>
+                <span onclick="removeHashParam('detail');" class='close-button material-symbols-rounded'>close</span>
+
+                <div class="loading-image"> </div>
+
+                <section>
+                    <div class="loading-text"> </div>
+                    <div class="small-loading-text"> </div>
+                    <div class="small-loading-text"> </div>
+                </section>
+            </div>
+        `;
+
+        // Detail rendering
         const vaisseau = await getVaisseau(id);
         const fabricant = (await getFabricant(vaisseau.fabricantId)).nom;
 
