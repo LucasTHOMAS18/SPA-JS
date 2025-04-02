@@ -132,12 +132,23 @@ def extract_value(pattern, text):
 def get_roles(title):
     api_url = f"https://starcitizen.tools/api.php?action=ask&query=[[{title}]]|?Role&format=json"
     result = requests.get(api_url).json()
-    return list(result["query"]["results"].values())[0]["printouts"]["Role"]
-
+    roles = list(result["query"]["results"].values())[0]["printouts"]["Role"] 
+    
+    if roles:
+        if "/" in roles[0]:
+            roles = roles[0].split("/")
+            
+        if "," in roles[0]:
+            roles = roles[0].split(",")
+        
+        roles = list(map(lambda x: x.strip(), roles))
+    
+    return roles            
+            
 def extract_trailer_url(wikitext):
     """ Extrait l'URL du trailer YouTube (supporte les deux formats) """
     match = re.search(r"\| trailerurl\s*=\s*(https?://(?:www\.youtube\.com/watch\?v=|youtu\.be/)[\w-]+)", wikitext)
-    return match.group(1) if match else None
+    return match.group(1).replace("https://youtu.be/", "").replace("https://www.youtube.com/watch?v=", "") if match else None
 
 def get_full_manufacturer(title, wikitext):
     """ Récupère le fabricant en version complète depuis l'API ask, avec fallback sur le wikitext """
