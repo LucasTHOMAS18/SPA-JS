@@ -1,5 +1,6 @@
 import json
 import re
+from collections import defaultdict
 
 import requests
 
@@ -22,6 +23,9 @@ def get_ships(limit=500):
     role_id = 0
     role_ids = {}
 
+    manufacturers_ships = defaultdict(list)
+    roles_ships = defaultdict(list)
+
     for ship_id, ship in enumerate(ships):
         try:
             print(f"Traitement du vaisseau : {ship['title']} ({ship_id+1}/{len(ships)})")
@@ -31,7 +35,7 @@ def get_ships(limit=500):
                 print(f"❌ Impossible de récupérer les détails pour {ship['title']}")
                 continue
 
-            # Vérification si fabricant, rôles ou image sont null
+            # Vérification des données
             if not ship_details["fabricant"]:
                 print(f"⚠️ {ship['title']} ignoré : fabricant manquant")
                 continue
@@ -78,8 +82,19 @@ def get_ships(limit=500):
                 "trailer_url": ship_details["trailer_url"],
             })
 
+            fabricant_id = manufacturer_ids[manufacturer]
+            manufacturers_ships[fabricant_id].append(ship_id)
+            for role_id_ref in role_refs:
+                roles_ships[role_id_ref].append(ship_id)
+
         except Exception as e:
             print(f"⚠️ Erreur avec {ship['title']} : {e}")
+
+    for fab in result["fabricants"]:
+        fab["vaisseauxIds"] = manufacturers_ships[fab["id"]]
+
+    for role in result["roles"]:
+        role["vaisseauxIds"] = roles_ships[role["id"]]
 
     return result
 
