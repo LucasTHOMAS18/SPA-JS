@@ -6,7 +6,6 @@ import { manufacterListingView } from "./views/manufactersListingView.js";
 
 // Routing
 const routes = {
-    "": listingView,
     "listing": listingView,
     "search": listingView,
     "favorites": listingView,
@@ -20,6 +19,11 @@ const routes = {
 function handleRouting() {
     let { hash, params } = getHashAndParams();
     let route = hash.split('/')[0];
+
+    if (route === "") {
+        window.location.hash = "listing";
+        return;
+    }
 
     if (routes.hasOwnProperty(route)) {
         routes[route].handleRouting(hash, params);
