@@ -8,7 +8,7 @@
         0
       ],
       "fabricantId": 0,
-      "score": 1,
+      "score": 0,
       "prix": "50",
       "trailer_url": "QGMxGdzYVY8"
     },
@@ -3112,11 +3112,5 @@
       "nom": "Bounty Hunter"
     }
   ],
-  "votes": [
-    {
-      "ip": "::1",
-      "vaisseauId": 0,
-      "value": 1
-    }
-  ]
+  "votes": []
 }
