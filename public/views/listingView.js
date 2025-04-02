@@ -6,7 +6,7 @@ import { getFavorites } from '../services/favorisService.js';
 import { detailView } from './detailView.js';
 import { GenericView } from './genericView.js';
 
-class ListingView extends GenericView {
+export class ListingView extends GenericView {
     constructor() {
         super();
 
@@ -60,6 +60,7 @@ class ListingView extends GenericView {
 
         // Handle page change
         console.log("Page changed")
+        this.showLoadingAnimation();
         switch (hash) {
             case 'search':
                 this.title = `Résultats de la recherche pour "${query}"`;
@@ -131,10 +132,18 @@ class ListingView extends GenericView {
         }
     }
 
+    async showLoadingAnimation() {
+        this.app.innerHTML = `<div class="loading loading-title"></div>` + 
+            Array(SHIPS_PER_PAGE).fill().map(() => 
+            `<div class="loading loading-horizontal-card"></div>`
+            ).join('');
+        this.footer.innerHTML = "";
+    }
+
     async render() {
         this.details.innerHTML = '';
         this.footer.innerHTML = "";
-    
+        
         let selectedPage = parseInt(getHashParam('page')) || 1;
         let displayedShips = this.renderedShips;
     

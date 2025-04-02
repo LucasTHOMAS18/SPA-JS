@@ -1,9 +1,9 @@
 import { SHIPS_PER_PAGE } from '../lib/config.js';
 import { getFabricants } from '../lib/provider.js';
 import { getHashParam } from '../lib/utils.js';
-import { GenericView } from './genericView.js';
+import { ListingView } from './listingView.js';
 
-class ManufacterListingView extends GenericView {
+class ManufacterListingView extends ListingView {
     constructor() {
         super();
 
@@ -30,9 +30,9 @@ class ManufacterListingView extends GenericView {
     }
 
     async render() {
-        this.details.innerHTML = '';
-
+        this.showLoadingAnimation();
         this.footer.innerHTML = ""
+        
         let selectedPage = parseInt(getHashParam('page')) || 1;
         let displayedmanufacters = this.renderedmanufacters;
 

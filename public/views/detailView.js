@@ -12,12 +12,12 @@ class DetailView extends GenericView {
             <div>
                 <span onclick="removeHashParam('detail');" class='close-button material-symbols-rounded'>close</span>
 
-                <div class="loading-image"> </div>
+                <div class="loading loading-image"> </div>
 
                 <section>
-                    <div class="loading-text"> </div>
-                    <div class="small-loading-text"> </div>
-                    <div class="small-loading-text"> </div>
+                    <div class="loading loading-text"> </div>
+                    <div class="loading small-loading-text"> </div>
+                    <div class="loading small-loading-text"> </div>
                 </section>
             </div>
         `;
