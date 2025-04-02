@@ -1,4 +1,5 @@
 import { SHIPS_PER_PAGE } from '../lib/config.js';
+import { initLazyLoad } from '../lib/lazyloading.js';
 import { getFabricant, getRole, getVaisseau, getVaisseaux, getVaisseauxByFabricant, getVaisseauxByRole, searchVaisseaux } from '../lib/provider.js';
 import { getHashParam } from '../lib/utils.js';
 import { getFavorites } from '../services/favorisService.js';
@@ -85,11 +86,10 @@ class ListingView extends GenericView {
                 if (roleId) {
                     const role = await getRole(roleId);
                     this.title = `Vaisseaux avec rôle: ${role.nom}`;
-                    this.ships = await getVaisseauxByRole(roleId); // <-- Doit appeler la fonction corrigée
+                    this.ships = await getVaisseauxByRole(roleId);
                 }
                 break;
 
-                
             default:
                 this.title = "Liste des vaisseaux";
                 this.ships = await getVaisseaux();
@@ -133,26 +133,28 @@ class ListingView extends GenericView {
 
     async render() {
         this.details.innerHTML = '';
-
-        this.footer.innerHTML = ""
+        this.footer.innerHTML = "";
+    
         let selectedPage = parseInt(getHashParam('page')) || 1;
         let displayedShips = this.renderedShips;
-
+    
         this.app.innerHTML = `<h1>${this.title}</h1>` + displayedShips.map(p =>
             `<div id=${p.id} class="horizontal-card" onclick="setHashParam('detail', ${p.id})">
                 <div class='image-container'>
                     <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
-                    <img loading="lazy" src="${p.image}" alt="${p.nom}">
+                    <img loading="lazy" data-src="${p.image}" alt="${p.nom}">
                 </div>
                 <h2>${p.nom}</h2>
             </div>`
         ).join('');
-
+    
         if (this.ships.length > SHIPS_PER_PAGE) {
             for (let i = 1; i <= parseInt(this.ships.length / SHIPS_PER_PAGE) + 1; i++) {
-                footer.innerHTML += `<button class='${i === selectedPage ? "selected" : ""}' onclick="setHashParam('page', ${i}); removeHashParam('detail'); window.scrollTo({top: 0, behavior: 'smooth'});">${i}</button>`
+                this.footer.innerHTML += `<button class='${i === selectedPage ? "selected" : ""}' onclick="setHashParam('page', ${i}); removeHashParam('detail'); window.scrollTo({top: 0, behavior: 'smooth'});">${i}</button>`;
             }
         }
+    
+        initLazyLoad();
     }
 }
 
